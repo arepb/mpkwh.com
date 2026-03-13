@@ -6,7 +6,7 @@
   <title>MPkWh — Most Efficient Electric Cars in the US</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="description" content="The most efficient electric cars available in the US, ranked by miles per kWh. Updated weekly using EPA data." />
-  <meta property="og:title" content="Most Efficient Electric Cars in the US — MPKWH" />
+  <meta property="og:title" content="Most Efficient Electric Cars in the US — MPkWh" />
   <meta property="og:description" content="Ranked by miles per kWh using EPA ratings. Updated every Monday." />
   <meta property="og:image" content="https://mpkwh.com/preview.svg" />
   <meta property="og:url" content="https://mpkwh.com" />
@@ -167,6 +167,33 @@
 
     footer a { color: #555; text-decoration: underline; }
     footer a:hover { color: #888; }
+
+    .bar-wrap {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .bar-wrap::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      right: 0;
+      background: #222;
+      color: #aaa;
+      font-size: 0.7rem;
+      white-space: nowrap;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #333;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .bar-wrap:hover::after {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -198,7 +225,7 @@
             <td class="num">410 mi</td>
             <td class="highlight">4.35</td>
             <td class="num">146</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">2</td>
@@ -206,7 +233,7 @@
             <td class="num">240 mi</td>
             <td class="highlight">4.00</td>
             <td class="num">135</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">3</td>
@@ -214,7 +241,7 @@
             <td class="num">358 mi</td>
             <td class="highlight">4.00</td>
             <td class="num">135</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">4</td>
@@ -222,7 +249,7 @@
             <td class="num">252 mi</td>
             <td class="highlight">3.92</td>
             <td class="num">132</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">5</td>
@@ -230,7 +257,7 @@
             <td class="num">320 mi</td>
             <td class="highlight">3.85</td>
             <td class="num">130</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">6</td>
@@ -238,7 +265,7 @@
             <td class="num">224 mi</td>
             <td class="highlight">3.70</td>
             <td class="num">125</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">7</td>
@@ -246,7 +273,7 @@
             <td class="num">405 mi</td>
             <td class="highlight">3.57</td>
             <td class="num">120</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">8</td>
@@ -254,7 +281,7 @@
             <td class="num">212 mi</td>
             <td class="highlight">3.57</td>
             <td class="num">120</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">9</td>
@@ -262,7 +289,7 @@
             <td class="num">261 mi</td>
             <td class="highlight">3.45</td>
             <td class="num">116</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></div></td>
           </tr>
           <tr>
             <td class="rank">10</td>
@@ -270,7 +297,7 @@
             <td class="num">301 mi</td>
             <td class="highlight">3.45</td>
             <td class="num">116</td>
-            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></td>
+            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></div></td>
           </tr>
         </tbody>
       </table>

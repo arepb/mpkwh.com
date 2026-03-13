@@ -10,7 +10,7 @@
 
   <!-- Left content area -->
   <!-- Wordmark -->
-  <text x="80" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#5dff9f" text-anchor="start">MPKWH.COM</text>
+  <text x="80" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#5dff9f" text-anchor="start">MPkWh.com</text>
 
   <!-- Headline -->
   <text x="80" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="46" font-weight="700" fill="#e8e8e8" text-anchor="start">Most Efficient</text>

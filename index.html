@@ -194,6 +194,24 @@
     .bar-wrap:hover::after {
       opacity: 1;
     }
+
+    @media (max-width: 600px) {
+      body { padding: 1.5rem 0.75rem 3rem; }
+
+      h1 { font-size: 1.6rem; }
+
+      .subtitle { font-size: 0.88rem; }
+
+      tbody td { padding: 0.75rem 0.6rem; }
+      thead th { padding: 0.6rem 0.6rem; }
+
+      /* Hide bar and MPGe on mobile — not enough room */
+      .bar-cell, thead th:last-child { display: none; }
+      .hide-mobile { display: none; }
+
+      td.vehicle { font-size: 0.85rem; }
+      td.num, td.highlight { font-size: 0.85rem; }
+    }
   </style>
 </head>
 <body>
@@ -214,7 +232,7 @@
             <th>Vehicle</th>
             <th class="num">Range</th>
             <th class="num">Mi / kWh</th>
-            <th class="num">MPGe</th>
+            <th class="num hide-mobile">MPGe</th>
             <th class="bar-cell"></th>
           </tr>
         </thead>
@@ -224,7 +242,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/lucid/air" target="_blank" rel="noopener">2026 Lucid Air Pure (RWD, 19")</a></td>
             <td class="num">410 mi</td>
             <td class="highlight">4.35</td>
-            <td class="num">146</td>
+            <td class="num hide-mobile">146</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div></div></td>
           </tr>
           <tr>
@@ -232,7 +250,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/hyundai/ioniq-6" target="_blank" rel="noopener">2026 Hyundai Ioniq 6 (Std Range RWD)</a></td>
             <td class="num">240 mi</td>
             <td class="highlight">4.00</td>
-            <td class="num">135</td>
+            <td class="num hide-mobile">135</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div></td>
           </tr>
           <tr>
@@ -240,7 +258,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/tesla/model-3" target="_blank" rel="noopener">2026 Tesla Model 3 (Long Range RWD)</a></td>
             <td class="num">358 mi</td>
             <td class="highlight">4.00</td>
-            <td class="num">135</td>
+            <td class="num hide-mobile">135</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div></td>
           </tr>
           <tr>
@@ -248,7 +266,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/toyota/bz4x" target="_blank" rel="noopener">2026 Toyota bZ4X</a> / <a href="https://www.caranddriver.com/subaru/solterra" target="_blank" rel="noopener">Subaru Solterra</a></td>
             <td class="num">252 mi</td>
             <td class="highlight">3.92</td>
-            <td class="num">132</td>
+            <td class="num hide-mobile">132</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div></div></td>
           </tr>
           <tr>
@@ -256,7 +274,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/tesla/model-y" target="_blank" rel="noopener">2026 Tesla Model Y (Long Range RWD)</a></td>
             <td class="num">320 mi</td>
             <td class="highlight">3.85</td>
-            <td class="num">130</td>
+            <td class="num hide-mobile">130</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div></div></td>
           </tr>
           <tr>
@@ -264,7 +282,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/lexus/rz" target="_blank" rel="noopener">2026 Lexus RZ 300e</a></td>
             <td class="num">224 mi</td>
             <td class="highlight">3.70</td>
-            <td class="num">125</td>
+            <td class="num hide-mobile">125</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div></div></td>
           </tr>
           <tr>
@@ -272,7 +290,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/tesla/model-s" target="_blank" rel="noopener">2026 Tesla Model S</a></td>
             <td class="num">405 mi</td>
             <td class="highlight">3.57</td>
-            <td class="num">120</td>
+            <td class="num hide-mobile">120</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div></td>
           </tr>
           <tr>
@@ -280,7 +298,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/nissan/leaf" target="_blank" rel="noopener">2026 Nissan Leaf</a></td>
             <td class="num">212 mi</td>
             <td class="highlight">3.57</td>
-            <td class="num">120</td>
+            <td class="num hide-mobile">120</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div></td>
           </tr>
           <tr>
@@ -288,7 +306,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/hyundai/kona-electric" target="_blank" rel="noopener">2026 Hyundai Kona Electric</a></td>
             <td class="num">261 mi</td>
             <td class="highlight">3.45</td>
-            <td class="num">116</td>
+            <td class="num hide-mobile">116</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></div></td>
           </tr>
           <tr>
@@ -296,7 +314,7 @@
             <td class="vehicle"><a href="https://www.caranddriver.com/bmw/i4" target="_blank" rel="noopener">2026 BMW i4 eDrive40</a></td>
             <td class="num">301 mi</td>
             <td class="highlight">3.45</td>
-            <td class="num">116</td>
+            <td class="num hide-mobile">116</td>
             <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></div></td>
           </tr>
         </tbody>

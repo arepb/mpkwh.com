@@ -232,24 +232,6 @@
       color: #5dff9f;
     }
 
-    .bar-cell {
-      width: 120px;
-      padding-right: 1rem;
-    }
-
-    .bar-bg {
-      background: #1e1e1e;
-      border-radius: 3px;
-      height: 6px;
-      overflow: hidden;
-    }
-
-    .bar-fill {
-      background: #5dff9f;
-      height: 100%;
-      border-radius: 3px;
-    }
-
     footer {
       max-width: 780px;
       margin: 3rem auto 0;
@@ -261,33 +243,6 @@
     footer a { color: #555; text-decoration: underline; }
     footer a:hover { color: #888; }
 
-    .bar-wrap {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-    }
-
-    .bar-wrap::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: calc(100% + 6px);
-      right: 0;
-      background: #222;
-      color: #aaa;
-      font-size: 0.7rem;
-      white-space: nowrap;
-      padding: 0.3rem 0.5rem;
-      border-radius: 4px;
-      border: 1px solid #333;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.15s;
-    }
-
-    .bar-wrap:hover::after {
-      opacity: 1;
-    }
-
     @media (max-width: 600px) {
       body { padding: 1.5rem 0.75rem 3rem; }
 
@@ -298,8 +253,6 @@
       tbody td { padding: 0.75rem 0.6rem; }
       thead th { padding: 0.6rem 0.6rem; }
 
-      /* Hide bar and MPGe on mobile — not enough room */
-      .bar-cell, thead th:last-child { display: none; }
       .hide-mobile { display: none; }
 
       td.vehicle { font-size: 0.85rem; }
@@ -326,7 +279,7 @@
             <th class="num">Range</th>
             <th class="num">Mi / kWh</th>
             <th class="num hide-mobile">MPGe</th>
-            <th class="bar-cell"></th>
+            <th class="num">Cost / 25 mi †</th>
           </tr>
         </thead>
         <tbody>
@@ -336,7 +289,7 @@
             <td class="num">410 mi</td>
             <td class="highlight">4.35</td>
             <td class="num hide-mobile">146</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div></div></td>
+            <td class="num">$0.92</td>
           </tr>
           <tr>
             <td class="rank">2</td>
@@ -344,7 +297,7 @@
             <td class="num">240 mi</td>
             <td class="highlight">4.00</td>
             <td class="num hide-mobile">135</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div></td>
+            <td class="num">$1.00</td>
           </tr>
           <tr>
             <td class="rank">3</td>
@@ -352,7 +305,7 @@
             <td class="num">358 mi</td>
             <td class="highlight">4.00</td>
             <td class="num hide-mobile">135</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div></td>
+            <td class="num">$1.00</td>
           </tr>
           <tr>
             <td class="rank">4</td>
@@ -360,7 +313,7 @@
             <td class="num">252 mi</td>
             <td class="highlight">3.92</td>
             <td class="num hide-mobile">132</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div></div></td>
+            <td class="num">$1.02</td>
           </tr>
           <tr>
             <td class="rank">5</td>
@@ -368,7 +321,7 @@
             <td class="num">320 mi</td>
             <td class="highlight">3.85</td>
             <td class="num hide-mobile">130</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div></div></td>
+            <td class="num">$1.04</td>
           </tr>
           <tr>
             <td class="rank">6</td>
@@ -376,7 +329,7 @@
             <td class="num">224 mi</td>
             <td class="highlight">3.70</td>
             <td class="num hide-mobile">125</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div></div></td>
+            <td class="num">$1.08</td>
           </tr>
           <tr>
             <td class="rank">7</td>
@@ -384,7 +337,7 @@
             <td class="num">405 mi</td>
             <td class="highlight">3.57</td>
             <td class="num hide-mobile">120</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div></td>
+            <td class="num">$1.12</td>
           </tr>
           <tr>
             <td class="rank">8</td>
@@ -392,7 +345,7 @@
             <td class="num">212 mi</td>
             <td class="highlight">3.57</td>
             <td class="num hide-mobile">120</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div></td>
+            <td class="num">$1.12</td>
           </tr>
           <tr>
             <td class="rank">9</td>
@@ -400,7 +353,7 @@
             <td class="num">261 mi</td>
             <td class="highlight">3.45</td>
             <td class="num hide-mobile">116</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></div></td>
+            <td class="num">$1.16</td>
           </tr>
           <tr>
             <td class="rank">10</td>
@@ -408,7 +361,7 @@
             <td class="num">301 mi</td>
             <td class="highlight">3.45</td>
             <td class="num hide-mobile">116</td>
-            <td class="bar-cell"><div class="bar-wrap" data-tooltip="Efficiency relative to #1 ranked"><div class="bar-bg"><div class="bar-fill" style="width:79%"></div></div></div></td>
+            <td class="num">$1.16</td>
           </tr>
         </tbody>
       </table>
@@ -417,6 +370,7 @@
 
   <footer>
     <p>Data sourced from EPA fuel economy ratings. Efficiency figures reflect the most efficient trim/configuration available for each model. Not all 2026 models have EPA ratings yet — table updates every Monday as new data is published.</p>
+    <p style="margin-top: 0.5rem;">† Cost to drive 25 miles based on US avg. electricity rate of $0.16/kWh (EIA).</p>
     <p style="margin-top: 0.5rem;"><a href="https://www.fueleconomy.gov" target="_blank" rel="noopener">fueleconomy.gov</a> &nbsp;·&nbsp; <a href="https://www.mobilityjobs.com" target="_blank" rel="noopener">mobilityjobs.com</a></p>
   </footer>
 

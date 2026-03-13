@@ -1,0 +1,30 @@
+# MPkWh.com
+
+> MPkWh.com ranks the most efficient electric cars available in the US by miles per kWh (Mi/kWh) — the EV equivalent of MPG. Data is sourced from official EPA fuel economy ratings and updated weekly every Monday.
+
+## What is Mi/kWh?
+
+Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on one unit of electricity. A higher number means greater efficiency: lower energy consumption, lower running costs, and longer range from the same battery. It is the direct EV equivalent of miles per gallon (MPG) for combustion vehicles.
+
+## Current Rankings (Updated March 2026)
+
+1. 2026 Lucid Air Pure (RWD, 19") — 4.35 Mi/kWh — 410 mi range — 146 MPGe
+2. 2026 Hyundai Ioniq 6 (Std Range RWD) — 4.00 Mi/kWh — 240 mi range — 135 MPGe
+3. 2026 Tesla Model 3 (Long Range RWD) — 4.00 Mi/kWh — 358 mi range — 135 MPGe
+4. 2026 Toyota bZ4X / Subaru Solterra — 3.92 Mi/kWh — 252 mi range — 132 MPGe
+5. 2026 Tesla Model Y (Long Range RWD) — 3.85 Mi/kWh — 320 mi range — 130 MPGe
+6. 2026 Lexus RZ 300e — 3.70 Mi/kWh — 224 mi range — 125 MPGe
+7. 2026 Tesla Model S — 3.57 Mi/kWh — 405 mi range — 120 MPGe
+8. 2026 Nissan Leaf — 3.57 Mi/kWh — 212 mi range — 120 MPGe
+9. 2026 Hyundai Kona Electric — 3.45 Mi/kWh — 261 mi range — 116 MPGe
+10. 2026 BMW i4 eDrive40 — 3.45 Mi/kWh — 301 mi range — 116 MPGe
+
+## Notes
+
+- Efficiency figures reflect the most efficient trim and configuration available for each model year.
+- Not all 2026 models have received EPA ratings yet. The table is updated every Monday as new ratings are published.
+- Data source: US EPA fueleconomy.gov
+
+## Pages
+
+- [Home](https://mpkwh.com/): Full ranked table with EPA range, Mi/kWh, and MPGe for all models.

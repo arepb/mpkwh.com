@@ -37,13 +37,22 @@ If the most recent commit on `main` is older than 7 days, the site is overdue.
      2. Diff this week's top-20 vehicle names vs the previous commit's. Any vehicle that's new (or returning after absence) gets a freshly-stamped `<span class="badge-new" data-since="<today>">NEW</span>`.
    There are no rising/falling rank arrows — the previous `.rank-up` system was removed because rank shifts caused by new entrants don't reflect actual efficiency changes.
 
-4. **Sanity-check before commit:**
-   - Tracker table and `index.html` table show identical numbers in identical order.
-   - JSON-LD positions match table ranks.
+4. **Update `llms.txt`** (AI-citable summary):
+   - Bump the "Updated <Month YYYY>" header to today's date.
+   - Replace the numbered top-20 list with this week's rankings, formatted as `N. <Vehicle> — <Mi/kWh> Mi/kWh — <range> mi range — <MPGe> MPGe`.
+   - If the EIA rate changed, update the rate line in Notes.
+   - Keep the "What is Mi/kWh?" section, FAQ-style notes, and Pages link unchanged.
+
+5. **Update `sitemap.xml`:** bump `<lastmod>` to today's date (YYYY-MM-DD).
+
+6. **Sanity-check before commit:**
+   - Tracker, index.html table, and llms.txt list show identical 20 vehicles in identical order.
+   - Both JSON-LD blocks (WebPage/ItemList and FAQPage) parse as valid JSON. The ItemList positions match table ranks.
    - Cost/100mi recomputed if the EIA rate changed (top 3 are visible at a glance — easy to spot-check).
+   - sitemap.xml `<lastmod>` is today's date.
    - View on mobile width (≤480px) — the MPGe column hides via `.hide-mobile`; everything else should still fit.
 
-5. **Commit & push:**
+7. **Commit & push:**
    - One commit, message: `Weekly EV efficiency update - YYYY-MM-DD`.
    - Author: `arepb <reillybrennan@gmail.com>` (configured in this repo's `.git/config`).
    - Push to `main` — GitHub Pages auto-deploys within ~1 minute.
@@ -63,7 +72,14 @@ This repo lives inside a Dropbox-synced folder. Two recurring issues:
 - `ev-efficiency-tracker.md` — source-of-truth data doc (this is what you edit first each week).
 - `CNAME` — `mpkwh.com` (do not delete; do not modify).
 - `favicon.svg`, `preview.png`, `preview.svg` — icons / og:image. Per parent CLAUDE.md: og:image must be raster (PNG), not SVG, for iOS/iMessage preview compatibility.
-- `robots.txt`, `sitemap.xml`, `llms.txt` — standard SEO/AI metadata.
+- `robots.txt` — AI crawlers (GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, GoogleOther) explicitly welcomed.
+- `sitemap.xml` — single URL; `<lastmod>` is bumped to the current date by every weekly update.
+- `llms.txt` — AI-citable plain-text summary of the site. Mirrors the top-20 list and is regenerated each weekly update so AI search engines (ChatGPT, Claude, Perplexity) cite current rankings, not stale data.
+
+## SEO / GEO
+- index.html includes two JSON-LD blocks: `WebPage` (with `ItemList` of all 20 ranked vehicles) and `FAQPage` (stable Q&As about Mi/kWh, calculation, update cadence, data sources). Both must remain valid JSON after every weekly update — validate before committing.
+- All OG/Twitter meta tags are static and don't need weekly updates. og:image is the 1200×630 PNG `/preview.png` (raster, iOS/iMessage compatible).
+- The FAQPage answers are deliberately stable — they describe the methodology, not the rankings. Don't add weekly-changing answers (like "what's the most efficient EV today") because they'd go stale between commits.
 
 ## Mobile responsiveness
 Per parent CLAUDE.md: always consider mobile when editing `index.html`. The site uses a single CSS breakpoint via `.hide-mobile` to drop the MPGe column on narrow viewports. Test changes against ≤480px width.

@@ -32,7 +32,10 @@ If the most recent commit on `main` is older than 7 days, the site is overdue.
    - `<span class="updated">Updated <Month D, YYYY></span>` in the header.
    - The main `<table>` rows in `<main>` — rank, vehicle name, range, Mi/kWh, MPGe (hidden on mobile), Cost/100mi.
    - The JSON-LD `ItemList` block in the `<head>` — must list all 20 vehicles with `position`, `name`, `url`, and `description` (Mi/kWh, EPA range, MPGe).
-   - **NEW badges:** any vehicle that's in this week's top 20 but was NOT in the previous commit's top 20 gets `<span class="badge-new">NEW</span>` appended after its `</a>` link in the vehicle cell. Remove `NEW` badges from vehicles that were marked NEW last week — the badge is for first-week-only. To compute: diff the vehicle names in `git show HEAD:index.html` table rows vs the new list; entrants get NEW, returnees-after-an-absence also get NEW. There are no rising/falling rank arrows — the previous `.rank-up` system was removed because rank shifts caused by new entrants don't reflect actual efficiency changes.
+   - **NEW badges (2-week lifetime):** vehicles get `<span class="badge-new" data-since="YYYY-MM-DD">NEW</span>` appended after their `</a>` link. The `data-since` is the date the vehicle first appeared on the list. The badge stays visible for 14 days from `data-since`, then is removed by the routine. Each weekly run does two things:
+     1. Read every existing `<span class="badge-new" data-since="...">` from the previous commit's index.html. If `today - data-since >= 14 days`, drop the badge from this week's HTML. Otherwise carry it forward (preserve the same `data-since`).
+     2. Diff this week's top-20 vehicle names vs the previous commit's. Any vehicle that's new (or returning after absence) gets a freshly-stamped `<span class="badge-new" data-since="<today>">NEW</span>`.
+   There are no rising/falling rank arrows — the previous `.rank-up` system was removed because rank shifts caused by new entrants don't reflect actual efficiency changes.
 
 4. **Sanity-check before commit:**
    - Tracker table and `index.html` table show identical numbers in identical order.

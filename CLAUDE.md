@@ -32,7 +32,7 @@ If the most recent commit on `main` is older than 7 days, the site is overdue.
    - `<span class="updated">Updated <Month D, YYYY></span>` in the header.
    - The main `<table>` rows in `<main>` — rank, vehicle name, range, Mi/kWh, MPGe (hidden on mobile), Cost/100mi.
    - The JSON-LD `ItemList` block in the `<head>` — must list all 20 vehicles with `position`, `name`, `url`, and `description` (Mi/kWh, EPA range, MPGe).
-   - Any "rising" badges: if a vehicle's rank improved week-over-week, mark it. Remove badges that no longer apply.
+   - **NEW badges:** any vehicle that's in this week's top 20 but was NOT in the previous commit's top 20 gets `<span class="badge-new">NEW</span>` appended after its `</a>` link in the vehicle cell. Remove `NEW` badges from vehicles that were marked NEW last week — the badge is for first-week-only. To compute: diff the vehicle names in `git show HEAD:index.html` table rows vs the new list; entrants get NEW, returnees-after-an-absence also get NEW. There are no rising/falling rank arrows — the previous `.rank-up` system was removed because rank shifts caused by new entrants don't reflect actual efficiency changes.
 
 4. **Sanity-check before commit:**
    - Tracker table and `index.html` table show identical numbers in identical order.

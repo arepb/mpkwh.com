@@ -6,7 +6,7 @@
 
 Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on one unit of electricity. A higher number means greater efficiency: lower energy consumption, lower running costs, and longer range from the same battery. It is the direct EV equivalent of miles per gallon (MPG) for combustion vehicles. Mi/kWh is derived from the EPA's MPGe rating divided by 33.7 (the kWh-energy equivalent of one gallon of gasoline).
 
-## Current Rankings (Updated April 27, 2026)
+## Current Rankings (Updated May 4, 2026)
 
 1. 2026 Lucid Air Pure (RWD, 19") — 4.33 Mi/kWh — 420 mi range — 146 MPGe
 2. 2026 Tesla Model 3 Standard (RWD) — 4.12 Mi/kWh — 321 mi range — 139 MPGe

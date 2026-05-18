@@ -1,4 +1,4 @@
-# EV Efficiency Tracker — Updated May 11, 2026
+# EV Efficiency Tracker — Updated May 18, 2026
 
 ## Top 20 Most Efficient Electric Cars in the US (EPA-Rated)
 
@@ -31,16 +31,16 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1765
 
 ---
 
-## Changelog vs. May 4, 2026
+## Changelog vs. May 11, 2026
 
 ### Rankings Unchanged
 - All vehicle rankings, MPGe ratings, and range figures are unchanged from last week.
 
 ### Electricity Rate Unchanged
-- EIA rate remains **$0.1765/kWh** (February 2026, published April 2026). No newer EIA monthly figure confirmed.
+- EIA rate remains **$0.1765/kWh** (February 2026, published April 2026). March 2026 EIA data not yet officially published (scheduled May 22, 2026).
 
-### NEW Badges Expired
-- Subaru Uncharted (FWD, Premium), Tesla Model Y Standard (AWD), and Lexus RZ 350e (FWD, 18") NEW badges aged out (14 days from 2026-04-27).
+### NEW Badges
+- No active badges to expire or add this week.
 
 ---
 

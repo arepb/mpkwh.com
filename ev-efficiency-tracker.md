@@ -1,4 +1,4 @@
-# EV Efficiency Tracker — Updated May 25, 2026
+# EV Efficiency Tracker — Updated June 1, 2026
 
 ## Top 20 Most Efficient Electric Cars in the US (EPA-Rated)
 
@@ -21,26 +21,33 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1805
 | 11 | 2026 Lucid Air Pure (RWD, 20") | 372 | 3.83 | 129 | $4.71 |
 | 12 | 2026 Tesla Model 3 Premium (AWD) | 346 | 3.80 | 128 | $4.75 |
 | 13 | 2026 Lucid Air Grand Touring XR (AWD, 19") | 512 | 3.80 | 128 | $4.75 |
-| 14 | 2026 Tesla Model Y Standard (AWD) | 294 | 3.77 | 127 | $4.79 |
-| 15 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 3.74 | 126 | $4.83 |
-| 16 | 2026 Mercedes-Benz CLA 250 Plus EQ (22") | 374 | 3.74 | 126 | $4.83 |
-| 17 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 3.71 | 125 | $4.87 |
-| 18 | 2026 Tesla Model S | 410 | 3.68 | 124 | $4.90 |
-| 19 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 3.65 | 123 | $4.95 |
-| 20 | 2026 Tesla Model Y Long Range (AWD) | 327 | 3.65 | 123 | $4.95 |
+| 14 | 2026 Lexus ES 350e (FWD, 19") | 307 | 3.77 | 127 | $4.79 |
+| 15 | 2026 Tesla Model Y Standard (AWD) | 294 | 3.77 | 127 | $4.79 |
+| 16 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 3.74 | 126 | $4.83 |
+| 17 | 2026 Mercedes-Benz CLA 250 Plus EQ (22") | 374 | 3.74 | 126 | $4.83 |
+| 18 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 3.71 | 125 | $4.87 |
+| 19 | 2026 Tesla Model S | 410 | 3.68 | 124 | $4.90 |
+| 20 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 3.65 | 123 | $4.95 |
 
 ---
 
-## Changelog vs. May 18, 2026
+## Changelog vs. May 25, 2026
 
-### Rankings Unchanged
-- All vehicle rankings, MPGe ratings, and range figures are unchanged from last week.
+### New Entrant
+- **2026 Lexus ES 350e (FWD, 19")** added at rank 14. EPA-rated 127 MPGe / 307 mi range. The eighth-generation Lexus ES electric sedan arrived in US dealerships in April 2026; EPA certification confirmed this week. Gets NEW badge (data-since: 2026-06-01).
 
-### Electricity Rate Updated
-- EIA rate updated to **$0.1805/kWh** (March 2026, published May 2026), up from $0.1765/kWh (February 2026). All Cost/100mi values recalculated.
+### Dropped
+- **2026 Tesla Model Y Long Range (AWD)** (123 MPGe) falls from rank 20 to rank 21 — displaced by the new Lexus ES 350e entry.
+
+### Rank Shifts
+- Ranks 14–20 shifted by +1 due to Lexus ES 350e insertion at rank 14.
+
+### Electricity Rate
+- EIA rate unchanged at **$0.1805/kWh** (March 2026, published May 2026). April 2026 data not yet published (expected June 24, 2026).
 
 ### NEW Badges
-- No active badges to expire or add this week.
+- Lexus ES 350e: fresh badge stamped 2026-06-01.
+- No prior badges to expire.
 
 ---
 

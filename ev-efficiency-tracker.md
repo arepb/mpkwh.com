@@ -1,4 +1,4 @@
-# EV Efficiency Tracker — Updated June 1, 2026
+# EV Efficiency Tracker — Updated June 8, 2026
 
 ## Top 20 Most Efficient Electric Cars in the US (EPA-Rated)
 
@@ -28,6 +28,21 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1805
 | 18 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 3.71 | 125 | $4.87 |
 | 19 | 2026 Tesla Model S | 410 | 3.68 | 124 | $4.90 |
 | 20 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 3.65 | 123 | $4.95 |
+
+---
+
+## Changelog vs. June 1, 2026
+
+### No data changes
+- EIA rate unchanged at **$0.1805/kWh** (March 2026, published May 2026). April 2026 data not yet published (expected June 24, 2026).
+- No new EPA certifications changing the top 20.
+- Header dates bumped to June 8, 2026.
+
+### HTML sync fix
+- The second June 1 commit (6943db6) had incorrectly reverted index.html — it used $0.1883/kWh and omitted Lexus ES 350e. Fixed in this update.
+
+### NEW Badges
+- Lexus ES 350e: badge carried forward (data-since: 2026-06-01, age: 7 days — expires 2026-06-15).
 
 ---
 

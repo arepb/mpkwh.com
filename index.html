@@ -411,12 +411,18 @@
 
       .subtitle { font-size: 0.88rem; }
 
-      tbody td { padding: 0.75rem 0.6rem; }
+      tbody td { padding: 0 0.6rem; }
       thead th { padding: 0.6rem 0.6rem; }
 
       .hide-mobile { display: none; }
 
-      td.vehicle { font-size: 0.85rem; }
+      td.vehicle { font-size: 0.85rem; padding-left: 0; }
+      td.vehicle a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0.5rem 0.6rem;
+      }
       td.num, td.highlight { font-size: 0.85rem; }
     }
   </style>

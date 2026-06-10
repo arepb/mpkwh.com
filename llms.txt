@@ -4,38 +4,40 @@
 
 ## What is Mi/kWh?
 
-Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on one unit of electricity. A higher number means greater efficiency: lower energy consumption, lower running costs, and longer range from the same battery. It is the direct EV equivalent of miles per gallon (MPG) for combustion vehicles. Mi/kWh is derived from the EPA's MPGe rating divided by 33.7 (the kWh-energy equivalent of one gallon of gasoline).
+Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on one unit of electricity. A higher number means greater efficiency: lower energy consumption, lower running costs, and longer range from the same battery. Mi/kWh is calculated as EPA-rated range divided by usable battery capacity — the portion of the pack the car can actually access. This measures battery-to-wheel efficiency.
 
-## Current Rankings (Updated April 27, 2026)
+## Current Rankings (Updated June 9, 2026)
 
-1. 2026 Lucid Air Pure (RWD, 19") — 4.33 Mi/kWh — 420 mi range — 146 MPGe
-2. 2026 Tesla Model 3 Standard (RWD) — 4.12 Mi/kWh — 321 mi range — 139 MPGe
-3. 2026 Tesla Model Y Standard (RWD, 18") — 4.09 Mi/kWh — 321 mi range — 138 MPGe
-4. 2026 Tesla Model 3 Premium (RWD) — 4.07 Mi/kWh — 363 mi range — 137 MPGe
-5. 2026 Tesla Model Y Long Range (RWD) — 3.98 Mi/kWh — 357 mi range — 134 MPGe
-6. 2026 Lucid Air Touring (AWD, 19") — 3.98 Mi/kWh — 431 mi range — 134 MPGe
-7. 2026 Toyota bZ (FWD, 191 Ah) — 3.89 Mi/kWh — 314 mi range — 131 MPGe
-8. 2026 Tesla Model Y Standard (RWD, 19") — 3.89 Mi/kWh — 303 mi range — 131 MPGe
-9. 2026 Toyota bZ (FWD, 200 Ah) — 3.86 Mi/kWh — 236 mi range — 130 MPGe
-10. 2026 Subaru Uncharted (FWD, Premium) — 3.83 Mi/kWh — 308 mi range — 129 MPGe
-11. 2026 Lucid Air Pure (RWD, 20") — 3.83 Mi/kWh — 372 mi range — 129 MPGe
-12. 2026 Tesla Model 3 Premium (AWD) — 3.80 Mi/kWh — 346 mi range — 128 MPGe
-13. 2026 Lucid Air Grand Touring XR (AWD, 19") — 3.80 Mi/kWh — 512 mi range — 128 MPGe
-14. 2026 Tesla Model Y Standard (AWD) — 3.77 Mi/kWh — 294 mi range — 127 MPGe
-15. 2026 Lexus RZ 350e (FWD, 18") — 3.74 Mi/kWh — 301 mi range — 126 MPGe
-16. 2026 Mercedes-Benz CLA 250 Plus EQ (22") — 3.74 Mi/kWh — 374 mi range — 126 MPGe
-17. 2026 Toyota bZ LIMITED (FWD, 191 Ah) — 3.71 Mi/kWh — 299 mi range — 125 MPGe
-18. 2026 Tesla Model S — 3.68 Mi/kWh — 410 mi range — 124 MPGe
-19. 2026 Toyota bZ LIMITED (FWD, 200 Ah) — 3.65 Mi/kWh — 296 mi range — 123 MPGe
-20. 2026 Tesla Model Y Long Range (AWD) — 3.65 Mi/kWh — 327 mi range — 123 MPGe
+1. 2026 Lucid Air Pure (RWD, 19") — 5.00 Mi/kWh — 420 mi range — 84 kWh usable
+2. 2026 Lucid Air Touring (AWD, 19") — 4.68 Mi/kWh — 431 mi range — 92 kWh usable
+3. 2026 Tesla Model 3 Standard (RWD) — 4.62 Mi/kWh — 321 mi range — 69.5 kWh usable
+4. 2026 Tesla Model Y Standard (RWD, 18") — 4.62 Mi/kWh — 321 mi range — 69.5 kWh usable
+5. 2026 Tesla Model 3 Premium (RWD) — 4.59 Mi/kWh — 363 mi range — 79 kWh usable
+6. 2026 Tesla Model Y Long Range (RWD) — 4.46 Mi/kWh — 357 mi range — 80 kWh usable
+7. 2026 Lucid Air Pure (RWD, 20") — 4.43 Mi/kWh — 372 mi range — 84 kWh usable
+8. 2026 Toyota bZ (FWD, 191 Ah) — 4.42 Mi/kWh — 314 mi range — 71 kWh usable
+9. 2026 Mercedes-Benz CLA 250 Plus EQ (22") — 4.40 Mi/kWh — 374 mi range — 85 kWh usable
+10. 2026 Tesla Model 3 Premium (AWD) — 4.38 Mi/kWh — 346 mi range — 79 kWh usable
+11. 2026 Lucid Air Grand Touring (AWD, 19") — 4.38 Mi/kWh — 512 mi range — 117 kWh usable
+12. 2026 Toyota bZ (FWD, 200 Ah) — 4.37 Mi/kWh — 236 mi range — 54 kWh usable
+13. 2026 Tesla Model Y Standard (RWD, 19") — 4.36 Mi/kWh — 303 mi range — 69.5 kWh usable
+14. 2026 Subaru Uncharted (FWD, Premium) — 4.28 Mi/kWh — 308 mi range — 72 kWh usable
+15. 2026 Tesla Model Y Standard (AWD) — 4.23 Mi/kWh — 294 mi range — 69.5 kWh usable
+16. 2026 Toyota bZ LIMITED (FWD, 191 Ah) — 4.21 Mi/kWh — 299 mi range — 71 kWh usable
+17. 2026 Lexus RZ 350e (FWD, 18") — 4.18 Mi/kWh — 301 mi range — 72 kWh usable
+18. 2026 Toyota bZ LIMITED (FWD, 200 Ah) — 4.17 Mi/kWh — 296 mi range — 71 kWh usable
+19. 2026 Tesla Model S — 4.14 Mi/kWh — 410 mi range — 99 kWh usable
+20. 2026 Tesla Model Y Long Range (AWD) — 4.09 Mi/kWh — 327 mi range — 80 kWh usable
 
 ## Notes
 
+- Mi/kWh = EPA range ÷ usable battery capacity. Measures battery-to-wheel efficiency (not wall-to-wheel, which would include charging losses).
 - Efficiency figures reflect the most efficient trim and configuration available for each model year.
+- Pack sizes sourced from ev-database.org, manufacturer spec pages, and EPA energy calculations (range × kWh/100mi × 0.89 charging efficiency). Tesla does not publicly disclose battery capacity — Tesla usable kWh figures are cross-verified via EPA energy data and C&D spec boxes.
 - Not all 2026 models have received EPA ratings yet. The table is updated every Monday as new ratings are published.
-- Cost-per-100-miles uses the latest US average residential electricity rate published monthly by the US Energy Information Administration (EIA). As of April 2026: $0.1765/kWh (February 2026 figure, published April 2026).
-- Data source: US EPA fueleconomy.gov
+- Cost-per-100-miles uses the latest US average residential electricity rate published monthly by the US Energy Information Administration (EIA). As of June 2026: $0.1883/kWh (March 2026 figure, published May 2026).
+- Data source: US EPA fueleconomy.gov, ev-database.org
 
 ## Pages
 
-- [Home](https://mpkwh.com/): Full ranked table with EPA range, Mi/kWh, MPGe, and cost-per-100-miles for all models.
+- [Home](https://mpkwh.com/): Full ranked table with EPA range, pack kWh, usable kWh, Mi/kWh, and cost-per-100-miles for all models.

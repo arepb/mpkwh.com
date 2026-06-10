@@ -1,7 +1,7 @@
 # MPkWh.com — Project Instructions
 
 ## What this is
-mpkwh.com — a static site ranking the most efficient electric cars sold in the US by Mi/kWh (EPA-derived). Single-page HTML, no build step.
+mpkwh.com — a static site ranking the most efficient electric cars sold in the US by Mi/kWh (EPA range ÷ usable battery capacity). Single-page HTML, no build step.
 
 - **Repo:** https://github.com/arepb/mpkwh.com
 - **Live:** https://mpkwh.com
@@ -20,18 +20,19 @@ If the most recent commit on `main` is older than 7 days, the site is overdue.
 
 1. **Refresh inputs:**
    - EPA fuel economy ratings for new/changed model years (caranddriver.com is the linked source per vehicle).
-   - EIA US average residential electricity rate (published monthly with ~2-month lag). Stored at the top of `ev-efficiency-tracker.md` as `$0.XXXX/kWh`. As of 2026-04-27 it's `$0.1765/kWh` (Feb 2026, published April 2026).
+   - EIA US average residential electricity rate (published monthly with ~2-month lag). Stored at the top of `ev-efficiency-tracker.md` as `$0.XXXX/kWh`.
+   - Usable battery pack sizes from ev-database.org — check for updates to existing vehicles or new entrants.
 
 2. **Update `ev-efficiency-tracker.md`:**
    - Header date (`# EV Efficiency Tracker — Updated <Month D, YYYY>`).
    - EIA rate line if it changed.
-   - Top-20 table: rank, vehicle, EPA range, Mi/kWh (= MPGe ÷ 33.7), MPGe, Cost/100mi (= 100 ÷ Mi/kWh × rate).
+   - Top-20 table: rank, vehicle, EPA range, Gross kWh, Usable kWh, Mi/kWh (= EPA range ÷ Usable kWh), Cost/100mi (= 100 ÷ Mi/kWh × rate).
    - Re-sort by Mi/kWh descending; reassign ranks 1–20.
 
 3. **Sync into `index.html`** — every weekly update touches FOUR places:
    - `<span class="updated">Updated <Month D, YYYY></span>` in the header.
-   - The main `<table>` rows in `<main>` — rank, vehicle name, range, Mi/kWh, MPGe (hidden on mobile), Cost/100mi.
-   - The JSON-LD `ItemList` block in the `<head>` — must list all 20 vehicles with `position`, `name`, `url`, and `description` (Mi/kWh, EPA range, MPGe).
+   - The main `<table>` rows in `<main>` — rank, vehicle name, range, Pack kWh (hidden on mobile), Usable kWh (hidden on mobile), Mi/kWh, Cost/100mi.
+   - The JSON-LD `ItemList` block in the `<head>` — must list all 20 vehicles with `position`, `name`, `url`, and `description` (Mi/kWh, EPA range, usable kWh). Format: `"5.35 Mi/kWh — 321 mi EPA range — 60 kWh usable"`.
    - **NEW badges (2-week lifetime):** vehicles get `<span class="badge-new" data-since="YYYY-MM-DD">NEW</span>` appended after their `</a>` link. The `data-since` is the date the vehicle first appeared on the list. The badge stays visible for 14 days from `data-since`, then is removed by the routine. Each weekly run does two things:
      1. Read every existing `<span class="badge-new" data-since="...">` from the previous commit's index.html. If `today - data-since >= 14 days`, drop the badge from this week's HTML. Otherwise carry it forward (preserve the same `data-since`).
      2. Diff this week's top-20 vehicle names vs the previous commit's. Any vehicle that's new (or returning after absence) gets a freshly-stamped `<span class="badge-new" data-since="<today>">NEW</span>`.
@@ -39,7 +40,7 @@ If the most recent commit on `main` is older than 7 days, the site is overdue.
 
 4. **Update `llms.txt`** (AI-citable summary):
    - Bump the "Updated <Month YYYY>" header to today's date.
-   - Replace the numbered top-20 list with this week's rankings, formatted as `N. <Vehicle> — <Mi/kWh> Mi/kWh — <range> mi range — <MPGe> MPGe`.
+   - Replace the numbered top-20 list with this week's rankings, formatted as `N. <Vehicle> — <Mi/kWh> Mi/kWh — <range> mi range — <usable kWh> kWh usable`.
    - If the EIA rate changed, update the rate line in Notes.
    - Keep the "What is Mi/kWh?" section, FAQ-style notes, and Pages link unchanged.
 
@@ -50,7 +51,7 @@ If the most recent commit on `main` is older than 7 days, the site is overdue.
    - Both JSON-LD blocks (WebPage/ItemList and FAQPage) parse as valid JSON. The ItemList positions match table ranks.
    - Cost/100mi recomputed if the EIA rate changed (top 3 are visible at a glance — easy to spot-check).
    - sitemap.xml `<lastmod>` is today's date.
-   - View on mobile width (≤480px) — the MPGe column hides via `.hide-mobile`; everything else should still fit.
+   - View on mobile width (≤480px) — the Pack kWh and Usable kWh columns hide via `.hide-mobile`; everything else should still fit.
 
 7. **Commit & push:**
    - One commit, message: `Weekly EV efficiency update - YYYY-MM-DD`.
@@ -82,4 +83,4 @@ This repo lives inside a Dropbox-synced folder. Two recurring issues:
 - The FAQPage answers are deliberately stable — they describe the methodology, not the rankings. Don't add weekly-changing answers (like "what's the most efficient EV today") because they'd go stale between commits.
 
 ## Mobile responsiveness
-Per parent CLAUDE.md: always consider mobile when editing `index.html`. The site uses a single CSS breakpoint via `.hide-mobile` to drop the MPGe column on narrow viewports. Test changes against ≤480px width.
+Per parent CLAUDE.md: always consider mobile when editing `index.html`. The site uses a single CSS breakpoint via `.hide-mobile` to hide the Pack kWh and Usable kWh columns on narrow viewports. Test changes against ≤480px width.

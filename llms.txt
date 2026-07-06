@@ -6,7 +6,7 @@
 
 Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on one unit of electricity. A higher number means greater efficiency: lower energy consumption, lower running costs, and longer range from the same battery. Mi/kWh is calculated as EPA-rated range divided by usable battery capacity — the portion of the pack the car can actually access. This measures battery-to-wheel efficiency.
 
-## Current Rankings (Updated June 29, 2026)
+## Current Rankings (Updated July 6, 2026)
 
 1. 2026 Lucid Air Pure (RWD, 19") — 5.00 Mi/kWh — 420 mi range — 84 kWh usable
 2. 2026 Lucid Air Touring (AWD, 19") — 4.68 Mi/kWh — 431 mi range — 92 kWh usable
@@ -35,7 +35,7 @@ Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on
 - Efficiency figures reflect the most efficient trim and configuration available for each model year.
 - Pack sizes sourced from ev-database.org, manufacturer spec pages, and EPA energy calculations (range × kWh/100mi × 0.89 charging efficiency). Tesla does not publicly disclose battery capacity — Tesla usable kWh figures are cross-verified via EPA energy data and C&D spec boxes.
 - Not all 2026 models have received EPA ratings yet. The table is updated every Monday as new ratings are published.
-- Cost-per-100-miles uses the latest US average residential electricity rate published monthly by the US Energy Information Administration (EIA). As of June 2026: $0.1883/kWh (March 2026 figure, published May 2026).
+- Cost-per-100-miles uses the latest US average residential electricity rate published monthly by the US Energy Information Administration (EIA). As of July 2026: $0.1883/kWh (April 2026 figure, published June 2026).
 - Data source: US EPA fueleconomy.gov, ev-database.org
 
 ## Pages

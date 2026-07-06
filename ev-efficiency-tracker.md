@@ -1,11 +1,11 @@
-# EV Efficiency Tracker — Updated June 29, 2026
+# EV Efficiency Tracker — Updated July 6, 2026
 
 ## Top 20 Most Efficient Electric Cars in the US (EPA-Rated)
 
 Sorted by Mi/kWh descending. **Mi/kWh = EPA range ÷ usable battery capacity.**
 Pack sizes sourced from ev-database.org and manufacturer spec pages.
 ⁺ Tesla does not publicly disclose battery capacity; figures estimated from third-party discharge tests and teardown data.
-EIA US avg. residential electricity rate: **$0.1883/kWh** (March 2026, published May 2026).
+EIA US avg. residential electricity rate: **$0.1883/kWh** (April 2026, published June 2026).
 Cost/100mi = (100 ÷ Mi/kWh) × $0.1883
 
 | Rank | Vehicle | Range (EPA mi) | Gross kWh | Usable kWh | Mi/kWh | Cost/100mi |
@@ -52,7 +52,7 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1883
 - "Lucid Air Grand Touring XR" corrected to "Lucid Air Grand Touring" — "XR" is not an official Lucid trim designation.
 
 ### Electricity Rate
-- EIA rate unchanged at **$0.1883/kWh** (March 2026, published May 2026).
+- EIA rate unchanged at **$0.1883/kWh** (April 2026, published June 2026).
 
 ---
 

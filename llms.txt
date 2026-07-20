@@ -6,7 +6,7 @@
 
 Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on one unit of electricity. A higher number means greater efficiency: lower energy consumption, lower running costs, and longer range from the same battery. Mi/kWh is calculated as EPA-rated range divided by usable battery capacity — the portion of the pack the car can actually access. This measures battery-to-wheel efficiency.
 
-## Current Rankings (Updated July 13, 2026)
+## Current Rankings (Updated July 20, 2026)
 
 1. 2026 Lucid Air Pure (RWD, 19") — 5.00 Mi/kWh — 420 mi range — 84 kWh usable
 2. 2026 Lucid Air Touring (AWD, 19") — 4.68 Mi/kWh — 431 mi range — 92 kWh usable

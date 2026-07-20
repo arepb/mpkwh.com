@@ -48,7 +48,7 @@ def fetch_eia_rate(api_key):
         f"?api_key={pct_encode(api_key, safe='')}"
         "&frequency=monthly"
         "&data[0]=price"
-        "&facets[sectorName][]=residential"
+        "&facets[sectorid][]=residential"
         "&facets[stateid][]=US"
         "&sort[0][column]=period"
         "&sort[0][direction]=desc"

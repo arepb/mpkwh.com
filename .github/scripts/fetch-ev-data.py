@@ -67,7 +67,7 @@ def fetch_eia_rate(api_key):
         facets = facet_data.get("response", {}).get("facets", [])
         print(f"  EIA sectorid facets: {facets}", file=sys.stderr)
         sectorid = next(
-            (f["id"] for f in facets if "residential" in f.get("description", "").lower()),
+            (f["id"] for f in facets if "residential" in f.get("name", "").lower()),
             None,
         )
     except Exception as exc:

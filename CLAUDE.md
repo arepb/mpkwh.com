@@ -33,8 +33,9 @@ If `data-cache.json` is missing or `epa_evs_2026` is empty (Action hasn't run ye
 1. **Refresh inputs from `data-cache.json`:**
    - Read `data-cache.json` first. Compare `eia.rate_per_kwh` to the current value in `ev-efficiency-tracker.md`. If different, use the new rate and update `period_label`/`published_label` references.
    - For each vehicle in the current top-20, find the matching entry in `epa_evs_2026` by make/model/trim. If `range` differs from the tracker, note it.
-   - Check the top entries of `epa_evs_2026` for any vehicle with high enough range that, divided by its usable kWh (from the Pack Size Sources table in the tracker), would exceed the current rank-20 threshold (~4.09 Mi/kWh). Flag any new entrant.
+   - Check the top entries of `epa_evs_2026` for any vehicle with high enough range that, divided by its usable kWh (from the Pack Size Sources table in the tracker), would exceed the current rank-20 threshold (currently ~4.16 Mi/kWh — always check the tracker for the live figure; it shifts when new entrants push the cutoff up).
    - Usable kWh is **not** in the cache — it is manually maintained in the tracker from ev-database.org and manufacturer specs.
+   - **For new entrants with no confirmed pack spec:** estimate usable kWh from the EPA energy calc: `range × (kwh_per_100mi / 100) × charging_efficiency`. Effective charging efficiency varies by manufacturer — calibrated from known pack specs: Tesla ~89%, Toyota/Lexus ~89–90%, Lucid ~86–87%. For Lucid, always prefer the confirmed spec from EVKX or UltimateSpecs over the EPA calc — Lucid's real efficiency is lower than the 0.89 default, so the EPA calc significantly overshoots. Document estimated values in Pack Size Sources with a note that manufacturer spec is unconfirmed. Update the entry as soon as the confirmed spec becomes available (ev-database.org usually has it within a few weeks of EPA rating).
 
 2. **Update `ev-efficiency-tracker.md`:**
    - Header date (`# EV Efficiency Tracker — Updated <Month D, YYYY>`).

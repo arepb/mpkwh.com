@@ -1,11 +1,3221 @@
 {
-  "fetched_at": "2026-07-20T00:00:00Z",
-  "_note": "Bootstrap placeholder — epa_evs_2026 will be populated on the first GitHub Action run (next Sunday). EIA value matches current tracker.",
+  "fetched_at": "2026-07-20T16:28:31Z",
   "eia": {
     "rate_per_kwh": 0.1883,
     "period": "2026-04",
     "period_label": "April 2026",
     "published_label": "June 2026"
   },
-  "epa_evs_2026": []
+  "epa_evs_2026": [
+    {
+      "id": "49969",
+      "make": "Lucid",
+      "model": "Air Pure RWD with 19 inch wheels",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 420,
+      "mpge": 146.0,
+      "kwh_per_100mi": 23.14
+    },
+    {
+      "id": "50251",
+      "make": "Tesla",
+      "model": "Model 3 Standard RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 321,
+      "mpge": 139.0,
+      "kwh_per_100mi": 24.3
+    },
+    {
+      "id": "50040",
+      "make": "Tesla",
+      "model": "Model Y Standard RWD (18in Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 321,
+      "mpge": 138.0,
+      "kwh_per_100mi": 24.35
+    },
+    {
+      "id": "50038",
+      "make": "Tesla",
+      "model": "Model 3 Premium RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 363,
+      "mpge": 137.0,
+      "kwh_per_100mi": 24.64
+    },
+    {
+      "id": "49743",
+      "make": "Tesla",
+      "model": "Model Y Long Range RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 357,
+      "mpge": 134.0,
+      "kwh_per_100mi": 25.23
+    },
+    {
+      "id": "49972",
+      "make": "Lucid",
+      "model": "Air Touring AWD with 19 inch wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 431,
+      "mpge": 134.0,
+      "kwh_per_100mi": 25.19
+    },
+    {
+      "id": "50041",
+      "make": "Tesla",
+      "model": "Model Y Standard RWD (19in Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 303,
+      "mpge": 131.0,
+      "kwh_per_100mi": 25.69
+    },
+    {
+      "id": "50042",
+      "make": "Toyota",
+      "model": "bZ (energy capacity 191 Ah)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 314,
+      "mpge": 131.0,
+      "kwh_per_100mi": 25.5
+    },
+    {
+      "id": "49983",
+      "make": "Toyota",
+      "model": "bZ (energy capacity 200 Ah)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 236,
+      "mpge": 130.0,
+      "kwh_per_100mi": 25.84
+    },
+    {
+      "id": "49970",
+      "make": "Lucid",
+      "model": "Air Pure RWD with 20 inch wheels",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 372,
+      "mpge": 129.0,
+      "kwh_per_100mi": 26.1
+    },
+    {
+      "id": "50301",
+      "make": "Subaru",
+      "model": "Uncharted",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 308,
+      "mpge": 129.0,
+      "kwh_per_100mi": 25.66
+    },
+    {
+      "id": "49966",
+      "make": "Lucid",
+      "model": "Air G Touring XR AWD with19 inch wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 512,
+      "mpge": 128.0,
+      "kwh_per_100mi": 26.43
+    },
+    {
+      "id": "50037",
+      "make": "Tesla",
+      "model": "Model 3 Premium AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 346,
+      "mpge": 128.0,
+      "kwh_per_100mi": 26.38
+    },
+    {
+      "id": "50304",
+      "make": "Tesla",
+      "model": "Model Y Standard AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 294,
+      "mpge": 127.0,
+      "kwh_per_100mi": 26.5
+    },
+    {
+      "id": "50450",
+      "make": "Lexus",
+      "model": "ES 350e (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 307,
+      "mpge": 127.0,
+      "kwh_per_100mi": 27.0
+    },
+    {
+      "id": "50031",
+      "make": "Mercedes-Benz",
+      "model": "CLA250 Plus with EQ Tech (R22)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 374,
+      "mpge": 126.0,
+      "kwh_per_100mi": 27.0
+    },
+    {
+      "id": "50291",
+      "make": "Lexus",
+      "model": "RZ 350e FWD (18 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 301,
+      "mpge": 126.0,
+      "kwh_per_100mi": 26.6
+    },
+    {
+      "id": "50043",
+      "make": "Toyota",
+      "model": "bZ LIMITED (energy capacity 191 Ah)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 299,
+      "mpge": 125.0,
+      "kwh_per_100mi": 26.86
+    },
+    {
+      "id": "49741",
+      "make": "Tesla",
+      "model": "Model S",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 410,
+      "mpge": 124.0,
+      "kwh_per_100mi": 27.13
+    },
+    {
+      "id": "49744",
+      "make": "Tesla",
+      "model": "Model Y Long Range AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 327,
+      "mpge": 123.0,
+      "kwh_per_100mi": 27.5
+    },
+    {
+      "id": "49973",
+      "make": "Lucid",
+      "model": "Air Touring AWD with 20 inch wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 396,
+      "mpge": 123.0,
+      "kwh_per_100mi": 27.31
+    },
+    {
+      "id": "49984",
+      "make": "Toyota",
+      "model": "bZ LIMITED (energy capacity 200 Ah)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 296,
+      "mpge": 123.0,
+      "kwh_per_100mi": 27.49
+    },
+    {
+      "id": "49975",
+      "make": "Nissan",
+      "model": "LEAF 75kWh (18 inch steel Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 303,
+      "mpge": 121.0,
+      "kwh_per_100mi": 27.82
+    },
+    {
+      "id": "50451",
+      "make": "Lexus",
+      "model": "ES 350e (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 292,
+      "mpge": 121.0,
+      "kwh_per_100mi": 27.52
+    },
+    {
+      "id": "49967",
+      "make": "Lucid",
+      "model": "Air G Touring XR AWD with 20 inch wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 480,
+      "mpge": 120.0,
+      "kwh_per_100mi": 28.16
+    },
+    {
+      "id": "49982",
+      "make": "Subaru",
+      "model": "Solterra AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 288,
+      "mpge": 120.0,
+      "kwh_per_100mi": 27.96
+    },
+    {
+      "id": "49985",
+      "make": "Toyota",
+      "model": "bZ AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 288,
+      "mpge": 120.0,
+      "kwh_per_100mi": 28.0
+    },
+    {
+      "id": "50216",
+      "make": "Lexus",
+      "model": "RZ 350e FWD (20 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 284,
+      "mpge": 120.0,
+      "kwh_per_100mi": 28.13
+    },
+    {
+      "id": "50032",
+      "make": "Mercedes-Benz",
+      "model": "CLA350 4matic with EQ Tech",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 312,
+      "mpge": 118.0,
+      "kwh_per_100mi": 29.0
+    },
+    {
+      "id": "50188",
+      "make": "BMW",
+      "model": "i4 eDrive40 Gran Coupe (18 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 333,
+      "mpge": 118.0,
+      "kwh_per_100mi": 28.53
+    },
+    {
+      "id": "49981",
+      "make": "Subaru",
+      "model": "Solterra 20 AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 278,
+      "mpge": 117.0,
+      "kwh_per_100mi": 28.92
+    },
+    {
+      "id": "49986",
+      "make": "Toyota",
+      "model": "bZ AWD LIMITED",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 278,
+      "mpge": 117.0,
+      "kwh_per_100mi": 28.92
+    },
+    {
+      "id": "50300",
+      "make": "Subaru",
+      "model": "Trailseeker AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 281,
+      "mpge": 117.0,
+      "kwh_per_100mi": 29.0
+    },
+    {
+      "id": "50303",
+      "make": "Subaru",
+      "model": "Uncharted AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 287,
+      "mpge": 117.0,
+      "kwh_per_100mi": 29.0
+    },
+    {
+      "id": "50305",
+      "make": "Toyota",
+      "model": "bZ Woodland AWD 235/60R18",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 281,
+      "mpge": 117.0,
+      "kwh_per_100mi": 29.0
+    },
+    {
+      "id": "50307",
+      "make": "Toyota",
+      "model": "C-HR AWD 18inch",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 287,
+      "mpge": 117.0,
+      "kwh_per_100mi": 29.0
+    },
+    {
+      "id": "49989",
+      "make": "Volvo",
+      "model": "EX30 Single motor extended range",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 261,
+      "mpge": 116.0,
+      "kwh_per_100mi": 29.17
+    },
+    {
+      "id": "50198",
+      "make": "Fiat",
+      "model": "500e",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 149,
+      "mpge": 116.0,
+      "kwh_per_100mi": 29.18
+    },
+    {
+      "id": "49612",
+      "make": "Audi",
+      "model": "Q4 45 e-tron",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 288,
+      "mpge": 115.0,
+      "kwh_per_100mi": 29.4
+    },
+    {
+      "id": "49961",
+      "make": "Hyundai",
+      "model": "Ioniq 5 Standard range",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 245,
+      "mpge": 115.0,
+      "kwh_per_100mi": 29.0
+    },
+    {
+      "id": "50215",
+      "make": "Kia",
+      "model": "EV6 Standard Range RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 237,
+      "mpge": 115.0,
+      "kwh_per_100mi": 29.22
+    },
+    {
+      "id": "49960",
+      "make": "Hyundai",
+      "model": "Ioniq 5 RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 318,
+      "mpge": 114.0,
+      "kwh_per_100mi": 30.0
+    },
+    {
+      "id": "49974",
+      "make": "Nissan",
+      "model": "LEAF 75kWh (18 inch alloy Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 288,
+      "mpge": 114.0,
+      "kwh_per_100mi": 30.0
+    },
+    {
+      "id": "50036",
+      "make": "Tesla",
+      "model": "Model 3 Performance",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 309,
+      "mpge": 114.0,
+      "kwh_per_100mi": 29.59
+    },
+    {
+      "id": "50214",
+      "make": "Kia",
+      "model": "EV6 Long Range RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 319,
+      "mpge": 114.0,
+      "kwh_per_100mi": 29.58
+    },
+    {
+      "id": "50299",
+      "make": "Subaru",
+      "model": "Trailseeker 20 inch AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 274,
+      "mpge": 114.0,
+      "kwh_per_100mi": 30.0
+    },
+    {
+      "id": "50452",
+      "make": "Lexus",
+      "model": "ES 500e AWD (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 276,
+      "mpge": 114.0,
+      "kwh_per_100mi": 30.0
+    },
+    {
+      "id": "49664",
+      "make": "Kia",
+      "model": "Niro Electric",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 253,
+      "mpge": 113.0,
+      "kwh_per_100mi": 30.0
+    },
+    {
+      "id": "49987",
+      "make": "Volkswagen",
+      "model": "ID.4",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 291,
+      "mpge": 113.0,
+      "kwh_per_100mi": 29.78
+    },
+    {
+      "id": "49968",
+      "make": "Lucid",
+      "model": "Air G Touring XR AWD with 21 inch wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 446,
+      "mpge": 112.0,
+      "kwh_per_100mi": 30.13
+    },
+    {
+      "id": "50302",
+      "make": "Subaru",
+      "model": "Uncharted 20 inch AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 273,
+      "mpge": 112.0,
+      "kwh_per_100mi": 29.5
+    },
+    {
+      "id": "50308",
+      "make": "Toyota",
+      "model": "C-HR AWD 20inch",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 273,
+      "mpge": 112.0,
+      "kwh_per_100mi": 29.58
+    },
+    {
+      "id": "50453",
+      "make": "Lexus",
+      "model": "ES 500e AWD (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 272,
+      "mpge": 112.0,
+      "kwh_per_100mi": 30.0
+    },
+    {
+      "id": "50221",
+      "make": "Lucid",
+      "model": "Gravity Touring w/20F21R wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 337,
+      "mpge": 111.0,
+      "kwh_per_100mi": 30.34
+    },
+    {
+      "id": "50250",
+      "make": "Tesla",
+      "model": "Model 3 Performance AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 314,
+      "mpge": 111.0,
+      "kwh_per_100mi": 30.25
+    },
+    {
+      "id": "49613",
+      "make": "BMW",
+      "model": "i5 eDrive40 Sedan (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 310,
+      "mpge": 110.0,
+      "kwh_per_100mi": 30.61
+    },
+    {
+      "id": "49652",
+      "make": "Genesis",
+      "model": "GV60 RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 306,
+      "mpge": 110.0,
+      "kwh_per_100mi": 30.57
+    },
+    {
+      "id": "49742",
+      "make": "Tesla",
+      "model": "Model S Plaid",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 368,
+      "mpge": 110.0,
+      "kwh_per_100mi": 30.59
+    },
+    {
+      "id": "50199",
+      "make": "Fiat",
+      "model": "500e All Season",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 141,
+      "mpge": 110.0,
+      "kwh_per_100mi": 30.53
+    },
+    {
+      "id": "50205",
+      "make": "Ford",
+      "model": "Mustang Mach-E RWD Extended",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 320,
+      "mpge": 110.0,
+      "kwh_per_100mi": 30.67
+    },
+    {
+      "id": "50217",
+      "make": "Lexus",
+      "model": "RZ 450e AWD (18 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 264,
+      "mpge": 110.0,
+      "kwh_per_100mi": 30.53
+    },
+    {
+      "id": "49992",
+      "make": "Volvo",
+      "model": "EX30 Twin Performance",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 253,
+      "mpge": 109.0,
+      "kwh_per_100mi": 31.06
+    },
+    {
+      "id": "50030",
+      "make": "Mercedes-Benz",
+      "model": "CLA250 Plus with EQ Tech",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 317,
+      "mpge": 109.0,
+      "kwh_per_100mi": 31.0
+    },
+    {
+      "id": "50187",
+      "make": "BMW",
+      "model": "i4 eDrive35 Gran Coupe (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 251,
+      "mpge": 109.0,
+      "kwh_per_100mi": 30.83
+    },
+    {
+      "id": "50306",
+      "make": "Toyota",
+      "model": "bZ Woodland AWD 235/65R18",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 260,
+      "mpge": 109.0,
+      "kwh_per_100mi": 30.58
+    },
+    {
+      "id": "49670",
+      "make": "Lucid",
+      "model": "Gravity GT w/20F21R wheels (2R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 450,
+      "mpge": 108.0,
+      "kwh_per_100mi": 31.09
+    },
+    {
+      "id": "49953",
+      "make": "Chevrolet",
+      "model": "Equinox EV FWD",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 319,
+      "mpge": 108.0,
+      "kwh_per_100mi": 31.08
+    },
+    {
+      "id": "50189",
+      "make": "BMW",
+      "model": "i4 eDrive40 Gran Coupe (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 307,
+      "mpge": 108.0,
+      "kwh_per_100mi": 31.1
+    },
+    {
+      "id": "50218",
+      "make": "Lexus",
+      "model": "RZ 450e AWD (20 inch wheels - 235/50R20)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 257,
+      "mpge": 108.0,
+      "kwh_per_100mi": 31.17
+    },
+    {
+      "id": "50204",
+      "make": "Ford",
+      "model": "Mustang Mach-E RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 260,
+      "mpge": 107.0,
+      "kwh_per_100mi": 31.44
+    },
+    {
+      "id": "49614",
+      "make": "BMW",
+      "model": "i5 eDrive40 Sedan (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 300,
+      "mpge": 106.0,
+      "kwh_per_100mi": 31.74
+    },
+    {
+      "id": "49747",
+      "make": "Volvo",
+      "model": "EX40",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 296,
+      "mpge": 106.0,
+      "kwh_per_100mi": 31.7
+    },
+    {
+      "id": "49748",
+      "make": "Volvo",
+      "model": "EC40",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 298,
+      "mpge": 106.0,
+      "kwh_per_100mi": 31.68
+    },
+    {
+      "id": "49962",
+      "make": "Hyundai",
+      "model": "Ioniq 5 AWD (19inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 290,
+      "mpge": 106.0,
+      "kwh_per_100mi": 31.67
+    },
+    {
+      "id": "50212",
+      "make": "Kia",
+      "model": "EV6 Long Range AWD (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 295,
+      "mpge": 106.0,
+      "kwh_per_100mi": 31.58
+    },
+    {
+      "id": "49745",
+      "make": "Tesla",
+      "model": "Model X",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 352,
+      "mpge": 105.0,
+      "kwh_per_100mi": 32.2
+    },
+    {
+      "id": "49949",
+      "make": "Cadillac",
+      "model": "OPTIQ RWD (11 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 317,
+      "mpge": 105.0,
+      "kwh_per_100mi": 32.08
+    },
+    {
+      "id": "49950",
+      "make": "Cadillac",
+      "model": "OPTIQ RWD (19 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 317,
+      "mpge": 105.0,
+      "kwh_per_100mi": 32.08
+    },
+    {
+      "id": "49971",
+      "make": "Lucid",
+      "model": "Air Sapphire AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 427,
+      "mpge": 105.0,
+      "kwh_per_100mi": 32.13
+    },
+    {
+      "id": "50253",
+      "make": "Tesla",
+      "model": "Model Y Performance AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 306,
+      "mpge": 105.0,
+      "kwh_per_100mi": 31.98
+    },
+    {
+      "id": "50458",
+      "make": "Porsche",
+      "model": "Macan Electric 20in Wheels",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 332,
+      "mpge": 105.0,
+      "kwh_per_100mi": 32.1
+    },
+    {
+      "id": "49644",
+      "make": "Chevrolet",
+      "model": "Blazer EV FWD",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 312,
+      "mpge": 104.0,
+      "kwh_per_100mi": 32.29
+    },
+    {
+      "id": "50029",
+      "make": "Lucid",
+      "model": "Gravity GT w/20F21R wheels (3R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 437,
+      "mpge": 104.0,
+      "kwh_per_100mi": 32.43
+    },
+    {
+      "id": "50201",
+      "make": "Ford",
+      "model": "Mustang Mach-E AWD Extended",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 300,
+      "mpge": 104.0,
+      "kwh_per_100mi": 32.26
+    },
+    {
+      "id": "50208",
+      "make": "Honda",
+      "model": "Prologue FWD",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 308,
+      "mpge": 104.0,
+      "kwh_per_100mi": 32.55
+    },
+    {
+      "id": "49955",
+      "make": "Chevrolet",
+      "model": "Equinox EV AWD (11 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 307,
+      "mpge": 103.0,
+      "kwh_per_100mi": 32.62
+    },
+    {
+      "id": "49976",
+      "make": "Nissan",
+      "model": "LEAF 75kWh (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 259,
+      "mpge": 103.0,
+      "kwh_per_100mi": 32.73
+    },
+    {
+      "id": "49988",
+      "make": "Volkswagen",
+      "model": "ID.4 AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 263,
+      "mpge": 102.0,
+      "kwh_per_100mi": 32.97
+    },
+    {
+      "id": "50459",
+      "make": "Porsche",
+      "model": "Macan 4 Electric 20in Wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 324,
+      "mpge": 102.0,
+      "kwh_per_100mi": 33.05
+    },
+    {
+      "id": "50192",
+      "make": "BMW",
+      "model": "i4 xDrive40 Gran Coupe (18 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 287,
+      "mpge": 101.0,
+      "kwh_per_100mi": 33.41
+    },
+    {
+      "id": "50226",
+      "make": "Nissan",
+      "model": "ARIYA FWD 63kWh",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 216,
+      "mpge": 101.0,
+      "kwh_per_100mi": 33.26
+    },
+    {
+      "id": "49653",
+      "make": "Genesis",
+      "model": "GV60 AWD (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 282,
+      "mpge": 100.0,
+      "kwh_per_100mi": 33.59
+    },
+    {
+      "id": "49746",
+      "make": "Tesla",
+      "model": "Model X Plaid",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 335,
+      "mpge": 100.0,
+      "kwh_per_100mi": 33.69
+    },
+    {
+      "id": "50200",
+      "make": "Ford",
+      "model": "Mustang Mach-E AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 240,
+      "mpge": 100.0,
+      "kwh_per_100mi": 33.64
+    },
+    {
+      "id": "49675",
+      "make": "Lucid",
+      "model": "Gravity Dream w/20F21R wheels (3R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 420,
+      "mpge": 99.0,
+      "kwh_per_100mi": 33.88
+    },
+    {
+      "id": "49951",
+      "make": "Cadillac",
+      "model": "OPTIQ AWD (11 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 303,
+      "mpge": 99.0,
+      "kwh_per_100mi": 34.02
+    },
+    {
+      "id": "49952",
+      "make": "Cadillac",
+      "model": "OPTIQ AWD (19 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 303,
+      "mpge": 99.0,
+      "kwh_per_100mi": 34.02
+    },
+    {
+      "id": "49991",
+      "make": "Volvo",
+      "model": "EX30 Cross Country (19 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 227,
+      "mpge": 99.0,
+      "kwh_per_100mi": 34.09
+    },
+    {
+      "id": "50194",
+      "make": "BMW",
+      "model": "i5 M60 xDrive Sedan (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 277,
+      "mpge": 99.0,
+      "kwh_per_100mi": 34.14
+    },
+    {
+      "id": "50206",
+      "make": "Honda",
+      "model": "Prologue AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 294,
+      "mpge": 99.0,
+      "kwh_per_100mi": 34.07
+    },
+    {
+      "id": "49615",
+      "make": "BMW",
+      "model": "i5 eDrive40 Sedan (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 278,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.48
+    },
+    {
+      "id": "49616",
+      "make": "BMW",
+      "model": "i5 xDrive40 Sedan (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 278,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.38
+    },
+    {
+      "id": "49671",
+      "make": "Lucid",
+      "model": "Gravity GT w/21F22R wheels (2R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 407,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.33
+    },
+    {
+      "id": "49672",
+      "make": "Lucid",
+      "model": "Gravity GT w/22F23R wheels (2R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 407,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.33
+    },
+    {
+      "id": "49681",
+      "make": "Mercedes-Benz",
+      "model": "EQS 450 Plus",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 390,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.01
+    },
+    {
+      "id": "49963",
+      "make": "Hyundai",
+      "model": "Ioniq 5 AWD (20inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 269,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.5
+    },
+    {
+      "id": "50190",
+      "make": "BMW",
+      "model": "i4 M60 xDrive Gran Coupe (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 278,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.4
+    },
+    {
+      "id": "50227",
+      "make": "Nissan",
+      "model": "ARIYA FWD 87kWh",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 289,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.37
+    },
+    {
+      "id": "50255",
+      "make": "Volvo",
+      "model": "EX90 (21 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 291,
+      "mpge": 98.0,
+      "kwh_per_100mi": 34.46
+    },
+    {
+      "id": "49623",
+      "make": "BMW",
+      "model": "iX xDrive60 (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 364,
+      "mpge": 97.0,
+      "kwh_per_100mi": 34.71
+    },
+    {
+      "id": "49750",
+      "make": "Volvo",
+      "model": "EC40 Twin",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 268,
+      "mpge": 97.0,
+      "kwh_per_100mi": 34.84
+    },
+    {
+      "id": "50182",
+      "make": "Audi",
+      "model": "Q4 55 e-tron quattro",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 251,
+      "mpge": 97.0,
+      "kwh_per_100mi": 34.63
+    },
+    {
+      "id": "50183",
+      "make": "Audi",
+      "model": "Q4 Sportback 55 e-tron quattro",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 251,
+      "mpge": 97.0,
+      "kwh_per_100mi": 34.63
+    },
+    {
+      "id": "50213",
+      "make": "Kia",
+      "model": "EV6 Long Range AWD (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 270,
+      "mpge": 97.0,
+      "kwh_per_100mi": 34.59
+    },
+    {
+      "id": "50233",
+      "make": "Polestar",
+      "model": "3 Long Range Single Motor (21 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 291,
+      "mpge": 97.0,
+      "kwh_per_100mi": 34.73
+    },
+    {
+      "id": "50296",
+      "make": "Porsche",
+      "model": "Macan Electric",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 309,
+      "mpge": 97.0,
+      "kwh_per_100mi": 34.59
+    },
+    {
+      "id": "49617",
+      "make": "BMW",
+      "model": "i5 xDrive40 Sedan (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 272,
+      "mpge": 96.0,
+      "kwh_per_100mi": 35.22
+    },
+    {
+      "id": "49651",
+      "make": "Genesis",
+      "model": "Electrified G80",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 300,
+      "mpge": 96.0,
+      "kwh_per_100mi": 35.0
+    },
+    {
+      "id": "49654",
+      "make": "Genesis",
+      "model": "GV60 AWD Advanced (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 267,
+      "mpge": 96.0,
+      "kwh_per_100mi": 35.17
+    },
+    {
+      "id": "49656",
+      "make": "Genesis",
+      "model": "Electrified GV70 AWD (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 263,
+      "mpge": 96.0,
+      "kwh_per_100mi": 35.0
+    },
+    {
+      "id": "49956",
+      "make": "Chevrolet",
+      "model": "Equinox EV AWD (19 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 288,
+      "mpge": 96.0,
+      "kwh_per_100mi": 35.11
+    },
+    {
+      "id": "50222",
+      "make": "MINI",
+      "model": "Countryman SE ALL4 (18 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 212,
+      "mpge": 96.0,
+      "kwh_per_100mi": 34.99
+    },
+    {
+      "id": "49645",
+      "make": "Chevrolet",
+      "model": "Blazer EV FWD 22 inch tire",
+      "trany": "Automatic (A1)",
+      "drive": "Front-Wheel Drive",
+      "range": 283,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.64
+    },
+    {
+      "id": "49958",
+      "make": "Dodge",
+      "model": "Charger Daytona R/T AWD 255/45R20",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 295,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.58
+    },
+    {
+      "id": "50033",
+      "make": "Polestar",
+      "model": "4 Long Range Single Motor",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 310,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.0
+    },
+    {
+      "id": "50207",
+      "make": "Honda",
+      "model": "Prologue AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 283,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.3
+    },
+    {
+      "id": "50219",
+      "make": "Lexus",
+      "model": "RZ 450e AWD (20 inch wheels - 235/50R20,255/45R20)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 228,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.23
+    },
+    {
+      "id": "50220",
+      "make": "Lexus",
+      "model": "RZ 550e AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 229,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.31
+    },
+    {
+      "id": "50224",
+      "make": "Nissan",
+      "model": "ARIYA e-4ORCE 63kWh",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 205,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.29
+    },
+    {
+      "id": "50232",
+      "make": "Polestar",
+      "model": "3 Long Range Single Motor (20 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 286,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.5
+    },
+    {
+      "id": "50294",
+      "make": "Porsche",
+      "model": "Macan 4 Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 304,
+      "mpge": 95.0,
+      "kwh_per_100mi": 35.31
+    },
+    {
+      "id": "49619",
+      "make": "BMW",
+      "model": "iX xDrive45 (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 312,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.99
+    },
+    {
+      "id": "49646",
+      "make": "Chevrolet",
+      "model": "Blazer EV AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 283,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.74
+    },
+    {
+      "id": "49679",
+      "make": "Mercedes-Benz",
+      "model": "EQE 320 Plus",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 308,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.63
+    },
+    {
+      "id": "49749",
+      "make": "Volvo",
+      "model": "EX40 Twin",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 260,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.98
+    },
+    {
+      "id": "49964",
+      "make": "Hyundai",
+      "model": "Ioniq 5 AWD XRT",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 259,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.76
+    },
+    {
+      "id": "50193",
+      "make": "BMW",
+      "model": "i4 xDrive40 Gran Coupe (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 268,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.99
+    },
+    {
+      "id": "50195",
+      "make": "BMW",
+      "model": "i5 M60 xDrive Sedan (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 266,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.82
+    },
+    {
+      "id": "49682",
+      "make": "Mercedes-Benz",
+      "model": "EQS 580 4matic",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 371,
+      "mpge": 93.0,
+      "kwh_per_100mi": 35.62
+    },
+    {
+      "id": "49684",
+      "make": "Mercedes-Benz",
+      "model": "EQE 320 Plus (SUV)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 302,
+      "mpge": 93.0,
+      "kwh_per_100mi": 36.08
+    },
+    {
+      "id": "50209",
+      "make": "Jeep",
+      "model": "Wagoneer S AWD (Falken tire)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 294,
+      "mpge": 93.0,
+      "kwh_per_100mi": 36.2
+    },
+    {
+      "id": "50238",
+      "make": "Porsche",
+      "model": "Taycan 4S Perf Battery Plus 19in All-Season (M+S)",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 315,
+      "mpge": 93.0,
+      "kwh_per_100mi": 36.24
+    },
+    {
+      "id": "50252",
+      "make": "Tesla",
+      "model": "Model S Plaid (21in wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 309,
+      "mpge": 93.0,
+      "kwh_per_100mi": 36.21
+    },
+    {
+      "id": "50456",
+      "make": "Porsche",
+      "model": "Taycan 4 Perf Battery Plus 19in All-Season (M+S)",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 315,
+      "mpge": 93.0,
+      "kwh_per_100mi": 36.24
+    },
+    {
+      "id": "49631",
+      "make": "Cadillac",
+      "model": "LYRIQ (11 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 326,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.82
+    },
+    {
+      "id": "49661",
+      "make": "Hyundai",
+      "model": "Ioniq 9 RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 335,
+      "mpge": 92.0,
+      "kwh_per_100mi": 37.0
+    },
+    {
+      "id": "49673",
+      "make": "Lucid",
+      "model": "Gravity GT w/21F22R wheels (3R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 386,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.45
+    },
+    {
+      "id": "49674",
+      "make": "Lucid",
+      "model": "Gravity GT w/22F23R wheels (3R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 386,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.45
+    },
+    {
+      "id": "49683",
+      "make": "Mercedes-Benz",
+      "model": "EQS 450 4matic",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 367,
+      "mpge": 92.0,
+      "kwh_per_100mi": 37.0
+    },
+    {
+      "id": "50026",
+      "make": "Cadillac",
+      "model": "OPTIQ AWD V SERIES 11 kW Charger 15 modes",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 278,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.66
+    },
+    {
+      "id": "50225",
+      "make": "Nissan",
+      "model": "ARIYA e-4ORCE 87kWh",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 272,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.64
+    },
+    {
+      "id": "50254",
+      "make": "Volvo",
+      "model": "EX90",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 276,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.81
+    },
+    {
+      "id": "50295",
+      "make": "Porsche",
+      "model": "Macan 4S Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 290,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.79
+    },
+    {
+      "id": "50297",
+      "make": "Porsche",
+      "model": "Macan GTS Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 294,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.71
+    },
+    {
+      "id": "49618",
+      "make": "BMW",
+      "model": "i5 xDrive40 Sedan (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 259,
+      "mpge": 91.0,
+      "kwh_per_100mi": 37.2
+    },
+    {
+      "id": "49624",
+      "make": "BMW",
+      "model": "iX xDrive60 (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 341,
+      "mpge": 91.0,
+      "kwh_per_100mi": 37.22
+    },
+    {
+      "id": "49632",
+      "make": "Cadillac",
+      "model": "LYRIQ (19 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 326,
+      "mpge": 91.0,
+      "kwh_per_100mi": 36.84
+    },
+    {
+      "id": "50023",
+      "make": "Acura",
+      "model": "ZDX RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 327,
+      "mpge": 91.0,
+      "kwh_per_100mi": 36.86
+    },
+    {
+      "id": "50196",
+      "make": "BMW",
+      "model": "i5 M60 xDrive Sedan (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 259,
+      "mpge": 91.0,
+      "kwh_per_100mi": 37.13
+    },
+    {
+      "id": "50223",
+      "make": "MINI",
+      "model": "Countryman SE ALL4 (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 204,
+      "mpge": 91.0,
+      "kwh_per_100mi": 36.86
+    },
+    {
+      "id": "50242",
+      "make": "Porsche",
+      "model": "Taycan Performance Battery",
+      "trany": "Automatic (A2)",
+      "drive": "Rear-Wheel Drive",
+      "range": 274,
+      "mpge": 91.0,
+      "kwh_per_100mi": 37.07
+    },
+    {
+      "id": "50298",
+      "make": "Porsche",
+      "model": "Macan Turbo Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 293,
+      "mpge": 91.0,
+      "kwh_per_100mi": 36.85
+    },
+    {
+      "id": "49655",
+      "make": "Genesis",
+      "model": "GV60 AWD Performance",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 252,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.03
+    },
+    {
+      "id": "49676",
+      "make": "Lucid",
+      "model": "Gravity Dream w/21F22R wheels (3R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 378,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.64
+    },
+    {
+      "id": "49677",
+      "make": "Lucid",
+      "model": "Gravity Dream w/22F23R wheels (3R)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 378,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.64
+    },
+    {
+      "id": "50185",
+      "make": "Audi",
+      "model": "S e-tron GT (20 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 300,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.65
+    },
+    {
+      "id": "50202",
+      "make": "Ford",
+      "model": "Mustang Mach-E GT",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 280,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.39
+    },
+    {
+      "id": "50228",
+      "make": "Nissan",
+      "model": "ARIYA PLATINUM+ e-4ORCE 87kWh 19in. Wheels",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 267,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.4
+    },
+    {
+      "id": "50229",
+      "make": "Polestar",
+      "model": "3 Long Range Dual Motor (21 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 312,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.53
+    },
+    {
+      "id": "49620",
+      "make": "BMW",
+      "model": "iX xDrive45 (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 297,
+      "mpge": 89.0,
+      "kwh_per_100mi": 37.72
+    },
+    {
+      "id": "49635",
+      "make": "Cadillac",
+      "model": "LYRIQ PAWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 319,
+      "mpge": 89.0,
+      "kwh_per_100mi": 37.98
+    },
+    {
+      "id": "49666",
+      "make": "Kia",
+      "model": "EV9 Long Range RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 305,
+      "mpge": 89.0,
+      "kwh_per_100mi": 38.0
+    },
+    {
+      "id": "49990",
+      "make": "Volvo",
+      "model": "EX30 Cross Country (18 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 203,
+      "mpge": 89.0,
+      "kwh_per_100mi": 37.81
+    },
+    {
+      "id": "50024",
+      "make": "Acura",
+      "model": "ZDX AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 323,
+      "mpge": 89.0,
+      "kwh_per_100mi": 37.7
+    },
+    {
+      "id": "49625",
+      "make": "BMW",
+      "model": "iX xDrive60 (22 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 327,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.52
+    },
+    {
+      "id": "49657",
+      "make": "Genesis",
+      "model": "Electrified GV70 AWD (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 243,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.0
+    },
+    {
+      "id": "49662",
+      "make": "Hyundai",
+      "model": "Ioniq 9 AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 320,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.0
+    },
+    {
+      "id": "49665",
+      "make": "Kia",
+      "model": "EV9 Standard Range RWD",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 230,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.0
+    },
+    {
+      "id": "49940",
+      "make": "BMW",
+      "model": "i7 eDrive50 Sedan (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 314,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.2
+    },
+    {
+      "id": "49945",
+      "make": "BMW",
+      "model": "i7 xDrive60 Sedan (19 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 311,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.41
+    },
+    {
+      "id": "50186",
+      "make": "Audi",
+      "model": "S e-tron GT (21 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 294,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.5
+    },
+    {
+      "id": "50239",
+      "make": "Porsche",
+      "model": "Taycan 4S Performance Battery",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 252,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.45
+    },
+    {
+      "id": "50257",
+      "make": "Volvo",
+      "model": "EX90 Twin Motor (21 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 305,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.32
+    },
+    {
+      "id": "50259",
+      "make": "Volvo",
+      "model": "EX90 Twin Motor Performance (21 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 305,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.32
+    },
+    {
+      "id": "49622",
+      "make": "BMW",
+      "model": "iX xDrive45 (23 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 290,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.65
+    },
+    {
+      "id": "49694",
+      "make": "Rivian",
+      "model": "R1T Dual Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 420,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.84
+    },
+    {
+      "id": "49697",
+      "make": "Rivian",
+      "model": "R1T Performance Dual Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 420,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.84
+    },
+    {
+      "id": "49942",
+      "make": "BMW",
+      "model": "i7 eDrive50 Sedan (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 307,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.95
+    },
+    {
+      "id": "49947",
+      "make": "BMW",
+      "model": "i7 xDrive60 Sedan (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 308,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.77
+    },
+    {
+      "id": "50235",
+      "make": "Porsche",
+      "model": "Taycan 4 Perf Battery Plus",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 294,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.73
+    },
+    {
+      "id": "50237",
+      "make": "Porsche",
+      "model": "Taycan 4S Perf Battery Plus",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 295,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.54
+    },
+    {
+      "id": "50457",
+      "make": "Porsche",
+      "model": "Taycan 4 Performance Battery",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 251,
+      "mpge": 87.0,
+      "kwh_per_100mi": 38.57
+    },
+    {
+      "id": "49636",
+      "make": "Cadillac",
+      "model": "VISTIQ (11 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 305,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.35
+    },
+    {
+      "id": "49637",
+      "make": "Cadillac",
+      "model": "VISTIQ (19 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 300,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.35
+    },
+    {
+      "id": "49647",
+      "make": "Dodge",
+      "model": "Charger Daytona R/T AWD 305/35ZR20",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 267,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.14
+    },
+    {
+      "id": "49648",
+      "make": "Dodge",
+      "model": "Charger Daytona Scat Pack AWD 305/35ZR20",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 267,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.14
+    },
+    {
+      "id": "49680",
+      "make": "Mercedes-Benz",
+      "model": "EQE 320 4matic",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 267,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.0
+    },
+    {
+      "id": "50210",
+      "make": "Jeep",
+      "model": "Wagoneer S AWD (Pirelli tire)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 268,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.11
+    },
+    {
+      "id": "50240",
+      "make": "Porsche",
+      "model": "Taycan GTS",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 293,
+      "mpge": 86.0,
+      "kwh_per_100mi": 38.98
+    },
+    {
+      "id": "50243",
+      "make": "Porsche",
+      "model": "Taycan Turbo",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 292,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.34
+    },
+    {
+      "id": "50256",
+      "make": "Volvo",
+      "model": "EX90 Twin Motor",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 298,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.16
+    },
+    {
+      "id": "50258",
+      "make": "Volvo",
+      "model": "EX90 Twin Motor Performance",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 298,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.16
+    },
+    {
+      "id": "49626",
+      "make": "BMW",
+      "model": "iX xDrive60 (23 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 318,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.56
+    },
+    {
+      "id": "49663",
+      "make": "Hyundai",
+      "model": "Ioniq 9 AWD Performance",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 311,
+      "mpge": 85.0,
+      "kwh_per_100mi": 40.0
+    },
+    {
+      "id": "49691",
+      "make": "Rivian",
+      "model": "R1T Dual Standard (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 270,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.89
+    },
+    {
+      "id": "49707",
+      "make": "Rivian",
+      "model": "R1T Dual Large (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 329,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.47
+    },
+    {
+      "id": "49710",
+      "make": "Rivian",
+      "model": "R1T Performance Dual Large (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 329,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.47
+    },
+    {
+      "id": "49716",
+      "make": "Rivian",
+      "model": "R1S Dual Standard (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 270,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.89
+    },
+    {
+      "id": "49732",
+      "make": "Rivian",
+      "model": "R1S Dual Large (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 329,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.47
+    },
+    {
+      "id": "49735",
+      "make": "Rivian",
+      "model": "R1S Performance Dual Large (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 329,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.47
+    },
+    {
+      "id": "49941",
+      "make": "BMW",
+      "model": "i7 eDrive50 Sedan (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 301,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.87
+    },
+    {
+      "id": "49948",
+      "make": "Cadillac",
+      "model": "LYRIQ AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 303,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.71
+    },
+    {
+      "id": "49954",
+      "make": "Chevrolet",
+      "model": "Blazer EV AWD SS",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 302,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.67
+    },
+    {
+      "id": "49957",
+      "make": "Dodge",
+      "model": "Charger Daytona R/T AWD 245/55ZR18",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 263,
+      "mpge": 85.0,
+      "kwh_per_100mi": 40.0
+    },
+    {
+      "id": "50034",
+      "make": "Polestar",
+      "model": "4 Long Range Dual Motor",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 280,
+      "mpge": 85.0,
+      "kwh_per_100mi": 40.0
+    },
+    {
+      "id": "49621",
+      "make": "BMW",
+      "model": "iX xDrive45 (22 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 279,
+      "mpge": 84.0,
+      "kwh_per_100mi": 40.27
+    },
+    {
+      "id": "49667",
+      "make": "Kia",
+      "model": "EV9 Long Range AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 283,
+      "mpge": 84.0,
+      "kwh_per_100mi": 40.0
+    },
+    {
+      "id": "49690",
+      "make": "Mercedes-Benz",
+      "model": "EQS 680 4matic Maybach (SUV)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 300,
+      "mpge": 84.0,
+      "kwh_per_100mi": 39.82
+    },
+    {
+      "id": "49719",
+      "make": "Rivian",
+      "model": "R1S Dual Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 410,
+      "mpge": 84.0,
+      "kwh_per_100mi": 39.94
+    },
+    {
+      "id": "49722",
+      "make": "Rivian",
+      "model": "R1S Performance Dual Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 410,
+      "mpge": 84.0,
+      "kwh_per_100mi": 39.94
+    },
+    {
+      "id": "50184",
+      "make": "Audi",
+      "model": "RS e-tron GT Performance",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 278,
+      "mpge": 84.0,
+      "kwh_per_100mi": 40.18
+    },
+    {
+      "id": "50203",
+      "make": "Ford",
+      "model": "Mustang Mach-E Rally",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 255,
+      "mpge": 84.0,
+      "kwh_per_100mi": 40.15
+    },
+    {
+      "id": "49946",
+      "make": "BMW",
+      "model": "i7 xDrive60 Sedan (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 296,
+      "mpge": 83.0,
+      "kwh_per_100mi": 40.75
+    },
+    {
+      "id": "49959",
+      "make": "Dodge",
+      "model": "Charger Daytona R/T AWD 275/40R20",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 258,
+      "mpge": 83.0,
+      "kwh_per_100mi": 41.0
+    },
+    {
+      "id": "50025",
+      "make": "Acura",
+      "model": "ZDX AWD Type S",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 296,
+      "mpge": 83.0,
+      "kwh_per_100mi": 40.57
+    },
+    {
+      "id": "50027",
+      "make": "Cadillac",
+      "model": "OPTIQ AWD V SERIES 19 kW charger 15 modes",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 250,
+      "mpge": 83.0,
+      "kwh_per_100mi": 41.0
+    },
+    {
+      "id": "50211",
+      "make": "Kia",
+      "model": "EV6 AWD GT",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 231,
+      "mpge": 83.0,
+      "kwh_per_100mi": 41.0
+    },
+    {
+      "id": "50454",
+      "make": "Maserati",
+      "model": "Grancabrio Folgore",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 231,
+      "mpge": 83.0,
+      "kwh_per_100mi": 40.72
+    },
+    {
+      "id": "49668",
+      "make": "Kia",
+      "model": "EV9 Long Range AWD GT-Line",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 280,
+      "mpge": 82.0,
+      "kwh_per_100mi": 41.0
+    },
+    {
+      "id": "49699",
+      "make": "Rivian",
+      "model": "R1T Dual Large Plus (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 330,
+      "mpge": 82.0,
+      "kwh_per_100mi": 40.9
+    },
+    {
+      "id": "49701",
+      "make": "Rivian",
+      "model": "R1T Performance Dual Large Plus (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 330,
+      "mpge": 82.0,
+      "kwh_per_100mi": 40.9
+    },
+    {
+      "id": "49724",
+      "make": "Rivian",
+      "model": "R1S Dual Large Plus (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 330,
+      "mpge": 82.0,
+      "kwh_per_100mi": 40.9
+    },
+    {
+      "id": "49726",
+      "make": "Rivian",
+      "model": "R1S Performance Dual Large Plus (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 330,
+      "mpge": 82.0,
+      "kwh_per_100mi": 40.9
+    },
+    {
+      "id": "50241",
+      "make": "Porsche",
+      "model": "Taycan GTS Sport Turismo",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 279,
+      "mpge": 82.0,
+      "kwh_per_100mi": 41.05
+    },
+    {
+      "id": "50245",
+      "make": "Porsche",
+      "model": "Taycan Turbo GT",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 276,
+      "mpge": 82.0,
+      "kwh_per_100mi": 40.88
+    },
+    {
+      "id": "49685",
+      "make": "Mercedes-Benz",
+      "model": "EQE 320 4matic (SUV)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 253,
+      "mpge": 81.0,
+      "kwh_per_100mi": 42.0
+    },
+    {
+      "id": "50191",
+      "make": "BMW",
+      "model": "i4 M60 xDrive Gran Coupe (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 232,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.44
+    },
+    {
+      "id": "50197",
+      "make": "Cadillac",
+      "model": "CELESTIQ",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 303,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.7
+    },
+    {
+      "id": "50230",
+      "make": "Polestar",
+      "model": "3 Long Range Dual Motor (22 Inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 281,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.55
+    },
+    {
+      "id": "50231",
+      "make": "Polestar",
+      "model": "3 Long Range Dual Motor Performance Pack",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 281,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.55
+    },
+    {
+      "id": "50234",
+      "make": "Porsche",
+      "model": "Taycan 4 Cross Turismo",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 277,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.51
+    },
+    {
+      "id": "50246",
+      "make": "Porsche",
+      "model": "Taycan Turbo GT with Weissach Package",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 269,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.75
+    },
+    {
+      "id": "50292",
+      "make": "Maserati",
+      "model": "Grecale Folgore (19 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 268,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.72
+    },
+    {
+      "id": "50455",
+      "make": "Maserati",
+      "model": "Grecale Folgore (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 268,
+      "mpge": 81.0,
+      "kwh_per_100mi": 41.72
+    },
+    {
+      "id": "49627",
+      "make": "BMW",
+      "model": "iX M70 (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 303,
+      "mpge": 80.0,
+      "kwh_per_100mi": 41.99
+    },
+    {
+      "id": "49633",
+      "make": "Cadillac",
+      "model": "LYRIQ PAWD V SERIES (11 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 285,
+      "mpge": 80.0,
+      "kwh_per_100mi": 42.36
+    },
+    {
+      "id": "49634",
+      "make": "Cadillac",
+      "model": "LYRIQ PAWD V SERIES (19 kW Charger)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 285,
+      "mpge": 80.0,
+      "kwh_per_100mi": 42.36
+    },
+    {
+      "id": "49689",
+      "make": "Mercedes-Benz",
+      "model": "EQS 550 4matic (SUV)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 317,
+      "mpge": 80.0,
+      "kwh_per_100mi": 42.0
+    },
+    {
+      "id": "49693",
+      "make": "Rivian",
+      "model": "R1T Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 380,
+      "mpge": 80.0,
+      "kwh_per_100mi": 41.97
+    },
+    {
+      "id": "49696",
+      "make": "Rivian",
+      "model": "R1T Performance Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 380,
+      "mpge": 80.0,
+      "kwh_per_100mi": 41.97
+    },
+    {
+      "id": "49718",
+      "make": "Rivian",
+      "model": "R1S Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 380,
+      "mpge": 80.0,
+      "kwh_per_100mi": 41.97
+    },
+    {
+      "id": "49721",
+      "make": "Rivian",
+      "model": "R1S Performance Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 380,
+      "mpge": 80.0,
+      "kwh_per_100mi": 41.97
+    },
+    {
+      "id": "50236",
+      "make": "Porsche",
+      "model": "Taycan 4S Cross Turismo",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 272,
+      "mpge": 80.0,
+      "kwh_per_100mi": 42.24
+    },
+    {
+      "id": "49688",
+      "make": "Mercedes-Benz",
+      "model": "EQS 400 4matic (SUV)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 312,
+      "mpge": 79.0,
+      "kwh_per_100mi": 43.0
+    },
+    {
+      "id": "49692",
+      "make": "Rivian",
+      "model": "R1T Dual Standard (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 258,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.87
+    },
+    {
+      "id": "49708",
+      "make": "Rivian",
+      "model": "R1T Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 300,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.87
+    },
+    {
+      "id": "49711",
+      "make": "Rivian",
+      "model": "R1T Performance Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 300,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.87
+    },
+    {
+      "id": "49717",
+      "make": "Rivian",
+      "model": "R1S Dual Standard (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 258,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.87
+    },
+    {
+      "id": "49733",
+      "make": "Rivian",
+      "model": "R1S Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 300,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.87
+    },
+    {
+      "id": "49736",
+      "make": "Rivian",
+      "model": "R1S Performance Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 300,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.87
+    },
+    {
+      "id": "49944",
+      "make": "BMW",
+      "model": "i7 M70 xDrive Sedan (21 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 285,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.45
+    },
+    {
+      "id": "50039",
+      "make": "Tesla",
+      "model": "Cybertruck AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 325,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.91
+    },
+    {
+      "id": "50247",
+      "make": "Porsche",
+      "model": "Taycan Turbo S",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 266,
+      "mpge": 79.0,
+      "kwh_per_100mi": 42.77
+    },
+    {
+      "id": "49650",
+      "make": "Dodge",
+      "model": "Charger Daytona Scat Pack AWD 325/35ZR20 Rear A/S",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 241,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.37
+    },
+    {
+      "id": "49669",
+      "make": "Kia",
+      "model": "EV9 GT",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 260,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.0
+    },
+    {
+      "id": "49695",
+      "make": "Rivian",
+      "model": "R1T All-Terrain Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 370,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.22
+    },
+    {
+      "id": "49698",
+      "make": "Rivian",
+      "model": "R1T All-Terrain Performance Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 370,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.22
+    },
+    {
+      "id": "49703",
+      "make": "Rivian",
+      "model": "R1T Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 317,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.12
+    },
+    {
+      "id": "49704",
+      "make": "Rivian",
+      "model": "R1T Performance Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 317,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.12
+    },
+    {
+      "id": "49720",
+      "make": "Rivian",
+      "model": "R1S All-Terrain Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 370,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.22
+    },
+    {
+      "id": "49723",
+      "make": "Rivian",
+      "model": "R1S All-Terrain Performance  Dual Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "Part-time 4-Wheel Drive",
+      "range": 370,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.22
+    },
+    {
+      "id": "49728",
+      "make": "Rivian",
+      "model": "R1S Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 317,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.12
+    },
+    {
+      "id": "49729",
+      "make": "Rivian",
+      "model": "R1S Performance Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 317,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.12
+    },
+    {
+      "id": "49965",
+      "make": "Hyundai",
+      "model": "Ioniq 5 N",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 221,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.0
+    },
+    {
+      "id": "50244",
+      "make": "Porsche",
+      "model": "Taycan Turbo Cross Turismo",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 265,
+      "mpge": 78.0,
+      "kwh_per_100mi": 42.95
+    },
+    {
+      "id": "50249",
+      "make": "Tesla",
+      "model": "Cybertruck Long Range (20in Cyber wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 335,
+      "mpge": 78.0,
+      "kwh_per_100mi": 43.36
+    },
+    {
+      "id": "50460",
+      "make": "Tesla",
+      "model": "Cybertruck Dual Motor AWD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 325,
+      "mpge": 78.0,
+      "kwh_per_100mi": 42.95
+    },
+    {
+      "id": "49979",
+      "make": "Rolls-Royce",
+      "model": "Spectre (22 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 277,
+      "mpge": 77.0,
+      "kwh_per_100mi": 43.65
+    },
+    {
+      "id": "50035",
+      "make": "Polestar",
+      "model": "4 Long Range Dual Motor Performance",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 255,
+      "mpge": 77.0,
+      "kwh_per_100mi": 44.0
+    },
+    {
+      "id": "50248",
+      "make": "Porsche",
+      "model": "Taycan Turbo S Cross Turismo",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 261,
+      "mpge": 77.0,
+      "kwh_per_100mi": 43.61
+    },
+    {
+      "id": "49628",
+      "make": "BMW",
+      "model": "iX M70 (22 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 284,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.48
+    },
+    {
+      "id": "49705",
+      "make": "Rivian",
+      "model": "R1T Tri Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 371,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.57
+    },
+    {
+      "id": "49709",
+      "make": "Rivian",
+      "model": "R1T All-Terrain Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 289,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.36
+    },
+    {
+      "id": "49712",
+      "make": "Rivian",
+      "model": "R1T All-Terrain Performance Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 289,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.36
+    },
+    {
+      "id": "49715",
+      "make": "Rivian",
+      "model": "R1T Quad Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 374,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.37
+    },
+    {
+      "id": "49730",
+      "make": "Rivian",
+      "model": "R1S Tri Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 371,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.57
+    },
+    {
+      "id": "49734",
+      "make": "Rivian",
+      "model": "R1S All-Terrain Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 289,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.36
+    },
+    {
+      "id": "49737",
+      "make": "Rivian",
+      "model": "R1S All-Terrain Performance Dual Large (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 289,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.36
+    },
+    {
+      "id": "49740",
+      "make": "Rivian",
+      "model": "R1S Quad Max (22in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 374,
+      "mpge": 76.0,
+      "kwh_per_100mi": 44.37
+    },
+    {
+      "id": "49629",
+      "make": "BMW",
+      "model": "iX M70 (23 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 283,
+      "mpge": 75.0,
+      "kwh_per_100mi": 44.81
+    },
+    {
+      "id": "49943",
+      "make": "BMW",
+      "model": "i7 M70 xDrive Sedan (20 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 267,
+      "mpge": 75.0,
+      "kwh_per_100mi": 45.06
+    },
+    {
+      "id": "49686",
+      "make": "Mercedes-Benz",
+      "model": "AMG EQE 4matic Plus (SUV)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 230,
+      "mpge": 74.0,
+      "kwh_per_100mi": 45.53
+    },
+    {
+      "id": "49977",
+      "make": "Rolls-Royce",
+      "model": "Spectre Black Badge (22 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 266,
+      "mpge": 74.0,
+      "kwh_per_100mi": 45.43
+    },
+    {
+      "id": "49649",
+      "make": "Dodge",
+      "model": "Charger Daytona Scat Pack AWD 325/35ZR20 Rear",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 223,
+      "mpge": 72.0,
+      "kwh_per_100mi": 46.59
+    },
+    {
+      "id": "49700",
+      "make": "Rivian",
+      "model": "R1T All-Terrain Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 292,
+      "mpge": 72.0,
+      "kwh_per_100mi": 46.89
+    },
+    {
+      "id": "49702",
+      "make": "Rivian",
+      "model": "R1T All-Terrain Performance Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 292,
+      "mpge": 72.0,
+      "kwh_per_100mi": 46.89
+    },
+    {
+      "id": "49725",
+      "make": "Rivian",
+      "model": "R1S All-Terrain Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 292,
+      "mpge": 72.0,
+      "kwh_per_100mi": 46.89
+    },
+    {
+      "id": "49727",
+      "make": "Rivian",
+      "model": "R1S All-Terrain Performance Dual Large Plus (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 292,
+      "mpge": 72.0,
+      "kwh_per_100mi": 46.89
+    },
+    {
+      "id": "50293",
+      "make": "Maserati",
+      "model": "Grecale Folgore (21 inch wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 239,
+      "mpge": 72.0,
+      "kwh_per_100mi": 46.66
+    },
+    {
+      "id": "49713",
+      "make": "Rivian",
+      "model": "R1T Quad Max (22in UHP)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 338,
+      "mpge": 71.0,
+      "kwh_per_100mi": 47.35
+    },
+    {
+      "id": "49738",
+      "make": "Rivian",
+      "model": "R1S Quad Max (22in UHP)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 338,
+      "mpge": 71.0,
+      "kwh_per_100mi": 47.35
+    },
+    {
+      "id": "50028",
+      "make": "Hyundai",
+      "model": "Ioniq 5 Robo taxi",
+      "trany": "Automatic (A1)",
+      "drive": "Rear-Wheel Drive",
+      "range": 168,
+      "mpge": 71.0,
+      "kwh_per_100mi": 47.53
+    },
+    {
+      "id": "50449",
+      "make": "Jeep",
+      "model": "Recon MOAB 4WD",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 222,
+      "mpge": 71.0,
+      "kwh_per_100mi": 47.56
+    },
+    {
+      "id": "49638",
+      "make": "Chevrolet",
+      "model": "Silverado EV 20-mod battery, 19kW 6-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 424,
+      "mpge": 70.0,
+      "kwh_per_100mi": 47.84
+    },
+    {
+      "id": "49678",
+      "make": "Mercedes-Benz",
+      "model": "AMG EQE 4matic Plus",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 220,
+      "mpge": 70.0,
+      "kwh_per_100mi": 48.0
+    },
+    {
+      "id": "49978",
+      "make": "Rolls-Royce",
+      "model": "Spectre Black Badge (23 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 251,
+      "mpge": 70.0,
+      "kwh_per_100mi": 48.28
+    },
+    {
+      "id": "49980",
+      "make": "Rolls-Royce",
+      "model": "Spectre (23 inch Wheels)",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 253,
+      "mpge": 70.0,
+      "kwh_per_100mi": 47.84
+    },
+    {
+      "id": "49639",
+      "make": "Chevrolet",
+      "model": "Silverado EV 24-mod battery, 19kW 6-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 493,
+      "mpge": 68.0,
+      "kwh_per_100mi": 49.48
+    },
+    {
+      "id": "49640",
+      "make": "Chevrolet",
+      "model": "Silverado EV 20-mod battery, 11kW 15-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 410,
+      "mpge": 68.0,
+      "kwh_per_100mi": 49.55
+    },
+    {
+      "id": "49642",
+      "make": "Chevrolet",
+      "model": "Silverado EV 14-mod battery, 11kW 6-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 286,
+      "mpge": 68.0,
+      "kwh_per_100mi": 49.55
+    },
+    {
+      "id": "49658",
+      "make": "GMC",
+      "model": "Sierra EV 20-mod battery, 11kW 15-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 410,
+      "mpge": 68.0,
+      "kwh_per_100mi": 49.55
+    },
+    {
+      "id": "49706",
+      "make": "Rivian",
+      "model": "R1T All-Terrain Tri Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 329,
+      "mpge": 68.0,
+      "kwh_per_100mi": 49.83
+    },
+    {
+      "id": "49731",
+      "make": "Rivian",
+      "model": "R1S All-Terrain Tri Max (20in)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 329,
+      "mpge": 68.0,
+      "kwh_per_100mi": 49.83
+    },
+    {
+      "id": "49643",
+      "make": "Chevrolet",
+      "model": "Silverado EV 14-mod battery, 11kW 15-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 283,
+      "mpge": 67.0,
+      "kwh_per_100mi": 50.28
+    },
+    {
+      "id": "49660",
+      "make": "GMC",
+      "model": "Sierra EV 14-mod battery, 11kW 15-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 283,
+      "mpge": 67.0,
+      "kwh_per_100mi": 50.28
+    },
+    {
+      "id": "49714",
+      "make": "Rivian",
+      "model": "R1T Quad Max (20in AT)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 325,
+      "mpge": 67.0,
+      "kwh_per_100mi": 50.1
+    },
+    {
+      "id": "49739",
+      "make": "Rivian",
+      "model": "R1S Quad Max (20in AT)",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 325,
+      "mpge": 67.0,
+      "kwh_per_100mi": 50.1
+    },
+    {
+      "id": "49641",
+      "make": "Chevrolet",
+      "model": "Silverado EV 20-mod battery, 19kW 15-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 385,
+      "mpge": 64.0,
+      "kwh_per_100mi": 52.42
+    },
+    {
+      "id": "49659",
+      "make": "GMC",
+      "model": "Sierra EV 20-mod battery, 19kW 15-mode charger",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 385,
+      "mpge": 64.0,
+      "kwh_per_100mi": 52.42
+    },
+    {
+      "id": "49687",
+      "make": "Mercedes-Benz",
+      "model": "G 580 with EQ Technology",
+      "trany": "Automatic (A2)",
+      "drive": "4-Wheel Drive",
+      "range": 239,
+      "mpge": 62.0,
+      "kwh_per_100mi": 54.0
+    },
+    {
+      "id": "49630",
+      "make": "Bugatti Rimac",
+      "model": "Nevera R",
+      "trany": "Automatic (A1)",
+      "drive": "4-Wheel Drive",
+      "range": 174,
+      "mpge": 51.0,
+      "kwh_per_100mi": 66.45
+    }
+  ]
 }

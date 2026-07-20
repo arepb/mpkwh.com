@@ -59,7 +59,15 @@ def fetch_eia_rate(api_key):
         req = Request(url, headers=HEADERS)
         with urlopen(req, timeout=30) as resp:
             data = json.loads(resp.read())
-    except (URLError, HTTPError) as exc:
+    except HTTPError as exc:
+        body = ""
+        try:
+            body = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            pass
+        print(f"  EIA request failed: {exc} — body: {body[:500]}", file=sys.stderr)
+        return None
+    except URLError as exc:
         print(f"  EIA request failed: {exc}", file=sys.stderr)
         return None
 

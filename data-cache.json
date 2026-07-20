@@ -1,0 +1,11 @@
+{
+  "fetched_at": "2026-07-20T00:00:00Z",
+  "_note": "Bootstrap placeholder — epa_evs_2026 will be populated on the first GitHub Action run (next Sunday). EIA value matches current tracker.",
+  "eia": {
+    "rate_per_kwh": 0.1883,
+    "period": "2026-04",
+    "period_label": "April 2026",
+    "published_label": "June 2026"
+  },
+  "epa_evs_2026": []
+}

@@ -16,12 +16,25 @@ If the most recent commit on `main` is older than 7 days, the site is overdue.
 ## Source of truth
 [ev-efficiency-tracker.md](ev-efficiency-tracker.md) is the working data document. Always update it FIRST, then sync the changes into `index.html`. Never edit `index.html` numbers without also reflecting them in the tracker.
 
+## Data cache
+
+A GitHub Action (`.github/workflows/refresh-ev-data.yml`) runs every Sunday at 2 AM UTC and writes `data-cache.json` to the repo root. The Monday routine reads from this file instead of hitting external URLs directly (which are blocked by the Claude Code egress policy).
+
+`data-cache.json` contains:
+- `eia` — latest US average residential electricity rate (`rate_per_kwh`, `period_label`, `published_label`)
+- `epa_evs_2026` — all 2026 battery EVs from fueleconomy.gov, sorted by MPGe descending, each with `make`, `model`, `trany`, `drive`, `range`, `mpge`, `kwh_per_100mi`
+
+The Action requires an `EIA_API_KEY` secret (free key from https://www.eia.gov/opendata/register.php). If the key is missing, `eia` is preserved from the previous cache run. `epa_evs_2026` requires no key — it downloads from fueleconomy.gov's public CSV.
+
+If `data-cache.json` is missing or `epa_evs_2026` is empty (Action hasn't run yet), fall back to Car and Driver links in index.html for each vehicle.
+
 ## Weekly update workflow
 
-1. **Refresh inputs:**
-   - EPA fuel economy ratings for new/changed model years (caranddriver.com is the linked source per vehicle).
-   - EIA US average residential electricity rate (published monthly with ~2-month lag). Stored at the top of `ev-efficiency-tracker.md` as `$0.XXXX/kWh`.
-   - Usable battery pack sizes from ev-database.org — check for updates to existing vehicles or new entrants.
+1. **Refresh inputs from `data-cache.json`:**
+   - Read `data-cache.json` first. Compare `eia.rate_per_kwh` to the current value in `ev-efficiency-tracker.md`. If different, use the new rate and update `period_label`/`published_label` references.
+   - For each vehicle in the current top-20, find the matching entry in `epa_evs_2026` by make/model/trim. If `range` differs from the tracker, note it.
+   - Check the top entries of `epa_evs_2026` for any vehicle with high enough range that, divided by its usable kWh (from the Pack Size Sources table in the tracker), would exceed the current rank-20 threshold (~4.09 Mi/kWh). Flag any new entrant.
+   - Usable kWh is **not** in the cache — it is manually maintained in the tracker from ev-database.org and manufacturer specs.
 
 2. **Update `ev-efficiency-tracker.md`:**
    - Header date (`# EV Efficiency Tracker — Updated <Month D, YYYY>`).
@@ -76,6 +89,9 @@ This repo lives inside a Dropbox-synced folder. Two recurring issues:
 - `robots.txt` — AI crawlers (GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, GoogleOther) explicitly welcomed.
 - `sitemap.xml` — single URL; `<lastmod>` is bumped to the current date by every weekly update.
 - `llms.txt` — AI-citable plain-text summary of the site. Mirrors the top-20 list and is regenerated each weekly update so AI search engines (ChatGPT, Claude, Perplexity) cite current rankings, not stale data.
+- `data-cache.json` — pre-fetched EIA rate and EPA EV data, written each Sunday by the GitHub Action. Read by the Monday routine instead of hitting external URLs. Commit this file; do not gitignore it.
+- `.github/workflows/refresh-ev-data.yml` — the GitHub Action that populates `data-cache.json`.
+- `.github/scripts/fetch-ev-data.py` — the fetch script called by the Action.
 
 ## SEO / GEO
 - index.html includes two JSON-LD blocks: `WebPage` (with `ItemList` of all 20 ranked vehicles) and `FAQPage` (stable Q&As about Mi/kWh, calculation, update cadence, data sources). Both must remain valid JSON after every weekly update — validate before committing.

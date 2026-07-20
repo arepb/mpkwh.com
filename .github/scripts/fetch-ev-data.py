@@ -48,7 +48,7 @@ def fetch_eia_rate(api_key):
         f"?api_key={pct_encode(api_key, safe='')}"
         "&frequency=monthly"
         "&data[0]=price"
-        "&facets[sectorid][]=residential"
+        "&facets[sectorid][]=RES"
         "&facets[stateid][]=US"
         "&sort[0][column]=period"
         "&sort[0][direction]=desc"
@@ -73,7 +73,8 @@ def fetch_eia_rate(api_key):
 
     rows = data.get("response", {}).get("data", [])
     if not rows:
-        print("  EIA returned no data rows", file=sys.stderr)
+        import json as _json
+        print(f"  EIA returned no data rows — full response: {_json.dumps(data)[:800]}", file=sys.stderr)
         return None
 
     latest = rows[0]

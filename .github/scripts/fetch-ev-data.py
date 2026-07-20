@@ -31,6 +31,21 @@ def load_existing_cache():
         return {}
 
 
+def _eia_get(url):
+    """GET an EIA API URL and return parsed JSON, or raise on error."""
+    req = Request(url, headers=HEADERS)
+    try:
+        with urlopen(req, timeout=30) as resp:
+            return json.loads(resp.read())
+    except HTTPError as exc:
+        body = ""
+        try:
+            body = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            pass
+        raise RuntimeError(f"HTTP {exc.code}: {body[:400]}") from exc
+
+
 def fetch_eia_rate(api_key):
     """Fetch latest US average residential electricity rate from EIA API v2.
 
@@ -41,14 +56,38 @@ def fetch_eia_rate(api_key):
         print("  EIA_API_KEY not set — skipping EIA fetch", file=sys.stderr)
         return None
 
-    # Brackets in EIA v2 param names must NOT be percent-encoded — build manually
     from urllib.parse import quote as pct_encode
+    key = pct_encode(api_key, safe="")
+
+    # Step 1: discover the sectorid value for residential via the facet endpoint
+    try:
+        facet_data = _eia_get(
+            f"https://api.eia.gov/v2/electricity/retail-sales/facet/sectorid/?api_key={key}"
+        )
+        facets = facet_data.get("response", {}).get("facets", [])
+        print(f"  EIA sectorid facets: {facets}", file=sys.stderr)
+        sectorid = next(
+            (f["id"] for f in facets if "residential" in f.get("description", "").lower()),
+            None,
+        )
+    except Exception as exc:
+        print(f"  EIA facet discovery failed: {exc}", file=sys.stderr)
+        sectorid = None
+
+    if not sectorid:
+        print("  Could not find residential sectorid — aborting EIA fetch", file=sys.stderr)
+        return None
+
+    print(f"  Using sectorid={sectorid!r} for residential", file=sys.stderr)
+
+    # Step 2: fetch data with the correct sectorid
+    # Brackets in EIA v2 param names must NOT be percent-encoded — build manually
     url = (
         "https://api.eia.gov/v2/electricity/retail-sales/data/"
-        f"?api_key={pct_encode(api_key, safe='')}"
+        f"?api_key={key}"
         "&frequency=monthly"
         "&data[0]=price"
-        "&facets[sectorid][]=RES"
+        f"&facets[sectorid][]={pct_encode(sectorid, safe='')}"
         "&facets[stateid][]=US"
         "&sort[0][column]=period"
         "&sort[0][direction]=desc"
@@ -56,25 +95,14 @@ def fetch_eia_rate(api_key):
     )
 
     try:
-        req = Request(url, headers=HEADERS)
-        with urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read())
-    except HTTPError as exc:
-        body = ""
-        try:
-            body = exc.read().decode("utf-8", errors="replace")
-        except Exception:
-            pass
-        print(f"  EIA request failed: {exc} — body: {body[:500]}", file=sys.stderr)
-        return None
-    except URLError as exc:
-        print(f"  EIA request failed: {exc}", file=sys.stderr)
+        data = _eia_get(url)
+    except Exception as exc:
+        print(f"  EIA data request failed: {exc}", file=sys.stderr)
         return None
 
     rows = data.get("response", {}).get("data", [])
     if not rows:
-        import json as _json
-        print(f"  EIA returned no data rows — full response: {_json.dumps(data)[:800]}", file=sys.stderr)
+        print(f"  EIA returned no data rows — response: {json.dumps(data)[:600]}", file=sys.stderr)
         return None
 
     latest = rows[0]

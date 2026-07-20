@@ -15,9 +15,8 @@ import json
 import os
 import sys
 import zipfile
-from datetime import datetime, date
+from datetime import datetime, date, timezone
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 CACHE_PATH = "data-cache.json"
@@ -42,17 +41,19 @@ def fetch_eia_rate(api_key):
         print("  EIA_API_KEY not set — skipping EIA fetch", file=sys.stderr)
         return None
 
-    params = urlencode([
-        ("api_key", api_key),
-        ("frequency", "monthly"),
-        ("data[0]", "price"),
-        ("facets[sectorName][]", "residential"),
-        ("facets[stateid][]", "US"),
-        ("sort[0][column]", "period"),
-        ("sort[0][direction]", "desc"),
-        ("length", "3"),
-    ])
-    url = f"https://api.eia.gov/v2/electricity/retail-sales/data/?{params}"
+    # Brackets in EIA v2 param names must NOT be percent-encoded — build manually
+    from urllib.parse import quote as pct_encode
+    url = (
+        "https://api.eia.gov/v2/electricity/retail-sales/data/"
+        f"?api_key={pct_encode(api_key, safe='')}"
+        "&frequency=monthly"
+        "&data[0]=price"
+        "&facets[sectorName][]=residential"
+        "&facets[stateid][]=US"
+        "&sort[0][column]=period"
+        "&sort[0][direction]=desc"
+        "&length=3"
+    )
 
     try:
         req = Request(url, headers=HEADERS)
@@ -167,7 +168,7 @@ def main():
     evs = fetch_epa_evs()
 
     cache = {
-        "fetched_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         # Fall back to previous cached values if a fetch fails
         "eia": eia if eia is not None else existing.get("eia"),
         "epa_evs_2026": evs if evs is not None else existing.get("epa_evs_2026", []),

@@ -65,7 +65,6 @@ def fetch_eia_rate(api_key):
             f"https://api.eia.gov/v2/electricity/retail-sales/facet/sectorid/?api_key={key}"
         )
         facets = facet_data.get("response", {}).get("facets", [])
-        print(f"  EIA sectorid facets: {facets}", file=sys.stderr)
         sectorid = next(
             (f["id"] for f in facets if "residential" in f.get("name", "").lower()),
             None,
@@ -102,7 +101,7 @@ def fetch_eia_rate(api_key):
 
     rows = data.get("response", {}).get("data", [])
     if not rows:
-        print(f"  EIA returned no data rows — response: {json.dumps(data)[:600]}", file=sys.stderr)
+        print("  EIA returned no data rows", file=sys.stderr)
         return None
 
     latest = rows[0]

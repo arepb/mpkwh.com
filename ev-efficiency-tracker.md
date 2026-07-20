@@ -23,13 +23,28 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1883
 | 11 | 2026 Lucid Air Grand Touring (AWD, 19") | 512 | 118.0 | 117.0 | 4.38 | $4.30 |
 | 12 | 2026 Toyota bZ (FWD, 200 Ah) | 236 | 57.7 | 54.0 | 4.37 | $4.31 |
 | 13 | 2026 Tesla Model Y Standard (RWD, 19") | 303 | 72.0 ⁺ | 69.5 ⁺ | 4.36 | $4.32 |
-| 14 | 2026 Subaru Uncharted (FWD, Premium) | 308 | 74.7 | 72.0 | 4.28 | $4.40 |
-| 15 | 2026 Tesla Model Y Standard (AWD) | 294 | 72.0 ⁺ | 69.5 ⁺ | 4.23 | $4.45 |
-| 16 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 74.7 | 71.0 | 4.21 | $4.47 |
-| 17 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 74.7 | 72.0 | 4.18 | $4.50 |
-| 18 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 74.7 | 71.0 | 4.17 | $4.52 |
-| 19 | 2026 Tesla Model S | 410 | 102.0 ⁺ | 99.0 ⁺ | 4.14 | $4.55 |
-| 20 | 2026 Tesla Model Y Long Range (AWD) | 327 | 82.0 ⁺ | 80.0 ⁺ | 4.09 | $4.61 |
+| 14 | 2026 Lucid Air Touring (AWD, 20") | 396 | 96.0 | 92.0 | 4.30 | $4.38 |
+| 15 | 2026 Subaru Uncharted (FWD, Premium) | 308 | 74.7 | 72.0 | 4.28 | $4.40 |
+| 16 | 2026 Tesla Model Y Standard (AWD) | 294 | 72.0 ⁺ | 69.5 ⁺ | 4.23 | $4.45 |
+| 17 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 74.7 | 71.0 | 4.21 | $4.47 |
+| 18 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 74.7 | 72.0 | 4.18 | $4.50 |
+| 19 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 74.7 | 71.0 | 4.17 | $4.52 |
+| 20 | 2026 Lexus ES 350e (FWD, 19") | 307 | 77.0 | 73.8 | 4.16 | $4.53 |
+
+---
+
+## Changelog vs. July 13, 2026
+
+### New Entrants
+- **Lucid Air Touring (AWD, 20")** enters at #14 (4.30 Mi/kWh, 396 mi range) — same 92 kWh usable pack as the 19" trim; lower range due to larger wheels.
+- **Lexus ES 350e (FWD, 19")** enters at #20 (4.16 Mi/kWh, 307 mi range) — first EPA rating for the Lexus ES BEV; usable kWh estimated at 73.8 from EPA energy calc (307mi × 0.27 kWh/100mi × 0.89), gross ~77.0 kWh.
+
+### Drop-Outs
+- **Tesla Model S** (4.14 Mi/kWh, was #19) — displaced by two new entrants.
+- **Tesla Model Y Long Range (AWD)** (4.09 Mi/kWh, was #20) — displaced by two new entrants.
+
+### Electricity Rate
+- EIA rate unchanged at **$0.1883/kWh** (April 2026, published June 2026).
 
 ---
 
@@ -75,6 +90,7 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1883
 | Toyota bZ LIMITED (200 Ah) | 74.7 | 71.0 | Toyota pressroom (LIMITED uses 74.7 kWh pack regardless of cell type) |
 | Subaru Uncharted (FWD) | 74.7 | 72.0 | Subaru press materials / C&D (74.7 kWh gross; ev-database.org had incorrect 77.0) |
 | Lexus RZ 350e (FWD) | 74.7 | 72.0 | Lexus pressroom (gross) / ev-database.org (usable) |
+| Lexus ES 350e (FWD) | 77.0 | 73.8 | EPA energy calc: 307mi×0.27kWh/100mi×0.89≈73.8 kWh usable; gross ~77.0 kWh estimated (manufacturer spec not yet confirmed for 2026 model year) |
 | Mercedes-Benz CLA 250 Plus EQ | 90.0 | 85.0 | Mercedes-Benz USA press (explicitly states 85 kWh usable) |
 
 ---

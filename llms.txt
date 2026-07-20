@@ -21,13 +21,13 @@ Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on
 11. 2026 Lucid Air Grand Touring (AWD, 19") — 4.38 Mi/kWh — 512 mi range — 117 kWh usable
 12. 2026 Toyota bZ (FWD, 200 Ah) — 4.37 Mi/kWh — 236 mi range — 54 kWh usable
 13. 2026 Tesla Model Y Standard (RWD, 19") — 4.36 Mi/kWh — 303 mi range — 69.5 kWh usable
-14. 2026 Subaru Uncharted (FWD, Premium) — 4.28 Mi/kWh — 308 mi range — 72 kWh usable
-15. 2026 Tesla Model Y Standard (AWD) — 4.23 Mi/kWh — 294 mi range — 69.5 kWh usable
-16. 2026 Toyota bZ LIMITED (FWD, 191 Ah) — 4.21 Mi/kWh — 299 mi range — 71 kWh usable
-17. 2026 Lexus RZ 350e (FWD, 18") — 4.18 Mi/kWh — 301 mi range — 72 kWh usable
-18. 2026 Toyota bZ LIMITED (FWD, 200 Ah) — 4.17 Mi/kWh — 296 mi range — 71 kWh usable
-19. 2026 Tesla Model S — 4.14 Mi/kWh — 410 mi range — 99 kWh usable
-20. 2026 Tesla Model Y Long Range (AWD) — 4.09 Mi/kWh — 327 mi range — 80 kWh usable
+14. 2026 Lucid Air Touring (AWD, 20") — 4.30 Mi/kWh — 396 mi range — 92 kWh usable
+15. 2026 Subaru Uncharted (FWD, Premium) — 4.28 Mi/kWh — 308 mi range — 72 kWh usable
+16. 2026 Tesla Model Y Standard (AWD) — 4.23 Mi/kWh — 294 mi range — 69.5 kWh usable
+17. 2026 Toyota bZ LIMITED (FWD, 191 Ah) — 4.21 Mi/kWh — 299 mi range — 71 kWh usable
+18. 2026 Lexus RZ 350e (FWD, 18") — 4.18 Mi/kWh — 301 mi range — 72 kWh usable
+19. 2026 Toyota bZ LIMITED (FWD, 200 Ah) — 4.17 Mi/kWh — 296 mi range — 71 kWh usable
+20. 2026 Lexus ES 350e (FWD, 19") — 4.16 Mi/kWh — 307 mi range — 73.8 kWh usable
 
 ## Notes
 

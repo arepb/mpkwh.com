@@ -177,16 +177,20 @@ def main():
         json.dump(cache, f, indent=2)
         f.write("\n")
 
-    warnings = []
-    if eia is None:
-        warnings.append("EIA data not updated (kept previous cached value)")
+    # "No API key" is expected and not an error. Actual fetch failures are.
+    errors = []
+    if api_key and eia is None:
+        errors.append("EIA fetch failed despite EIA_API_KEY being set")
+    elif not api_key:
+        print("NOTE: EIA_API_KEY not set — EIA rate kept from previous cache", file=sys.stderr)
     if evs is None:
-        warnings.append("EPA data not updated (kept previous cached value)")
-    for w in warnings:
-        print(f"WARNING: {w}", file=sys.stderr)
+        errors.append("EPA fetch failed — fueleconomy.gov unreachable or returned bad data")
 
-    if warnings:
-        sys.exit(1)  # fail the Action so it shows as an error in GitHub UI
+    for e in errors:
+        print(f"ERROR: {e}", file=sys.stderr)
+
+    if errors:
+        sys.exit(1)
 
     print("data-cache.json written successfully.", file=sys.stderr)
 

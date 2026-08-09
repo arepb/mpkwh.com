@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-02T05:24:31Z",
+  "fetched_at": "2026-08-09T03:39:12Z",
   "eia": {
     "rate_per_kwh": 0.1844,
     "period": "2026-05",
@@ -1500,7 +1500,7 @@
     {
       "id": "50026",
       "make": "Cadillac",
-      "model": "OPTIQ AWD V SERIES 11 kW Charger 15 modes",
+      "model": "OPTIQ AWD V SERIES 11 kW Charger",
       "trany": "Automatic (A1)",
       "drive": "All-Wheel Drive",
       "range": 278,
@@ -2260,7 +2260,7 @@
     {
       "id": "50027",
       "make": "Cadillac",
-      "model": "OPTIQ AWD V SERIES 19 kW charger 15 modes",
+      "model": "OPTIQ AWD V SERIES 19 kW charger",
       "trany": "Automatic (A1)",
       "drive": "All-Wheel Drive",
       "range": 250,
@@ -3040,7 +3040,7 @@
     {
       "id": "49638",
       "make": "Chevrolet",
-      "model": "Silverado EV 20-mod battery, 19kW 6-mode charger",
+      "model": "Silverado EV Ext Range WT",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 424,
@@ -3080,7 +3080,7 @@
     {
       "id": "49639",
       "make": "Chevrolet",
-      "model": "Silverado EV 24-mod battery, 19kW 6-mode charger",
+      "model": "Silverado EV Max Range WT (19kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 493,
@@ -3090,7 +3090,7 @@
     {
       "id": "49640",
       "make": "Chevrolet",
-      "model": "Silverado EV 20-mod battery, 11kW 15-mode charger",
+      "model": "Silverado EV Ext Range (11kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 410,
@@ -3100,7 +3100,7 @@
     {
       "id": "49642",
       "make": "Chevrolet",
-      "model": "Silverado EV 14-mod battery, 11kW 6-mode charger",
+      "model": "Silverado EV Std Range WT (11kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 286,
@@ -3110,7 +3110,7 @@
     {
       "id": "49658",
       "make": "GMC",
-      "model": "Sierra EV 20-mod battery, 11kW 15-mode charger",
+      "model": "SIERRA EV Ext Range (11kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 410,
@@ -3140,7 +3140,7 @@
     {
       "id": "49643",
       "make": "Chevrolet",
-      "model": "Silverado EV 14-mod battery, 11kW 15-mode charger",
+      "model": "Silverado EV Std Range (11kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 283,
@@ -3150,7 +3150,7 @@
     {
       "id": "49660",
       "make": "GMC",
-      "model": "Sierra EV 14-mod battery, 11kW 15-mode charger",
+      "model": "SIERRA EV Std Range (11kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 283,
@@ -3180,7 +3180,7 @@
     {
       "id": "49641",
       "make": "Chevrolet",
-      "model": "Silverado EV 20-mod battery, 19kW 15-mode charger",
+      "model": "Silverado EV Ext Range (19kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 385,
@@ -3190,7 +3190,7 @@
     {
       "id": "49659",
       "make": "GMC",
-      "model": "Sierra EV 20-mod battery, 19kW 15-mode charger",
+      "model": "SIERRA EV Ext Range (19kW Charger)",
       "trany": "Automatic (A1)",
       "drive": "4-Wheel Drive",
       "range": 385,

@@ -6,7 +6,7 @@
 
 Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on one unit of electricity. A higher number means greater efficiency: lower energy consumption, lower running costs, and longer range from the same battery. Mi/kWh is calculated as EPA-rated range divided by usable battery capacity — the portion of the pack the car can actually access. This measures battery-to-wheel efficiency.
 
-## Current Rankings (Updated August 3, 2026)
+## Current Rankings (Updated August 10, 2026)
 
 1. 2026 Lucid Air Pure (RWD, 19") — 5.00 Mi/kWh — 420 mi range — 84 kWh usable
 2. 2026 Lucid Air Touring (AWD, 19") — 4.68 Mi/kWh — 431 mi range — 92 kWh usable
@@ -23,11 +23,11 @@ Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on
 13. 2026 Tesla Model Y Standard (RWD, 19") — 4.36 Mi/kWh — 303 mi range — 69.5 kWh usable
 14. 2026 Lucid Air Touring (AWD, 20") — 4.30 Mi/kWh — 396 mi range — 92 kWh usable
 15. 2026 Subaru Uncharted (FWD, Premium) — 4.28 Mi/kWh — 308 mi range — 72 kWh usable
-16. 2026 Tesla Model Y Standard (AWD) — 4.23 Mi/kWh — 294 mi range — 69.5 kWh usable
-17. 2026 Toyota bZ LIMITED (FWD, 191 Ah) — 4.21 Mi/kWh — 299 mi range — 71 kWh usable
-18. 2026 Lexus RZ 350e (FWD, 18") — 4.18 Mi/kWh — 301 mi range — 72 kWh usable
-19. 2026 Toyota bZ LIMITED (FWD, 200 Ah) — 4.17 Mi/kWh — 296 mi range — 71 kWh usable
-20. 2026 Lexus ES 350e (FWD, 19") — 4.16 Mi/kWh — 307 mi range — 73.8 kWh usable
+16. 2026 Nissan LEAF 75kWh (18" steel) — 4.27 Mi/kWh — 303 mi range — 71 kWh usable
+17. 2026 Tesla Model Y Standard (AWD) — 4.23 Mi/kWh — 294 mi range — 69.5 kWh usable
+18. 2026 Toyota bZ LIMITED (FWD, 191 Ah) — 4.21 Mi/kWh — 299 mi range — 71 kWh usable
+19. 2026 Lexus RZ 350e (FWD, 18") — 4.18 Mi/kWh — 301 mi range — 72 kWh usable
+20. 2026 Toyota bZ LIMITED (FWD, 200 Ah) — 4.17 Mi/kWh — 296 mi range — 71 kWh usable
 
 ## Notes
 
@@ -35,7 +35,7 @@ Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on
 - Efficiency figures reflect the most efficient trim and configuration available for each model year.
 - Pack sizes sourced from ev-database.org, manufacturer spec pages, and EPA energy calculations (range × kWh/100mi × 0.89 charging efficiency). Tesla does not publicly disclose battery capacity — Tesla usable kWh figures are cross-verified via EPA energy data and C&D spec boxes.
 - Not all 2026 models have received EPA ratings yet. The table is updated every Monday as new ratings are published.
-- Cost-per-100-miles uses the latest US average residential electricity rate published monthly by the US Energy Information Administration (EIA). As of July 2026: $0.1844/kWh (May 2026 figure, published July 2026).
+- Cost-per-100-miles uses the latest US average residential electricity rate published monthly by the US Energy Information Administration (EIA). As of August 2026: $0.1844/kWh (May 2026 figure, published July 2026).
 - Data source: US EPA fueleconomy.gov, ev-database.org
 
 ## Pages

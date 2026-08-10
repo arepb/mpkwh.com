@@ -1,4 +1,4 @@
-# EV Efficiency Tracker — Updated August 3, 2026
+# EV Efficiency Tracker — Updated August 10, 2026
 
 ## Top 20 Most Efficient Electric Cars in the US (EPA-Rated)
 
@@ -25,11 +25,24 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1844
 | 13 | 2026 Tesla Model Y Standard (RWD, 19") | 303 | 72.0 ⁺ | 69.5 ⁺ | 4.36 | $4.23 |
 | 14 | 2026 Lucid Air Touring (AWD, 20") | 396 | 96.0 | 92.0 | 4.30 | $4.29 |
 | 15 | 2026 Subaru Uncharted (FWD, Premium) | 308 | 74.7 | 72.0 | 4.28 | $4.31 |
-| 16 | 2026 Tesla Model Y Standard (AWD) | 294 | 72.0 ⁺ | 69.5 ⁺ | 4.23 | $4.36 |
-| 17 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 74.7 | 71.0 | 4.21 | $4.38 |
-| 18 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 74.7 | 72.0 | 4.18 | $4.41 |
-| 19 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 74.7 | 71.0 | 4.17 | $4.42 |
-| 20 | 2026 Lexus ES 350e (FWD, 19") | 307 | 77.0 | 73.8 | 4.16 | $4.43 |
+| 16 | 2026 Nissan LEAF 75kWh (18" steel) | 303 | 75.0 | 71.0 | 4.27 | $4.32 |
+| 17 | 2026 Tesla Model Y Standard (AWD) | 294 | 72.0 ⁺ | 69.5 ⁺ | 4.23 | $4.36 |
+| 18 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 74.7 | 71.0 | 4.21 | $4.38 |
+| 19 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 74.7 | 72.0 | 4.18 | $4.41 |
+| 20 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 74.7 | 71.0 | 4.17 | $4.42 |
+
+---
+
+## Changelog vs. August 3, 2026
+
+### New Entrants
+- **2026 Nissan LEAF 75kWh (18" steel)** enters at #16 (4.27 Mi/kWh, 303 mi range) — newly EPA-rated; usable kWh estimated at 71.0 from 94.7% DoD of 75.0 kWh gross (based on LEAF Plus precedent); manufacturer spec unconfirmed.
+
+### Drop-Outs
+- **2026 Lexus ES 350e (FWD, 19")** (4.16 Mi/kWh, was #20) — displaced by LEAF 75kWh.
+
+### Electricity Rate
+- EIA rate unchanged at **$0.1844/kWh** (May 2026, published July 2026).
 
 ---
 
@@ -115,6 +128,7 @@ Cost/100mi = (100 ÷ Mi/kWh) × $0.1844
 | Toyota bZ LIMITED (191 Ah) | 74.7 | 71.0 | Toyota pressroom (all LIMITED trims use 74.7 kWh pack) |
 | Toyota bZ LIMITED (200 Ah) | 74.7 | 71.0 | Toyota pressroom (LIMITED uses 74.7 kWh pack regardless of cell type) |
 | Subaru Uncharted (FWD) | 74.7 | 72.0 | Subaru press materials / C&D (74.7 kWh gross; ev-database.org had incorrect 77.0) |
+| Nissan LEAF 75kWh (18" steel) | 75.0 | 71.0 | Estimated: 94.7% DoD of 75.0 kWh gross (2019 LEAF Plus 62kWh had 95.3% DoD; conservative estimate applied). EPA energy calc with 89% overshoots gross, suggesting Nissan's AC charging efficiency is ~84-85%. Manufacturer spec unconfirmed — update when ev-database.org posts 2026 LEAF data. |
 | Lexus RZ 350e (FWD) | 74.7 | 72.0 | Lexus pressroom (gross) / ev-database.org (usable) |
 | Lexus ES 350e (FWD) | 77.0 | 73.8 | EPA energy calc: 307mi×0.27kWh/100mi×0.89≈73.8 kWh usable; gross ~77.0 kWh estimated (manufacturer spec not yet confirmed for 2026 model year) |
 | Mercedes-Benz CLA 250 Plus EQ | 90.0 | 85.0 | Mercedes-Benz USA press (explicitly states 85 kWh usable) |

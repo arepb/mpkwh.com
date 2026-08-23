@@ -14,6 +14,7 @@ import io
 import json
 import os
 import sys
+import time
 import zipfile
 from datetime import datetime, date, timezone
 from urllib.error import HTTPError, URLError
@@ -31,19 +32,44 @@ def load_existing_cache():
         return {}
 
 
+EIA_TIMEOUT = 60      # seconds per request; EIA has been slow enough to blow past 30
+EIA_ATTEMPTS = 3      # total tries per request, with backoff between them
+
+
 def _eia_get(url):
-    """GET an EIA API URL and return parsed JSON, or raise on error."""
+    """GET an EIA API URL and return parsed JSON, or raise on error.
+
+    Retries timeouts, connection errors and 5xx responses — EIA is
+    intermittently slow. A 4xx is the request's own fault (bad key or
+    bad params), so it fails immediately.
+    """
     req = Request(url, headers=HEADERS)
-    try:
-        with urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read())
-    except HTTPError as exc:
-        body = ""
+    for attempt in range(1, EIA_ATTEMPTS + 1):
         try:
-            body = exc.read().decode("utf-8", errors="replace")
-        except Exception:
-            pass
-        raise RuntimeError(f"HTTP {exc.code}: {body[:400]}") from exc
+            with urlopen(req, timeout=EIA_TIMEOUT) as resp:
+                return json.loads(resp.read())
+        except HTTPError as exc:
+            body = ""
+            try:
+                body = exc.read().decode("utf-8", errors="replace")
+            except Exception:
+                pass
+            problem = f"HTTP {exc.code}: {body[:400]}"
+            if exc.code < 500:
+                raise RuntimeError(problem) from exc
+        except (OSError, json.JSONDecodeError) as exc:
+            problem = str(exc) or exc.__class__.__name__
+
+        if attempt == EIA_ATTEMPTS:
+            raise RuntimeError(f"{problem} (after {EIA_ATTEMPTS} attempts)")
+
+        wait = 5 * attempt
+        print(
+            f"  EIA request failed ({problem}) — attempt {attempt}/{EIA_ATTEMPTS},"
+            f" retrying in {wait}s",
+            file=sys.stderr,
+        )
+        time.sleep(wait)
 
 
 def fetch_eia_rate(api_key):
@@ -214,14 +240,24 @@ def main():
         json.dump(cache, f, indent=2)
         f.write("\n")
 
-    # "No API key" is expected and not an error. Actual fetch failures are.
+    # The EPA list is the whole point of the cache, so losing it is fatal. The EIA
+    # rate changes at most once a month and the previous value is carried forward
+    # above, so a bad EIA night is only a warning — unless nothing is cached yet.
     errors = []
-    if api_key and eia is None:
-        errors.append("EIA fetch failed despite EIA_API_KEY being set")
-    elif not api_key:
-        print("NOTE: EIA_API_KEY not set — EIA rate kept from previous cache", file=sys.stderr)
     if evs is None:
         errors.append("EPA fetch failed — fueleconomy.gov unreachable or returned bad data")
+
+    if not api_key:
+        print("NOTE: EIA_API_KEY not set — EIA rate kept from previous cache", file=sys.stderr)
+    elif eia is None:
+        prev_rate = (existing.get("eia") or {}).get("rate_per_kwh")
+        if prev_rate is None:
+            errors.append("EIA fetch failed and no previous rate is cached")
+        else:
+            print(
+                f"WARNING: EIA fetch failed — keeping previous cached rate ${prev_rate}/kWh",
+                file=sys.stderr,
+            )
 
     for e in errors:
         print(f"ERROR: {e}", file=sys.stderr)

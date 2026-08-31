@@ -1,35 +1,48 @@
-# EV Efficiency Tracker — Updated August 24, 2026
+# EV Efficiency Tracker — Updated August 31, 2026
 
 ## Top 20 Most Efficient Electric Cars in the US (EPA-Rated)
 
 Sorted by Mi/kWh descending. **Mi/kWh = EPA range ÷ usable battery capacity.**
 Pack sizes sourced from ev-database.org and manufacturer spec pages.
 ⁺ Tesla does not publicly disclose battery capacity; figures estimated from third-party discharge tests and teardown data.
-EIA US avg. residential electricity rate: **$0.1844/kWh** (May 2026, published July 2026).
-Cost/100mi = (100 ÷ Mi/kWh) × $0.1844
+EIA US avg. residential electricity rate: **$0.1834/kWh** (June 2026, published August 2026).
+Cost/100mi = (100 ÷ Mi/kWh) × $0.1834
 
 | Rank | Vehicle | Range (EPA mi) | Gross kWh | Usable kWh | Mi/kWh | Cost/100mi |
 |------|---------|----------------|-----------|------------|--------|------------|
-| 1 | 2026 Lucid Air Pure (RWD, 19") | 420 | 88.0 | 84.0 | 5.00 | $3.69 |
-| 2 | 2026 Lucid Air Touring (AWD, 19") | 431 | 96.0 | 92.0 | 4.68 | $3.94 |
-| 3 | 2026 Tesla Model 3 Standard (RWD) | 321 | 72.0 ⁺ | 69.5 ⁺ | 4.62 | $3.99 |
-| 4 | 2026 Tesla Model Y Standard (RWD, 18") | 321 | 72.0 ⁺ | 69.5 ⁺ | 4.62 | $3.99 |
-| 5 | 2026 Tesla Model 3 Premium (RWD) | 363 | 82.0 ⁺ | 79.0 ⁺ | 4.59 | $4.02 |
-| 6 | 2026 Tesla Model Y Long Range (RWD) | 357 | 82.0 ⁺ | 80.0 ⁺ | 4.46 | $4.13 |
-| 7 | 2026 Lucid Air Pure (RWD, 20") | 372 | 88.0 | 84.0 | 4.43 | $4.16 |
-| 8 | 2026 Toyota bZ (FWD, 191 Ah) | 314 | 74.7 | 71.0 | 4.42 | $4.17 |
-| 9 | 2026 Mercedes-Benz CLA 250 Plus EQ (22") | 374 | 90.0 | 85.0 | 4.40 | $4.19 |
-| 10 | 2026 Tesla Model 3 Premium (AWD) | 346 | 82.0 ⁺ | 79.0 ⁺ | 4.38 | $4.21 |
-| 11 | 2026 Lucid Air Grand Touring (AWD, 19") | 512 | 118.0 | 117.0 | 4.38 | $4.21 |
-| 12 | 2026 Toyota bZ (FWD, 200 Ah) | 236 | 57.7 | 54.0 | 4.37 | $4.22 |
-| 13 | 2026 Tesla Model Y Standard (RWD, 19") | 303 | 72.0 ⁺ | 69.5 ⁺ | 4.36 | $4.23 |
-| 14 | 2026 Lucid Air Touring (AWD, 20") | 396 | 96.0 | 92.0 | 4.30 | $4.29 |
-| 15 | 2026 Subaru Uncharted (FWD, Premium) | 308 | 74.7 | 72.0 | 4.28 | $4.31 |
-| 16 | 2026 Nissan LEAF 75kWh (18" steel) | 303 | 75.0 | 71.0 | 4.27 | $4.32 |
-| 17 | 2026 Tesla Model Y Standard (AWD) | 294 | 72.0 ⁺ | 69.5 ⁺ | 4.23 | $4.36 |
-| 18 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 74.7 | 71.0 | 4.21 | $4.38 |
-| 19 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 74.7 | 72.0 | 4.18 | $4.41 |
-| 20 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 74.7 | 71.0 | 4.17 | $4.42 |
+| 1 | 2026 Lucid Air Pure (RWD, 19") | 420 | 88.0 | 84.0 | 5.00 | $3.67 |
+| 2 | 2026 Lucid Air Touring (AWD, 19") | 431 | 96.0 | 92.0 | 4.68 | $3.92 |
+| 3 | 2026 Tesla Model 3 Standard (RWD) | 321 | 72.0 ⁺ | 69.5 ⁺ | 4.62 | $3.97 |
+| 4 | 2026 Tesla Model Y Standard (RWD, 18") | 321 | 72.0 ⁺ | 69.5 ⁺ | 4.62 | $3.97 |
+| 5 | 2026 Tesla Model 3 Premium (RWD) | 363 | 82.0 ⁺ | 79.0 ⁺ | 4.59 | $4.00 |
+| 6 | 2026 Tesla Model Y Long Range (RWD) | 357 | 82.0 ⁺ | 80.0 ⁺ | 4.46 | $4.11 |
+| 7 | 2026 Lucid Air Pure (RWD, 20") | 372 | 88.0 | 84.0 | 4.43 | $4.14 |
+| 8 | 2026 Toyota bZ (FWD, 191 Ah) | 314 | 74.7 | 71.0 | 4.42 | $4.15 |
+| 9 | 2026 Mercedes-Benz CLA 250 Plus EQ (22") | 374 | 90.0 | 85.0 | 4.40 | $4.17 |
+| 10 | 2026 Tesla Model 3 Premium (AWD) | 346 | 82.0 ⁺ | 79.0 ⁺ | 4.38 | $4.19 |
+| 11 | 2026 Lucid Air Grand Touring (AWD, 19") | 512 | 118.0 | 117.0 | 4.38 | $4.19 |
+| 12 | 2026 Toyota bZ (FWD, 200 Ah) | 236 | 57.7 | 54.0 | 4.37 | $4.20 |
+| 13 | 2026 Tesla Model Y Standard (RWD, 19") | 303 | 72.0 ⁺ | 69.5 ⁺ | 4.36 | $4.21 |
+| 14 | 2026 Lucid Air Touring (AWD, 20") | 396 | 96.0 | 92.0 | 4.30 | $4.27 |
+| 15 | 2026 Subaru Uncharted (FWD, Premium) | 308 | 74.7 | 72.0 | 4.28 | $4.29 |
+| 16 | 2026 Nissan LEAF 75kWh (18" steel) | 303 | 75.0 | 71.0 | 4.27 | $4.30 |
+| 17 | 2026 Tesla Model Y Standard (AWD) | 294 | 72.0 ⁺ | 69.5 ⁺ | 4.23 | $4.34 |
+| 18 | 2026 Toyota bZ LIMITED (FWD, 191 Ah) | 299 | 74.7 | 71.0 | 4.21 | $4.36 |
+| 19 | 2026 Lexus RZ 350e (FWD, 18") | 301 | 74.7 | 72.0 | 4.18 | $4.39 |
+| 20 | 2026 Toyota bZ LIMITED (FWD, 200 Ah) | 296 | 74.7 | 71.0 | 4.17 | $4.40 |
+
+---
+
+## Changelog vs. August 24, 2026
+
+### New Entrants
+- None.
+
+### Drop-Outs
+- None.
+
+### Electricity Rate
+- EIA rate updated to **$0.1834/kWh** (June 2026, published August 2026) — down from $0.1844/kWh. All Cost/100mi values recalculated.
 
 ---
 

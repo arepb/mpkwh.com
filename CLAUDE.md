@@ -6,7 +6,7 @@ mpkwh.com — a static site ranking the most efficient electric cars sold in the
 - **Repo:** https://github.com/arepb/mpkwh.com
 - **Live:** https://mpkwh.com
 - **Hosting:** GitHub Pages, served from `main` branch root. Custom domain via `CNAME` file. Pushes to `main` auto-deploy.
-- **Working dir:** this folder lives in Dropbox. The `.git` directory is real but Dropbox sometimes drops files (notably `CNAME`) — see "Dropbox gotchas" below.
+- **Working dir:** `~/Developer/MPKWH` (moved out of Dropbox 2026-08-25). Cross-project conventions live in `~/.claude/CLAUDE.md`.
 
 ## Update cadence
 **Every Monday.** The footer of the site states "data updates every Monday as new data is published." Commit-message convention is `Weekly EV efficiency update - YYYY-MM-DD`.
@@ -76,17 +76,14 @@ If `data-cache.json` is missing or `epa_evs_2026` is empty (Action hasn't run ye
 ## Feature changes (not weekly data)
 Use focused, separate commits — see existing history for tone (`Add rising badge feature; apply to Model Y LR`, `Move rising indicator to rank column`, `Clarify EIA footnote date label`). Don't bundle feature work into the weekly data commit.
 
-## Dropbox gotchas
-This repo lives inside a Dropbox-synced folder. Two recurring issues:
-
-- **`CNAME` can disappear.** It went missing once (lost the custom domain when pushed, would have broken `mpkwh.com`). Before any commit, run `git status` — if `CNAME` shows as deleted, restore it: `git checkout origin/main -- CNAME`. Never commit a deletion of `CNAME`.
-- **`.DS_Store` files appear.** Already gitignored.
+## Before any commit
+Run `git status` and confirm `CNAME` is neither deleted nor modified — a push without it drops the `mpkwh.com` custom domain. Restore with `git checkout origin/main -- CNAME`.
 
 ## Files
 - `index.html` — the entire site (single page, inline CSS).
 - `ev-efficiency-tracker.md` — source-of-truth data doc (this is what you edit first each week).
 - `CNAME` — `mpkwh.com` (do not delete; do not modify).
-- `favicon.svg`, `preview.png`, `preview.svg` — icons / og:image. Per parent CLAUDE.md: og:image must be raster (PNG), not SVG, for iOS/iMessage preview compatibility.
+- `favicon.svg`, `preview.png`, `preview.svg` — icons / og:image. og:image must be raster (PNG), not SVG, for iOS/iMessage preview compatibility (`~/.claude/CLAUDE.md`).
 - `robots.txt` — AI crawlers (GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, GoogleOther) explicitly welcomed.
 - `sitemap.xml` — single URL; `<lastmod>` is bumped to the current date by every weekly update.
 - `llms.txt` — AI-citable plain-text summary of the site. Mirrors the top-20 list and is regenerated each weekly update so AI search engines (ChatGPT, Claude, Perplexity) cite current rankings, not stale data.
@@ -100,4 +97,4 @@ This repo lives inside a Dropbox-synced folder. Two recurring issues:
 - The FAQPage answers are deliberately stable — they describe the methodology, not the rankings. Don't add weekly-changing answers (like "what's the most efficient EV today") because they'd go stale between commits.
 
 ## Mobile responsiveness
-Per parent CLAUDE.md: always consider mobile when editing `index.html`. The site uses a single CSS breakpoint via `.hide-mobile` to hide the Pack kWh and Usable kWh columns on narrow viewports. Test changes against ≤480px width.
+Consider mobile when editing `index.html`. The site uses a single CSS breakpoint via `.hide-mobile` to hide the Pack kWh and Usable kWh columns on narrow viewports. Test changes against ≤480px width.

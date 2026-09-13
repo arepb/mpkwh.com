@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-06T06:49:37Z",
+  "fetched_at": "2026-09-13T07:08:42Z",
   "eia": {
     "rate_per_kwh": 0.1834,
     "period": "2026-06",
@@ -1000,7 +1000,7 @@
     {
       "id": "50206",
       "make": "Honda",
-      "model": "Prologue AWD",
+      "model": "Prologue AWD Touring",
       "trany": "Automatic (A1)",
       "drive": "All-Wheel Drive",
       "range": 294,
@@ -1260,7 +1260,7 @@
     {
       "id": "50207",
       "make": "Honda",
-      "model": "Prologue AWD",
+      "model": "Prologue AWD Elite",
       "trany": "Automatic (A1)",
       "drive": "All-Wheel Drive",
       "range": 283,

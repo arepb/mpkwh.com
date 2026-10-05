@@ -1,4 +1,4 @@
-# EV Efficiency Tracker — Updated September 28, 2026
+# EV Efficiency Tracker — Updated October 5, 2026
 
 ## Top 20 Most Efficient Electric Cars in the US (EPA-Rated)
 

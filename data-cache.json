@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-10-18T06:57:04Z",
+  "fetched_at": "2026-10-25T07:15:01Z",
   "eia": {
-    "rate_per_kwh": 0.1831,
-    "period": "2026-07",
-    "period_label": "July 2026",
-    "published_label": "September 2026"
+    "rate_per_kwh": 0.1816,
+    "period": "2026-08",
+    "period_label": "August 2026",
+    "published_label": "October 2026"
   },
   "epa_evs_2026": [
     {

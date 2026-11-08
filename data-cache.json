@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-01T08:40:18Z",
+  "fetched_at": "2026-11-08T08:33:32Z",
   "eia": {
     "rate_per_kwh": 0.1816,
     "period": "2026-08",
@@ -1228,6 +1228,26 @@
       "kwh_per_100mi": 34.99
     },
     {
+      "id": "51102",
+      "make": "Porsche",
+      "model": "Cayenne Coupe Electric Range Setup",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 339,
+      "mpge": 96.0,
+      "kwh_per_100mi": 34.97
+    },
+    {
+      "id": "51106",
+      "make": "Porsche",
+      "model": "Cayenne S Coupe Electric Range Setup",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 330,
+      "mpge": 96.0,
+      "kwh_per_100mi": 34.99
+    },
+    {
       "id": "49645",
       "make": "Chevrolet",
       "model": "Blazer EV FWD 22 inch tire",
@@ -1388,6 +1408,16 @@
       "kwh_per_100mi": 35.82
     },
     {
+      "id": "51104",
+      "make": "Porsche",
+      "model": "Cayenne Electric Range Setup",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 322,
+      "mpge": 94.0,
+      "kwh_per_100mi": 35.91
+    },
+    {
       "id": "49682",
       "make": "Mercedes-Benz",
       "model": "EQS 580 4matic",
@@ -1446,6 +1476,16 @@
       "range": 315,
       "mpge": 93.0,
       "kwh_per_100mi": 36.24
+    },
+    {
+      "id": "51108",
+      "make": "Porsche",
+      "model": "Cayenne S Electric Range Setup",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 325,
+      "mpge": 93.0,
+      "kwh_per_100mi": 36.25
     },
     {
       "id": "49631",
@@ -1546,6 +1586,26 @@
       "range": 294,
       "mpge": 92.0,
       "kwh_per_100mi": 36.71
+    },
+    {
+      "id": "51101",
+      "make": "Porsche",
+      "model": "Cayenne Coupe Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 326,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.46
+    },
+    {
+      "id": "51105",
+      "make": "Porsche",
+      "model": "Cayenne S Coupe Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 316,
+      "mpge": 92.0,
+      "kwh_per_100mi": 36.78
     },
     {
       "id": "49618",
@@ -1698,6 +1758,16 @@
       "kwh_per_100mi": 37.53
     },
     {
+      "id": "51103",
+      "make": "Porsche",
+      "model": "Cayenne Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 317,
+      "mpge": 90.0,
+      "kwh_per_100mi": 37.39
+    },
+    {
       "id": "49620",
       "make": "BMW",
       "model": "iX xDrive45 (21 inch Wheels)",
@@ -1746,6 +1816,16 @@
       "range": 323,
       "mpge": 89.0,
       "kwh_per_100mi": 37.7
+    },
+    {
+      "id": "51113",
+      "make": "Porsche",
+      "model": "Taycan Turbo S 21in Aero-Design wheel (285/35)",
+      "trany": "Automatic (A2)",
+      "drive": "All-Wheel Drive",
+      "range": 299,
+      "mpge": 89.0,
+      "kwh_per_100mi": 37.85
     },
     {
       "id": "49625",
@@ -1846,6 +1926,16 @@
       "range": 305,
       "mpge": 88.0,
       "kwh_per_100mi": 38.32
+    },
+    {
+      "id": "51109",
+      "make": "Porsche",
+      "model": "Cayenne Turbo Coupe Electric w/21in All-Season Tires",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 307,
+      "mpge": 88.0,
+      "kwh_per_100mi": 38.41
     },
     {
       "id": "49622",
@@ -2028,6 +2118,36 @@
       "kwh_per_100mi": 39.16
     },
     {
+      "id": "51107",
+      "make": "Porsche",
+      "model": "Cayenne S Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 299,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.21
+    },
+    {
+      "id": "51110",
+      "make": "Porsche",
+      "model": "Cayenne Turbo Coupe Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 302,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.13
+    },
+    {
+      "id": "51112",
+      "make": "Porsche",
+      "model": "Cayenne Turbo Electric w/21in All-Season Tires",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 303,
+      "mpge": 86.0,
+      "kwh_per_100mi": 39.0
+    },
+    {
       "id": "49626",
       "make": "BMW",
       "model": "iX xDrive60 (23 inch Wheels)",
@@ -2158,6 +2278,16 @@
       "kwh_per_100mi": 40.0
     },
     {
+      "id": "51111",
+      "make": "Porsche",
+      "model": "Cayenne Turbo Electric",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 298,
+      "mpge": 85.0,
+      "kwh_per_100mi": 39.72
+    },
+    {
       "id": "49621",
       "make": "BMW",
       "model": "iX xDrive45 (22 inch Wheels)",
@@ -2226,6 +2356,16 @@
       "range": 255,
       "mpge": 84.0,
       "kwh_per_100mi": 40.15
+    },
+    {
+      "id": "51100",
+      "make": "Maserati",
+      "model": "Granturismo Folgore",
+      "trany": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "range": 235,
+      "mpge": 84.0,
+      "kwh_per_100mi": 40.12
     },
     {
       "id": "49946",

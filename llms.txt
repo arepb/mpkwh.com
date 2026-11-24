@@ -38,6 +38,19 @@ Miles per kilowatt-hour (Mi/kWh) measures how far an electric vehicle travels on
 - Cost-per-100-miles uses the latest US average residential electricity rate published monthly by the US Energy Information Administration (EIA). As of October 2026: $0.1816/kWh (August 2026 figure, published October 2026).
 - Data source: US EPA fueleconomy.gov, ev-database.org
 
+## Break-Even MPG
+
+Break-even MPG is the gasoline fuel economy at which a car's monthly gasoline spending exactly equals an electric car's monthly payment plus its electricity cost. A gas vehicle rated below the break-even figure spends enough on fuel that the avoided spending would cover the EV.
+
+break_even_mpg = monthly_miles × gas_price_per_gallon ÷ (ev_monthly_payment + ev_electricity_cost)
+
+The EV's electricity cost is monthly miles ÷ Mi/kWh, increased by a charging overhead (15% by default, because Mi/kWh measures battery-to-wheel efficiency rather than the energy drawn from the wall), multiplied by the residential electricity rate.
+
+This is a fuel-and-electricity comparison only. It excludes insurance, registration, sales and use tax, maintenance, depreciation, financing opportunity cost, parking, and home charger installation. "Fuel savings cover the payment" means avoided gasoline spending is equal to or greater than the EV's payment plus electricity — not that total ownership cost is zero.
+
+Break-even MPG is highly sensitive to annual mileage and to local gasoline prices. At low mileage and low gasoline prices it falls into single digits, where essentially no production vehicle qualifies; at high mileage or high regional prices it rises into full-size truck and SUV territory.
+
 ## Pages
 
 - [Home](https://mpkwh.com/): Full ranked table with EPA range, pack kWh, usable kWh, Mi/kWh, and cost-per-100-miles for all models.
+- [Break-even calculator](https://mpkwh.com/break-even/): Interactive calculator showing what share of an EV's monthly payment a gas car's avoided fuel spending would cover, plus the break-even MPG threshold. All inputs editable.

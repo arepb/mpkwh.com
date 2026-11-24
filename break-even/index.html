@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Break-Even MPG Calculator — Which Gas Cars Can Pay for an EV? | MPkWh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/preview.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Find the MPG at which a gas car's fuel spending equals an EV's monthly payment plus electricity. Uses EPA efficiency data and current EIA energy prices. Fuel and electricity costs only." />
+  <meta property="og:title" content="Which Gas Cars Can Pay for an EV? — MPkWh Break-Even Calculator" />
+  <meta property="og:description" content="How much of an EV payment does your avoided gasoline spending cover? Break-even MPG from EPA efficiency and EIA energy prices." />
+  <meta property="og:image" content="https://mpkwh.com/preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MPkWh — EV break-even MPG calculator" />
+  <meta property="og:url" content="https://mpkwh.com/break-even/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MPkWh" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Which Gas Cars Can Pay for an EV? — MPkWh" />
+  <meta name="twitter:description" content="Break-even MPG from EPA efficiency and current energy prices. Fuel and electricity costs only." />
+  <meta name="twitter:image" content="https://mpkwh.com/preview.png" />
+  <meta name="twitter:image:alt" content="MPkWh — EV break-even MPG calculator" />
+  <link rel="canonical" href="https://mpkwh.com/break-even/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "EV Break-Even MPG Calculator",
+    "description": "Calculates the gasoline MPG at which a vehicle's monthly fuel spending equals an electric car's monthly payment plus electricity cost, using EPA efficiency ratings and EIA energy prices.",
+    "url": "https://mpkwh.com/break-even/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "MPkWh",
+      "url": "https://mpkwh.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MPkWh",
+      "url": "https://mpkwh.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is break-even MPG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Break-even MPG is the gasoline fuel economy at which a car's monthly gasoline spending equals an electric vehicle's monthly payment plus its electricity cost. A gas vehicle rated below the break-even figure spends enough on fuel that the avoided spending would cover the EV. It is calculated as monthly miles multiplied by the price per gallon, divided by the EV's total monthly cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this mean the EV is free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The calculation compares fuel and electricity costs only. It excludes insurance, registration, sales and use tax, maintenance, depreciation, financing opportunity cost, parking, and home charger installation. When fuel savings cover the payment, it means avoided gasoline spending is equal to or greater than the EV's monthly payment plus electricity — not that total ownership cost is zero."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the calculator add 15% to the EV's energy use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MPkWh's Mi/kWh figure measures battery-to-wheel efficiency: EPA range divided by usable battery capacity. Charging a car from a wall outlet loses energy to heat and conversion, so the electricity a household actually pays for is higher than the energy the battery stores. The calculator adds a default 15% charging overhead, which is editable between 0% and 25%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between advertised payment and effective lease cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The advertised payment is the headline monthly figure. The effective lease cost also amortizes mandatory upfront money — the amount due at signing, the acquisition fee, and any other required fees — across the lease term, which produces a higher and more complete monthly figure. Taxes are excluded from both because they depend on location."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does the data come from?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EV efficiency comes from the MPkWh dataset, which derives Mi/kWh from EPA-rated range and usable battery capacity. Residential electricity prices come from the U.S. Energy Information Administration. Gasoline prices come from EIA weekly retail averages. Lease offers are verified manually and carry a source link and verification date."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Author display rules (.field-row is a grid) outrank the UA [hidden] rule,
+       so hidden sections need this to actually hide. */
+    [hidden] { display: none !important; }
+
+    body {
+      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.55;
+      padding: 2.5rem 1.5rem 4rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header { max-width: 780px; margin: 0 auto 2rem; }
+
+    .wordmark {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #16a34a;
+      margin-bottom: 1.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #e4e4e7;
+    }
+
+    .wordmark a { color: inherit; text-decoration: none; }
+    .wordmark a:hover { opacity: 0.7; }
+    .wordmark-tld { font-weight: 400; opacity: 0.55; letter-spacing: 0.04em; }
+
+    .breadcrumb {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+    .breadcrumb a { color: #6b7280; text-decoration: none; border-bottom: 1px solid #d4d4d8; }
+    .breadcrumb a:hover { color: #16a34a; border-bottom-color: #16a34a; }
+
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle { font-size: 0.95rem; color: #6b7280; line-height: 1.6; }
+
+    .updated {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #16a34a;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    main { max-width: 780px; margin: 0 auto; }
+
+    h2 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin: 2.5rem 0 0.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* ---------- Hero result ---------- */
+
+    .result {
+      border: 1px solid #bbf7d0;
+      background: #f0fdf4;
+      border-radius: 10px;
+      padding: 1.6rem 1.5rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .result.short { border-color: #fde68a; background: #fffbeb; }
+
+    .result-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #15803d;
+      margin-bottom: 0.5rem;
+    }
+    .result.short .result-label { color: #b45309; }
+
+    .result-headline {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.9rem, 6vw, 2.75rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #14532d;
+      margin-bottom: 0.6rem;
+    }
+    .result.short .result-headline { color: #78350f; }
+
+    .result-sub { font-size: 0.92rem; color: #3f6212; line-height: 1.6; }
+    .result.short .result-sub { color: #854d0e; }
+
+    .result-meter {
+      height: 8px;
+      background: #dcfce7;
+      border: 1px solid #bbf7d0;
+      border-radius: 99px;
+      margin: 1rem 0 1.1rem;
+      overflow: hidden;
+    }
+    .result.short .result-meter { background: #fef3c7; border-color: #fde68a; }
+
+    .result-meter-fill {
+      height: 100%;
+      background: #16a34a;
+      border-radius: 99px;
+      transition: width 0.25s ease;
+    }
+    .result.short .result-meter-fill { background: #d97706; }
+
+    .result-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid #bbf7d0;
+    }
+    .result.short .result-stats { border-top-color: #fde68a; }
+
+    .stat-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      color: #4d7c0f;
+      margin-bottom: 0.2rem;
+    }
+    .result.short .stat-label { color: #a16207; }
+
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: #14532d;
+    }
+    .result.short .stat-value { color: #78350f; }
+
+    .stat-note { font-size: 0.72rem; color: #65a30d; }
+    .result.short .stat-note { color: #b45309; }
+
+    /* ---------- Inputs ---------- */
+
+    .panel {
+      border: 1px solid #e4e4e7;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .panel-section { padding: 1.25rem 1.4rem; border-bottom: 1px solid #f0f0f0; }
+    .panel-section:last-child { border-bottom: none; }
+
+    .panel-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      color: #6b7280;
+      margin-bottom: 0.9rem;
+    }
+
+    .field { margin-bottom: 1rem; }
+    .field:last-child { margin-bottom: 0; }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #3f3f46;
+      margin-bottom: 0.35rem;
+    }
+
+    .field-hint { font-size: 0.72rem; color: #9ca3af; font-weight: 400; }
+
+    input[type="number"], select {
+      width: 100%;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+      color: #1a1a1a;
+      background: #ffffff;
+      border: 1px solid #d4d4d8;
+      border-radius: 6px;
+      padding: 0.55rem 0.7rem;
+      min-height: 44px;
+    }
+
+    input[type="number"]:focus, select:focus {
+      outline: none;
+      border-color: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.13);
+    }
+
+    input[type="range"] { width: 100%; accent-color: #16a34a; min-height: 44px; }
+
+    .range-readout {
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: #15803d;
+    }
+    .range-readout span { font-weight: 400; color: #9ca3af; }
+
+    .toggle { display: flex; gap: 0; border: 1px solid #d4d4d8; border-radius: 6px; overflow: hidden; }
+
+    .toggle button {
+      flex: 1;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #52525b;
+      background: #ffffff;
+      border: none;
+      padding: 0.6rem 0.5rem;
+      min-height: 44px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toggle button + button { border-left: 1px solid #d4d4d8; }
+    .toggle button:hover { background: #f9fafb; }
+    .toggle button[aria-pressed="true"] { background: #16a34a; color: #ffffff; }
+
+    .offer-note {
+      font-size: 0.75rem;
+      line-height: 1.55;
+      color: #6b7280;
+      background: #f9fafb;
+      border: 1px solid #e4e4e7;
+      border-radius: 6px;
+      padding: 0.6rem 0.75rem;
+      margin-top: 0.75rem;
+    }
+    .offer-note.warn { color: #854d0e; background: #fffbeb; border-color: #fde68a; }
+    .offer-note a { color: #16a34a; }
+
+    /* ---------- Math ---------- */
+
+    details.math {
+      margin-top: 1.25rem;
+      border: 1px solid #e4e4e7;
+      border-radius: 8px;
+      background: #f9fafb;
+    }
+
+    details.math summary {
+      cursor: pointer;
+      padding: 0.8rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #3f3f46;
+      list-style: none;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    details.math summary::-webkit-details-marker { display: none; }
+    details.math summary::before { content: "▸ "; color: #9ca3af; margin-right: 0.4rem; }
+    details.math[open] summary::before { content: "▾ "; }
+
+    .math-body { padding: 0 1rem 1rem; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .math-body td { padding: 0.4rem 0; border-bottom: 1px solid #ececef; color: #52525b; }
+    .math-body tr:last-child td { border-bottom: none; font-weight: 700; color: #1a1a1a; }
+    .math-body td:last-child { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid #e4e4e7;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    thead th {
+      background: #f9fafb;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      border-bottom: 1px solid #e4e4e7;
+      white-space: nowrap;
+    }
+    thead th.num { text-align: right; }
+
+    tbody tr { border-bottom: 1px solid #f0f0f0; }
+    tbody tr:nth-child(even) { background: #f7f7f8; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody td { padding: 0.75rem 1rem; vertical-align: middle; }
+    tbody td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; color: #52525b; }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.15em 0.5em;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .pill.covers { color: #15803d; background: #dcfce7; border: 1px solid #86efac; }
+    .pill.near { color: #a16207; background: #fef9c3; border: 1px solid #fde68a; }
+    .pill.short { color: #6b7280; background: #f4f4f5; border: 1px solid #e4e4e7; }
+
+    .empty-state {
+      border: 1px dashed #d4d4d8;
+      border-radius: 8px;
+      padding: 1.25rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+      background: #fafafa;
+    }
+
+    .prose { font-size: 0.9rem; color: #52525b; line-height: 1.7; }
+    .prose p { margin-bottom: 0.85rem; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { color: #1a1a1a; }
+    .prose a { color: #16a34a; }
+
+    .callout {
+      border-left: 3px solid #bbf7d0;
+      background: #f0fdf4;
+      padding: 0.9rem 1.1rem;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.86rem;
+      color: #3f6212;
+      line-height: 1.65;
+    }
+
+    footer {
+      max-width: 780px;
+      margin: 3rem auto 0;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      line-height: 1.7;
+    }
+    footer p { margin-bottom: 0.5rem; }
+    footer a { color: #6b7280; text-decoration: underline; }
+    footer a:hover { color: #374151; }
+
+    @media (max-width: 600px) {
+      body { padding: 1.5rem 0.75rem 3rem; }
+      h1 { font-size: 1.75rem; }
+      .subtitle { font-size: 0.88rem; }
+      .result { padding: 1.25rem 1.1rem; }
+      .result-stats { grid-template-columns: 1fr; gap: 0.85rem; }
+      .panel-section { padding: 1.1rem 1rem; }
+      .field-row { grid-template-columns: 1fr; gap: 0.85rem; }
+      tbody td, thead th { padding: 0.6rem; }
+      .hide-mobile { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wordmark"><a href="/">MPkWh<span class="wordmark-tld">.com</span></a></div>
+    <nav class="breadcrumb"><a href="/">Efficiency leaderboard</a> &rsaquo; Break-even</nav>
+    <h1>Which Gas Cars Can Pay for an EV?</h1>
+    <p class="subtitle">Enter what your current car costs to fuel and see how much of an electric car's monthly payment that avoided spending would cover. Fuel and electricity costs only.</p>
+    <span class="updated">Updated September 9, 2026</span>
+  </header>
+
+  <main>
+
+    <!-- Default state is rendered in HTML so the page is meaningful without JS. -->
+    <section class="result" id="result" aria-live="polite">
+      <div class="result-label" id="resultLabel">FUEL SAVINGS COVER</div>
+      <div class="result-headline" id="resultHeadline">56% of the payment</div>
+      <div class="result-meter"><div class="result-meter-fill" id="resultMeter" style="width: 56%"></div></div>
+      <p class="result-sub" id="resultSub">Driving 1,250 miles a month at 18 MPG on regular fuel costs about $215 in fuel. A 2026 Tesla Model 3 Standard (RWD) would cost about $382 a month — payment plus electricity — leaving roughly $167 a month to find elsewhere.</p>
+      <div class="result-stats">
+        <div>
+          <div class="stat-label">BREAK-EVEN MPG</div>
+          <div class="stat-value" id="statBreakEven">10.1</div>
+          <div class="stat-note">at or below this, fuel savings cover it</div>
+        </div>
+        <div>
+          <div class="stat-label">GAS PER MONTH</div>
+          <div class="stat-value" id="statGas">$215</div>
+          <div class="stat-note" id="statGasNote">18 MPG, regular</div>
+        </div>
+        <div>
+          <div class="stat-label">EV PER MONTH</div>
+          <div class="stat-value" id="statEv">$382</div>
+          <div class="stat-note" id="statEvNote">payment + electricity</div>
+        </div>
+      </div>
+    </section>
+
+    <details class="math" id="mathBlock">
+      <summary>Show the math</summary>
+      <div class="math-body">
+        <table>
+          <tbody id="mathRows">
+            <tr><td>Monthly miles</td><td>1,250</td></tr>
+            <tr><td>Gas car — 18 MPG at $3.10/gal regular</td><td>$215.28</td></tr>
+            <tr><td>EV energy at battery — 1,250 mi ÷ 4.62 Mi/kWh</td><td>270.6 kWh</td></tr>
+            <tr><td>EV energy from the wall — +15% charging overhead</td><td>311.1 kWh</td></tr>
+            <tr><td>EV electricity — 311.1 kWh × $0.1834/kWh</td><td>$57.06</td></tr>
+            <tr><td>EV payment</td><td>$325.00</td></tr>
+            <tr><td>EV total per month</td><td>$382.06</td></tr>
+            <tr><td>Break-even MPG — 1,250 × $3.10 ÷ $382.06</td><td>10.1 MPG</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <h2>Your assumptions</h2>
+
+    <div class="panel">
+
+      <div class="panel-section">
+        <div class="panel-title">THE ELECTRIC CAR</div>
+        <div class="field">
+          <label for="evSelect">Vehicle <span class="field-hint">— all 20 configurations from the MPkWh leaderboard</span></label>
+          <select id="evSelect"></select>
+        </div>
+        <div class="field">
+          <label for="paymentBasis">Payment basis</label>
+          <div class="toggle" id="paymentBasis" role="group" aria-label="Payment basis">
+            <button type="button" data-basis="advertised" aria-pressed="true">Advertised payment</button>
+            <button type="button" data-basis="effective" aria-pressed="false">Effective lease cost</button>
+          </div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="payment">Monthly payment ($)</label>
+            <input type="number" id="payment" value="325" min="0" step="1" inputmode="decimal" />
+          </div>
+          <div id="termWrap">
+            <label for="term">Lease term (months)</label>
+            <input type="number" id="term" value="36" min="1" step="1" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="field-row" id="effectiveFields" hidden>
+          <div>
+            <label for="dueAtSigning">Due at signing ($)</label>
+            <input type="number" id="dueAtSigning" value="0" min="0" step="1" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="fees">Acquisition + other required fees ($)</label>
+            <input type="number" id="fees" value="0" min="0" step="1" inputmode="decimal" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="allowance">Annual mileage allowance</label>
+            <input type="number" id="allowance" value="15000" min="0" step="500" inputmode="numeric" />
+          </div>
+          <div>
+            <label for="overageFee">Overage fee ($ per mile)</label>
+            <input type="number" id="overageFee" value="0.25" min="0" step="0.01" inputmode="decimal" />
+          </div>
+        </div>
+        <div class="offer-note" id="offerNote">No current lease offer tracked for this vehicle. The payment above is your own estimate — enter the figure you have been quoted.</div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-title">THE GAS CAR YOU DRIVE NOW</div>
+        <div class="field-row">
+          <div>
+            <label for="mpg">Combined MPG</label>
+            <input type="number" id="mpg" value="18" min="1" max="150" step="0.1" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="grade">Fuel grade</label>
+            <select id="grade">
+              <option value="regular" selected>Regular</option>
+              <option value="midgrade">Midgrade</option>
+              <option value="premium">Premium</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-title">DRIVING &amp; ENERGY PRICES</div>
+        <div class="field">
+          <label for="miles">Miles per month</label>
+          <input type="range" id="miles" min="500" max="3000" step="50" value="1250" />
+          <div class="range-readout" id="milesReadout">1,250 mi/month <span>— 15,000 mi/year</span></div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="gasRegular">Regular ($/gal)</label>
+            <input type="number" id="gasRegular" value="3.10" min="0" step="0.01" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="gasMidgrade">Midgrade ($/gal)</label>
+            <input type="number" id="gasMidgrade" value="3.50" min="0" step="0.01" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="gasPremium">Premium ($/gal)</label>
+            <input type="number" id="gasPremium" value="3.90" min="0" step="0.01" inputmode="decimal" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="elecRate">Electricity ($/kWh)</label>
+            <input type="number" id="elecRate" value="0.1834" min="0" step="0.0001" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="overhead">Charging overhead (%) <span class="field-hint">— wall-to-battery loss</span></label>
+            <input type="number" id="overhead" value="15" min="0" max="25" step="1" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="offer-note" id="priceNote"></div>
+      </div>
+
+    </div>
+
+    <h2>Cars that could pay for this EV</h2>
+    <div id="comparison">
+      <div class="empty-state">
+        The ranked EPA gas-vehicle comparison arrives with the next weekly data refresh. In the meantime, enter your own car's combined MPG above — you can look it up at <a href="https://www.fueleconomy.gov/feg/findacar.shtml" target="_blank" rel="noopener">fueleconomy.gov</a>.
+      </div>
+    </div>
+
+    <h2>What "fuel savings cover the payment" means</h2>
+    <div class="prose">
+      <p>MPkWh does not claim an electric car is free. This page compares <strong>fuel and electricity costs only</strong>. When avoided gasoline spending is equal to or greater than the EV's monthly payment plus its electricity, the fuel savings cover the payment — nothing more than that.</p>
+      <p>The calculation excludes insurance, registration, sales and use tax, maintenance, depreciation, financing opportunity cost, parking, and home charger installation. It also assumes you would actually stop driving the gas car, rather than adding the EV alongside it.</p>
+      <div class="callout"><strong>Break-even MPG</strong> is the gasoline fuel economy at which monthly gas spending exactly equals the EV's monthly payment plus electricity. It is monthly miles × price per gallon ÷ the EV's total monthly cost. A gas vehicle rated below that number burns enough fuel to cover the EV.</div>
+      <p style="margin-top: 0.85rem;">Two things move this number more than anything else: <strong>how far you drive</strong> and <strong>what you pay per gallon</strong>. At low mileage and cheap gasoline, break-even MPG falls into single digits, where essentially no production vehicle qualifies. At high mileage or high regional gas prices it rises into the range of full-size trucks and SUVs. That is why the percentage of the payment covered is the more useful headline: it always gives a real answer.</p>
+      <p>Every input on this page is editable. The defaults are national figures, and your own electricity rate, local gasoline price, and quoted payment will all differ.</p>
+    </div>
+
+    <h2>How the numbers are calculated</h2>
+    <div class="prose">
+      <p><strong>Gas cost</strong> = (monthly miles ÷ combined MPG) × price per gallon, using the fuel grade the vehicle requires.</p>
+      <p><strong>EV electricity</strong> = monthly miles ÷ Mi/kWh, increased by the charging overhead, multiplied by the electricity rate. MPkWh's <a href="/">Mi/kWh figure</a> is EPA range divided by usable battery capacity, which measures battery-to-wheel efficiency — so the overhead is added here to reach the energy a household actually buys.</p>
+      <p><strong>EV monthly cost</strong> = payment + electricity + any lease mileage overage. On the effective-lease basis, the payment also includes the amount due at signing and required fees amortized across the lease term. Taxes are excluded because they depend on location.</p>
+      <p><strong>Mileage overage</strong> applies automatically when annualized mileage exceeds the lease allowance: excess miles × the per-mile fee ÷ 12. If you are consistently over the allowance, a purchase or finance arrangement is likely a better comparison than a lease.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p><strong>Fuel and electricity costs only.</strong> Insurance, taxes, registration, maintenance, depreciation and other ownership costs are not included. Lease offers vary by credit tier, geography, inventory, trim and incentives — an advertised offer is not a quote.</p>
+    <p>EV efficiency from the <a href="/">MPkWh leaderboard</a>, derived from EPA-rated range and usable battery capacity. Electricity rate from the <a href="https://www.eia.gov/electricity/monthly/update/end-use.php" target="_blank" rel="noopener">U.S. Energy Information Administration</a>. Gasoline prices from <a href="https://www.eia.gov/petroleum/gasdiesel/" target="_blank" rel="noopener">EIA weekly retail averages</a>. Gas vehicle fuel economy from <a href="https://www.fueleconomy.gov" target="_blank" rel="noopener">fueleconomy.gov</a>.</p>
+    <p><a href="/">← Back to the efficiency leaderboard</a></p>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    // ---- Data -------------------------------------------------------------
+    // EV list mirrors the top 20 in ev-efficiency-tracker.md. Re-sync when the
+    // leaderboard changes. See CLAUDE.md, "Weekly update workflow".
+    var EVS = [
+      { id: "lucid-air-pure-rwd-19",        name: "2026 Lucid Air Pure (RWD, 19\")",            mpk: 5.00, range: 420, kwh: 84.0 },
+      { id: "lucid-air-touring-awd-19",     name: "2026 Lucid Air Touring (AWD, 19\")",         mpk: 4.68, range: 431, kwh: 92.0 },
+      { id: "tesla-model-3-standard-rwd",   name: "2026 Tesla Model 3 Standard (RWD)",          mpk: 4.62, range: 321, kwh: 69.5 },
+      { id: "tesla-model-y-standard-rwd-18",name: "2026 Tesla Model Y Standard (RWD, 18\")",    mpk: 4.62, range: 321, kwh: 69.5 },
+      { id: "tesla-model-3-premium-rwd",    name: "2026 Tesla Model 3 Premium (RWD)",           mpk: 4.59, range: 363, kwh: 79.0 },
+      { id: "tesla-model-y-lr-rwd",         name: "2026 Tesla Model Y Long Range (RWD)",        mpk: 4.46, range: 357, kwh: 80.0 },
+      { id: "lucid-air-pure-rwd-20",        name: "2026 Lucid Air Pure (RWD, 20\")",            mpk: 4.43, range: 372, kwh: 84.0 },
+      { id: "toyota-bz-fwd-191",            name: "2026 Toyota bZ (FWD, 191 Ah)",               mpk: 4.42, range: 314, kwh: 71.0 },
+      { id: "mercedes-cla-250-plus-eq-22",  name: "2026 Mercedes-Benz CLA 250 Plus EQ (22\")",  mpk: 4.40, range: 374, kwh: 85.0 },
+      { id: "tesla-model-3-premium-awd",    name: "2026 Tesla Model 3 Premium (AWD)",           mpk: 4.38, range: 346, kwh: 79.0 },
+      { id: "lucid-air-gt-awd-19",          name: "2026 Lucid Air Grand Touring (AWD, 19\")",   mpk: 4.38, range: 512, kwh: 117.0 },
+      { id: "toyota-bz-fwd-200",            name: "2026 Toyota bZ (FWD, 200 Ah)",               mpk: 4.37, range: 236, kwh: 54.0 },
+      { id: "tesla-model-y-standard-rwd-19",name: "2026 Tesla Model Y Standard (RWD, 19\")",    mpk: 4.36, range: 303, kwh: 69.5 },
+      { id: "lucid-air-touring-awd-20",     name: "2026 Lucid Air Touring (AWD, 20\")",         mpk: 4.30, range: 396, kwh: 92.0 },
+      { id: "subaru-uncharted-fwd-premium", name: "2026 Subaru Uncharted (FWD, Premium)",       mpk: 4.28, range: 308, kwh: 72.0 },
+      { id: "nissan-leaf-75-18-steel",      name: "2026 Nissan LEAF 75kWh (18\" steel)",        mpk: 4.27, range: 303, kwh: 71.0 },
+      { id: "tesla-model-y-standard-awd",   name: "2026 Tesla Model Y Standard (AWD)",          mpk: 4.23, range: 294, kwh: 69.5 },
+      { id: "toyota-bz-limited-fwd-191",    name: "2026 Toyota bZ LIMITED (FWD, 191 Ah)",       mpk: 4.21, range: 299, kwh: 71.0 },
+      { id: "lexus-rz-350e-fwd-18",         name: "2026 Lexus RZ 350e (FWD, 18\")",             mpk: 4.18, range: 301, kwh: 72.0 },
+      { id: "toyota-bz-limited-fwd-200",    name: "2026 Toyota bZ LIMITED (FWD, 200 Ah)",       mpk: 4.17, range: 296, kwh: 71.0 }
+    ];
+
+    // Mirror of lease-offers.json. An offer is only used when it carries both
+    // monthly_payment and verified_at; otherwise the payment field stays a
+    // user estimate. Offers older than 14 days are flagged, not hidden.
+    var OFFERS = {};
+
+    // Ranked EPA gas-vehicle comparison set. Populated from
+    // data-cache.json -> epa_gas_vehicles by the weekly routine.
+    var GAS_VEHICLES = [];
+
+    // Price provenance. gas.as_of === null means the figures are placeholders
+    // awaiting the first EIA gasoline refresh, and the UI says so.
+    var PRICES = {
+      electricity: { rate: 0.1834, period_label: "June 2026", published_label: "August 2026" },
+      gas: { regular: 3.10, midgrade: 3.50, premium: 3.90, as_of: null }
+    };
+
+    var OFFER_STALE_DAYS = 14;
+
+    // ---- Helpers ----------------------------------------------------------
+    var $ = function (id) { return document.getElementById(id); };
+    var money = function (n) { return "$" + Math.round(n).toLocaleString("en-US"); };
+    var money2 = function (n) { return "$" + n.toFixed(2); };
+    var num = function (n) { return n.toLocaleString("en-US"); };
+
+    var numField = function (id, fallback) {
+      var v = parseFloat($(id).value);
+      return isFinite(v) && v >= 0 ? v : fallback;
+    };
+
+    var daysSince = function (iso) {
+      var then = new Date(iso + "T00:00:00Z").getTime();
+      if (!isFinite(then)) { return null; }
+      return Math.floor((Date.now() - then) / 86400000);
+    };
+
+    var basis = "advertised";
+
+    // ---- Populate the vehicle picker --------------------------------------
+    var select = $("evSelect");
+    EVS.forEach(function (ev, i) {
+      var opt = document.createElement("option");
+      opt.value = ev.id;
+      opt.textContent = ev.name + " — " + ev.mpk.toFixed(2) + " Mi/kWh";
+      if (ev.id === "tesla-model-3-standard-rwd") { opt.selected = true; }
+      select.appendChild(opt);
+    });
+
+    var currentEv = function () {
+      var id = select.value;
+      for (var i = 0; i < EVS.length; i++) { if (EVS[i].id === id) { return EVS[i]; } }
+      return EVS[0];
+    };
+
+    // ---- Offer wiring -----------------------------------------------------
+    function applyOffer() {
+      var ev = currentEv();
+      var offer = OFFERS[ev.id];
+      var note = $("offerNote");
+      var usable = offer && offer.monthly_payment != null && offer.verified_at && offer.source_url;
+
+      if (!usable) {
+        note.className = "offer-note";
+        note.textContent = "No current lease offer tracked for this vehicle. The payment above is your own estimate — enter the figure you have been quoted.";
+        return;
+      }
+
+      $("payment").value = offer.monthly_payment;
+      if (offer.term_months != null) { $("term").value = offer.term_months; }
+      if (offer.due_at_signing != null) { $("dueAtSigning").value = offer.due_at_signing; }
+      var fees = (offer.acquisition_fee || 0) + (offer.other_required_upfront || 0);
+      $("fees").value = fees;
+      if (offer.annual_mileage_allowance != null) { $("allowance").value = offer.annual_mileage_allowance; }
+      if (offer.overage_fee_per_mile != null) { $("overageFee").value = offer.overage_fee_per_mile; }
+
+      var age = daysSince(offer.verified_at);
+      var stale = age != null && age > OFFER_STALE_DAYS;
+      note.className = stale ? "offer-note warn" : "offer-note";
+      note.innerHTML =
+        (stale ? "<strong>Offer may have changed. Verify current pricing.</strong> " : "") +
+        "Advertised offer" + (offer.market ? " (" + offer.market + ")" : "") +
+        ", verified " + offer.verified_at +
+        ". <a href=\"" + offer.source_url + "\" target=\"_blank\" rel=\"noopener\">Source</a>. " +
+        "An advertised offer is not a quote — overwrite any field with your own numbers.";
+    }
+
+    function renderPriceNote() {
+      var e = PRICES.electricity;
+      var parts = ["Electricity: EIA US average residential rate, " + e.period_label + " (published " + e.published_label + ") — the most recent available."];
+      if (PRICES.gas.as_of) {
+        parts.push("Gasoline: EIA weekly US retail average, " + PRICES.gas.as_of + ".");
+      } else {
+        parts.push("<strong>Gasoline prices are placeholders</strong> pending the first EIA gasoline refresh — replace them with your local price.");
+      }
+      $("priceNote").innerHTML = parts.join(" ");
+    }
+
+    // ---- The calculation --------------------------------------------------
+    function compute() {
+      var ev = currentEv();
+      var miles = numField("miles", 1250);
+      var mpg = Math.max(numField("mpg", 18), 0.1);
+      var grade = $("grade").value;
+      var gasPrice = numField("gas" + grade.charAt(0).toUpperCase() + grade.slice(1), 3.10);
+      var elecRate = numField("elecRate", 0.1834);
+      var overhead = Math.min(numField("overhead", 15), 100) / 100;
+      var payment = numField("payment", 0);
+      var term = Math.max(numField("term", 36), 1);
+      var allowance = numField("allowance", 15000);
+      var overageFee = numField("overageFee", 0.25);
+
+      var batteryKwh = miles / ev.mpk;
+      var wallKwh = batteryKwh * (1 + overhead);
+      var elecCost = wallKwh * elecRate;
+
+      var upfront = basis === "effective" ? numField("dueAtSigning", 0) + numField("fees", 0) : 0;
+      var amortized = upfront / term;
+      var effectivePayment = payment + amortized;
+
+      var annualMiles = miles * 12;
+      var excessMiles = Math.max(0, annualMiles - allowance);
+      var overage = excessMiles * overageFee / 12;
+
+      var evCost = effectivePayment + elecCost + overage;
+      var gasCost = miles / mpg * gasPrice;
+
+      var coverage = evCost > 0 ? gasCost / evCost * 100 : 0;
+      var gap = evCost - gasCost;
+      var breakEvenMpg = evCost > 0 ? miles * gasPrice / evCost : 0;
+
+      return {
+        ev: ev, miles: miles, mpg: mpg, grade: grade, gasPrice: gasPrice,
+        batteryKwh: batteryKwh, wallKwh: wallKwh, elecCost: elecCost,
+        amortized: amortized, effectivePayment: effectivePayment, payment: payment,
+        excessMiles: excessMiles, overage: overage, evCost: evCost, gasCost: gasCost,
+        coverage: coverage, gap: gap, breakEvenMpg: breakEvenMpg, overhead: overhead
+      };
+    }
+
+    // ---- Render -----------------------------------------------------------
+    function render() {
+      var r = compute();
+
+      $("milesReadout").innerHTML = num(r.miles) + " mi/month <span>— " + num(r.miles * 12) + " mi/year</span>";
+
+      var covers = r.gap <= 0;
+      $("result").className = covers ? "result" : "result short";
+      $("resultLabel").textContent = covers ? "FUEL SAVINGS COVER" : "FUEL SAVINGS COVER";
+      $("resultHeadline").textContent = covers
+        ? "The whole payment, with " + money(-r.gap) + " to spare"
+        : Math.round(r.coverage) + "% of the payment";
+      $("resultMeter").style.width = Math.max(0, Math.min(100, r.coverage)) + "%";
+
+      var sub = "Driving " + num(r.miles) + " miles a month at " + (+r.mpg.toFixed(1)) + " MPG on " +
+        r.grade + " fuel costs about " + money(r.gasCost) + " in fuel. A " +
+        r.ev.name + " would cost about " + money(r.evCost) + " a month — payment plus electricity" +
+        (r.overage > 0 ? " plus mileage overage" : "") + " — ";
+      sub += covers
+        ? "so the avoided gasoline more than covers it, by roughly " + money(-r.gap) + " a month."
+        : "leaving roughly " + money(r.gap) + " a month to find elsewhere.";
+      $("resultSub").textContent = sub;
+
+      $("statBreakEven").textContent = r.breakEvenMpg.toFixed(1);
+      $("statGas").textContent = money(r.gasCost);
+      $("statGasNote").textContent = (+r.mpg.toFixed(1)) + " MPG, " + r.grade;
+      $("statEv").textContent = money(r.evCost);
+      var evParts = [basis === "effective" ? "effective payment" : "payment", "electricity"];
+      if (r.overage > 0) { evParts.push("overage"); }
+      $("statEvNote").textContent = evParts.join(" + ");
+
+      // Math breakdown
+      var rows = [
+        ["Monthly miles", num(r.miles)],
+        ["Gas car — " + (+r.mpg.toFixed(1)) + " MPG at " + money2(r.gasPrice) + "/gal " + r.grade, money2(r.gasCost)],
+        ["EV energy at battery — " + num(r.miles) + " mi ÷ " + r.ev.mpk.toFixed(2) + " Mi/kWh", r.batteryKwh.toFixed(1) + " kWh"],
+        ["EV energy from the wall — +" + Math.round(r.overhead * 100) + "% charging overhead", r.wallKwh.toFixed(1) + " kWh"],
+        ["EV electricity — " + r.wallKwh.toFixed(1) + " kWh × $" + numField("elecRate", 0.1834).toFixed(4) + "/kWh", money2(r.elecCost)],
+        ["EV payment" + (basis === "effective" ? " (advertised)" : ""), money2(r.payment)]
+      ];
+      if (basis === "effective") {
+        rows.push(["Upfront money amortized over " + Math.round(numField("term", 36)) + " months", money2(r.amortized)]);
+      }
+      if (r.overage > 0) {
+        rows.push([num(Math.round(r.excessMiles)) + " excess miles/year × " + money2(numField("overageFee", 0.25)) + "/mi ÷ 12", money2(r.overage)]);
+      }
+      rows.push(["EV total per month", money2(r.evCost)]);
+      rows.push(["Break-even MPG — " + num(r.miles) + " × " + money2(r.gasPrice) + " ÷ " + money2(r.evCost), r.breakEvenMpg.toFixed(1) + " MPG"]);
+
+      $("mathRows").innerHTML = rows.map(function (row) {
+        return "<tr><td>" + row[0] + "</td><td>" + row[1] + "</td></tr>";
+      }).join("");
+
+      renderComparison(r);
+    }
+
+    function renderComparison(r) {
+      var host = $("comparison");
+      if (!GAS_VEHICLES.length) { return; }
+
+      var scored = GAS_VEHICLES.map(function (v) {
+        var price = v.grade === "premium" ? numField("gasPremium", 3.90)
+                  : v.grade === "midgrade" ? numField("gasMidgrade", 3.50)
+                  : numField("gasRegular", 3.10);
+        var cost = r.miles / v.mpg * price;
+        return { v: v, cost: cost, diff: r.evCost - cost };
+      }).sort(function (a, b) { return a.diff - b.diff; });
+
+      var rows = scored.map(function (s) {
+        var cls = s.diff <= 0 ? "covers" : (s.diff <= 50 ? "near" : "short");
+        var label = s.diff <= 0 ? "Covers the payment"
+                  : (s.diff <= 50 ? "Nearly neutral" : money(s.diff) + "/mo short");
+        return "<tr><td>" + s.v.name + "</td>" +
+          "<td class=\"num hide-mobile\">" + s.v.mpg + "</td>" +
+          "<td class=\"num hide-mobile\">" + s.v.grade + "</td>" +
+          "<td class=\"num\">" + money(s.cost) + "</td>" +
+          "<td class=\"num\"><span class=\"pill " + cls + "\">" + label + "</span></td></tr>";
+      }).join("");
+
+      host.innerHTML = "<div class=\"table-wrap\"><table>" +
+        "<thead><tr><th>Gas vehicle</th><th class=\"num hide-mobile\">Comb. MPG</th>" +
+        "<th class=\"num hide-mobile\">Fuel</th><th class=\"num\">Gas/month</th>" +
+        "<th class=\"num\">vs " + money(r.evCost) + " EV</th></tr></thead>" +
+        "<tbody>" + rows + "</tbody></table></div>";
+    }
+
+    // ---- Wiring -----------------------------------------------------------
+    $("paymentBasis").addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-basis]");
+      if (!btn) { return; }
+      basis = btn.getAttribute("data-basis");
+      Array.prototype.forEach.call(this.querySelectorAll("button"), function (b) {
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+      $("effectiveFields").hidden = basis !== "effective";
+      render();
+    });
+
+    select.addEventListener("change", function () { applyOffer(); render(); });
+
+    ["miles", "mpg", "grade", "gasRegular", "gasMidgrade", "gasPremium", "elecRate",
+     "overhead", "payment", "term", "dueAtSigning", "fees", "allowance", "overageFee"
+    ].forEach(function (id) {
+      $(id).addEventListener("input", render);
+      $(id).addEventListener("change", render);
+    });
+
+    renderPriceNote();
+    applyOffer();
+    render();
+  })();
+  </script>
+
+</body>
+</html>

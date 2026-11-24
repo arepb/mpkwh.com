@@ -424,6 +424,31 @@
     footer a { color: #6b7280; text-decoration: underline; }
     footer a:hover { color: #374151; }
 
+    .cta {
+      display: block;
+      margin-top: 1.5rem;
+      padding: 1.1rem 1.3rem;
+      border: 1px solid #bbf7d0;
+      background: #f0fdf4;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .cta:hover { background: #dcfce7; border-color: #86efac; }
+
+    .cta-title {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 1.1rem;
+      color: #14532d;
+      margin-bottom: 0.25rem;
+    }
+
+    .cta-title .arrow { color: #16a34a; font-family: "DM Sans", sans-serif; }
+
+    .cta-sub { font-size: 0.83rem; color: #3f6212; line-height: 1.55; }
+
     @media (max-width: 600px) {
       body { padding: 1.5rem 0.75rem 3rem; }
 
@@ -654,6 +679,11 @@
         </tbody>
       </table>
     </div>
+
+    <a class="cta" href="/break-even/">
+      <div class="cta-title">Which gas cars can pay for one of these? <span class="arrow">&rarr;</span></div>
+      <p class="cta-sub">Find the break-even MPG &mdash; the point where a gas car&rsquo;s fuel spending equals an EV&rsquo;s monthly payment plus electricity. Fuel and electricity costs only.</p>
+    </a>
   </main>
 
   <footer>

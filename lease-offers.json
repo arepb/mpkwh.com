@@ -1,0 +1,90 @@
+{
+  "_comment": "Tracked EV lease/payment offers for the /break-even/ calculator. Manually maintained -- see CLAUDE.md 'Lease offer tracking'. An offer must never be published without both source_url and verified_at. Null monthly_payment means 'not yet verified'; the calculator falls back to a user-entered payment for that vehicle.",
+  "updated": "2026-09-09",
+  "offers": [
+    {
+      "id": "tesla-model-3-standard-rwd",
+      "monthly_payment": null,
+      "term_months": null,
+      "due_at_signing": null,
+      "acquisition_fee": null,
+      "other_required_upfront": null,
+      "annual_mileage_allowance": null,
+      "overage_fee_per_mile": null,
+      "source_url": null,
+      "verified_at": null,
+      "market": "US national advertised",
+      "notes": "Not yet verified."
+    },
+    {
+      "id": "tesla-model-y-standard-rwd-18",
+      "monthly_payment": null,
+      "term_months": null,
+      "due_at_signing": null,
+      "acquisition_fee": null,
+      "other_required_upfront": null,
+      "annual_mileage_allowance": null,
+      "overage_fee_per_mile": null,
+      "source_url": null,
+      "verified_at": null,
+      "market": "US national advertised",
+      "notes": "Not yet verified."
+    },
+    {
+      "id": "nissan-leaf-75-18-steel",
+      "monthly_payment": null,
+      "term_months": null,
+      "due_at_signing": null,
+      "acquisition_fee": null,
+      "other_required_upfront": null,
+      "annual_mileage_allowance": null,
+      "overage_fee_per_mile": null,
+      "source_url": null,
+      "verified_at": null,
+      "market": "US national advertised",
+      "notes": "Not yet verified."
+    },
+    {
+      "id": "toyota-bz-fwd-191",
+      "monthly_payment": null,
+      "term_months": null,
+      "due_at_signing": null,
+      "acquisition_fee": null,
+      "other_required_upfront": null,
+      "annual_mileage_allowance": null,
+      "overage_fee_per_mile": null,
+      "source_url": null,
+      "verified_at": null,
+      "market": "US national advertised",
+      "notes": "Not yet verified."
+    },
+    {
+      "id": "subaru-uncharted-fwd-premium",
+      "monthly_payment": null,
+      "term_months": null,
+      "due_at_signing": null,
+      "acquisition_fee": null,
+      "other_required_upfront": null,
+      "annual_mileage_allowance": null,
+      "overage_fee_per_mile": null,
+      "source_url": null,
+      "verified_at": null,
+      "market": "US national advertised",
+      "notes": "Not yet verified."
+    },
+    {
+      "id": "lucid-air-pure-rwd-19",
+      "monthly_payment": null,
+      "term_months": null,
+      "due_at_signing": null,
+      "acquisition_fee": null,
+      "other_required_upfront": null,
+      "annual_mileage_allowance": null,
+      "overage_fee_per_mile": null,
+      "source_url": null,
+      "verified_at": null,
+      "market": "US national advertised",
+      "notes": "Not yet verified."
+    }
+  ]
+}

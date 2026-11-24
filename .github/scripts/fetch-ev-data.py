@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch EIA electricity rate and EPA EV data. Writes data-cache.json.
+"""Fetch EIA energy prices and EPA vehicle data. Writes data-cache.json.
 
 Runs as a GitHub Action every Sunday so the Monday Claude Code routine
 can read local data instead of hitting external URLs directly.
@@ -153,10 +153,89 @@ def fetch_eia_rate(api_key):
     }
 
 
-def fetch_epa_evs():
-    """Download fueleconomy.gov vehicles.csv.zip; return 2026 BEVs sorted by MPGe.
+# EIA weekly retail gasoline series (US total, all formulations, $/gal).
+# Regional coverage is limited -- national + PADD + a handful of states -- so
+# the site exposes a national figure and lets the visitor edit it.
+EIA_GAS_SERIES = {
+    "regular": "EMM_EPMR_PTE_NUS_DPG",
+    "midgrade": "EMM_EPMM_PTE_NUS_DPG",
+    "premium": "EMM_EPMP_PTE_NUS_DPG",
+}
 
-    Returns a list of dicts, or None if the fetch fails.
+
+def fetch_eia_gas_prices(api_key):
+    """Fetch latest US average retail gasoline prices by grade from EIA API v2.
+
+    Returns a dict with regular/midgrade/premium in $/gal plus period labels,
+    or None if the fetch fails. A single grade failing is not fatal -- the
+    caller keeps whatever previous values are cached.
+    """
+    if not api_key:
+        print("  EIA_API_KEY not set -- skipping gasoline fetch", file=sys.stderr)
+        return None
+
+    from urllib.parse import quote as pct_encode
+    key = pct_encode(api_key, safe="")
+
+    prices = {}
+    period = None
+    for grade, series in EIA_GAS_SERIES.items():
+        url = (
+            "https://api.eia.gov/v2/petroleum/pri/gnd/data/"
+            f"?api_key={key}"
+            "&frequency=weekly"
+            "&data[0]=value"
+            f"&facets[series][]={series}"
+            "&sort[0][column]=period"
+            "&sort[0][direction]=desc"
+            "&length=1"
+        )
+        try:
+            rows = _eia_get(url).get("response", {}).get("data", [])
+        except Exception as exc:
+            print(f"  EIA gasoline fetch failed for {grade}: {exc}", file=sys.stderr)
+            continue
+
+        if not rows:
+            print(f"  EIA returned no gasoline rows for {grade}", file=sys.stderr)
+            continue
+
+        try:
+            prices[grade] = round(float(rows[0]["value"]), 3)
+        except (KeyError, TypeError, ValueError):
+            print(f"  EIA gasoline row for {grade} had no usable value", file=sys.stderr)
+            continue
+        period = period or rows[0].get("period")
+
+    if not prices:
+        return None
+
+    if period:
+        try:
+            as_of = datetime.strptime(period, "%Y-%m-%d").strftime("%B %-d, %Y")
+        except ValueError:
+            as_of = period
+    else:
+        as_of = None
+
+    print(
+        "  EIA gasoline: "
+        + ", ".join(f"{g} ${p}" for g, p in prices.items())
+        + (f" (week of {as_of})" if as_of else ""),
+        file=sys.stderr,
+    )
+
+    prices["period"] = period
+    prices["as_of"] = as_of
+    return prices
+
+
+def _download_epa_rows():
+    """Download fueleconomy.gov vehicles.csv.zip and return its rows as dicts.
+
+    The full file covers every vehicle EPA has rated, so both the EV list and
+    the gasoline comparison set come from this one download.
+    Returns None if the fetch or extraction fails.
     """
     url = "https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip"
     try:
@@ -174,9 +253,13 @@ def fetch_epa_evs():
         print(f"  ZIP extraction failed: {exc}", file=sys.stderr)
         return None
 
-    reader = csv.DictReader(io.StringIO(csv_bytes.decode("latin-1")))
+    return list(csv.DictReader(io.StringIO(csv_bytes.decode("latin-1"))))
+
+
+def fetch_epa_evs(rows):
+    """Return 2026 BEVs sorted by MPGe descending."""
     evs = []
-    for row in reader:
+    for row in rows:
         if row.get("year") != "2026":
             continue
         if row.get("fuelType1", "").strip() != "Electricity":
@@ -219,6 +302,77 @@ def fetch_epa_evs():
     return evs
 
 
+# EPA fuelType1 values mapped to the grades the break-even calculator prices.
+# Diesel is deliberately excluded -- it needs its own fuel price series.
+GAS_GRADES = {
+    "Regular Gasoline": "regular",
+    "Midgrade Gasoline": "midgrade",
+    "Premium Gasoline": "premium",
+}
+
+# The break-even comparison only gets interesting below roughly 30 MPG, so the
+# cache keeps the thirstiest slice rather than every gasoline vehicle rated.
+GAS_VEHICLE_LIMIT = 80
+
+
+def fetch_epa_gas_vehicles(rows):
+    """Return the thirstiest 2026 gasoline vehicles, one per make/model.
+
+    Deduplicates on make+model keeping the least efficient configuration --
+    that is the one whose fuel spending is most likely to cover an EV payment,
+    and it stops a single nameplate filling the table with trim variants.
+    """
+    best = {}
+    for row in rows:
+        if row.get("year") != "2026":
+            continue
+        if row.get("fuelType2", "").strip():
+            continue  # PHEVs and flex-fuel: not a clean gasoline comparison
+
+        grade = GAS_GRADES.get(row.get("fuelType1", "").strip())
+        if not grade:
+            continue
+
+        try:
+            mpg = float(row.get("comb08", "").strip())
+        except ValueError:
+            continue
+        if mpg <= 0:
+            continue
+
+        make = row.get("make", "").strip()
+        model = row.get("model", "").strip()
+        if not make or not model:
+            continue
+
+        key = (make, model)
+        if key not in best or mpg < best[key]["mpg"]:
+            best[key] = {
+                "id": row.get("id", "").strip(),
+                "name": f"2026 {make} {model}",
+                "make": make,
+                "model": model,
+                "drive": row.get("drive", "").strip(),
+                "vclass": row.get("VClass", "").strip(),
+                "mpg": round(mpg, 1),
+                "city_mpg": row.get("city08", "").strip(),
+                "highway_mpg": row.get("highway08", "").strip(),
+                "grade": grade,
+            }
+
+    vehicles = sorted(best.values(), key=lambda v: v["mpg"])[:GAS_VEHICLE_LIMIT]
+    if vehicles:
+        print(
+            f"  Found {len(best)} 2026 gasoline nameplates — keeping the "
+            f"{len(vehicles)} thirstiest ({vehicles[0]['name']} at "
+            f"{vehicles[0]['mpg']} MPG through {vehicles[-1]['mpg']} MPG)",
+            file=sys.stderr,
+        )
+    else:
+        print("  Found no 2026 gasoline vehicles", file=sys.stderr)
+    return vehicles
+
+
 def main():
     existing = load_existing_cache()
     api_key = os.environ.get("EIA_API_KEY", "").strip()
@@ -226,14 +380,24 @@ def main():
     print("Fetching EIA electricity rate...", file=sys.stderr)
     eia = fetch_eia_rate(api_key)
 
-    print("Fetching EPA EV data from fueleconomy.gov...", file=sys.stderr)
-    evs = fetch_epa_evs()
+    print("Fetching EIA gasoline prices...", file=sys.stderr)
+    gas = fetch_eia_gas_prices(api_key)
+
+    print("Fetching EPA vehicle data from fueleconomy.gov...", file=sys.stderr)
+    rows = _download_epa_rows()
+    evs = fetch_epa_evs(rows) if rows is not None else None
+    gas_vehicles = fetch_epa_gas_vehicles(rows) if rows is not None else None
 
     cache = {
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         # Fall back to previous cached values if a fetch fails
         "eia": eia if eia is not None else existing.get("eia"),
+        "eia_gas": gas if gas is not None else existing.get("eia_gas"),
         "epa_evs_2026": evs if evs is not None else existing.get("epa_evs_2026", []),
+        "epa_gas_vehicles_2026": (
+            gas_vehicles if gas_vehicles is not None
+            else existing.get("epa_gas_vehicles_2026", [])
+        ),
     }
 
     with open(CACHE_PATH, "w") as f:
@@ -248,16 +412,30 @@ def main():
         errors.append("EPA fetch failed — fueleconomy.gov unreachable or returned bad data")
 
     if not api_key:
-        print("NOTE: EIA_API_KEY not set — EIA rate kept from previous cache", file=sys.stderr)
-    elif eia is None:
-        prev_rate = (existing.get("eia") or {}).get("rate_per_kwh")
-        if prev_rate is None:
-            errors.append("EIA fetch failed and no previous rate is cached")
-        else:
-            print(
-                f"WARNING: EIA fetch failed — keeping previous cached rate ${prev_rate}/kWh",
-                file=sys.stderr,
-            )
+        print("NOTE: EIA_API_KEY not set — EIA values kept from previous cache", file=sys.stderr)
+    else:
+        if eia is None:
+            prev_rate = (existing.get("eia") or {}).get("rate_per_kwh")
+            if prev_rate is None:
+                errors.append("EIA fetch failed and no previous rate is cached")
+            else:
+                print(
+                    f"WARNING: EIA fetch failed — keeping previous cached rate ${prev_rate}/kWh",
+                    file=sys.stderr,
+                )
+
+        if gas is None:
+            if existing.get("eia_gas"):
+                print(
+                    "WARNING: EIA gasoline fetch failed — keeping previous cached prices",
+                    file=sys.stderr,
+                )
+            else:
+                print(
+                    "WARNING: EIA gasoline fetch failed and nothing is cached yet — "
+                    "the break-even page keeps its placeholder gasoline prices",
+                    file=sys.stderr,
+                )
 
     for e in errors:
         print(f"ERROR: {e}", file=sys.stderr)
